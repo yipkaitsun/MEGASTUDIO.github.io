@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="./css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="./css/owl.carousel.min.css" />
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <!-- MyApi -->
+    <script src="./js/api.js"></script>
+    <!-- BackendApi -->
+    <script src="./js/AsynctTask.js"></script>
+	<link rel="stylesheet" href="./css/mystyle.css" />
+
+    <script>
+        $(function () {
+            $("#header-container").load("header.html");
+            $("#footer-container").load("footer.html");
+      
+        });
+		function submitContact(){
+		data = {
+              "path": "https://api.vexpo.ai/megastore/contact",
+			  "param":{
+				"name":$("#name").val(),
+				"phone":$("#phone").val(),
+				"email":$("#email").val(),
+				"message":$("#message").val(),
+			  }
+            }
+         console.log(data);
+		 var asyncTask = new AsyncTask(data);
+          asyncTask.post().then(
+              function(response)
+              {
+               alert(response.content);
+                });
+		return false;
+		}
+    </script>
+
+</head>
+	<body>
+		<div id="header-container"></div>
+			<div id="contact">
+				<div class="contact-col">
+				<h1>Hi, contact us & work together!</h1>
+				<p>+852 6356 6078</p>
+				<p>info@mega-root.com</p>
+				</div>
+				<div class="contact-col">
+				<form onsubmit='return submitContact();'>  
+					  <input type="text" id="name" class="contact_input" name="name" placeholder="Name"><br>
+					  <input type="text" id="email" class="contact_input" name="email" placeholder="Email"><br>
+					  <input type="text" id="phone" class="contact_input" name="phone" placeholder="Phone"><br>
+					  <textarea class="contact_textArea" id="message" name="message" placeholder="Message"></textarea>
+					  <br/>
+					  <br/>
+					  <Button class="contact-btn" type="submit" value="Submit">Submit</Button>
+				</form> 
+				</div>
+			</div>
+		<div id="footer-container"></div>
+	</body>
+</html>

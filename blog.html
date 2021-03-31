@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="./css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="./css/owl.carousel.min.css" />
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <!-- MyApi -->
+    <script src="./js/api.js"></script>
+    <!-- BackendApi -->
+    <script src="./js/AsynctTask.js"></script>
+    <script src="./js/owl.carousel.js"></script>
+	<script src="./js/drawer.js"></script>
+	<script src="./js/ResizeSensor.js"></script>
+	<link rel="stylesheet" href="./css/mystyle.css" />
+
+    <script>
+        $(function () {
+          data = {
+              "path": "https://api.vexpo.ai/megastore/article",
+            }
+          var asyncTask = new AsyncTask(data);
+          asyncTask.post().then(
+              function(response)
+              {
+                response.content.article.forEach(function(article)
+                {
+                  $("#Blog").append("<a href ='./article.html?id="+article.id+"' class='grid'>  <img class='thumbnail' src='"+article.thumbnail+"' /></a>");
+                });
+                }
+            );
+            new ResizeSensor(jQuery('#Blog'), function()
+              {
+                $('.thumbnail').css('height', $('#Blog > a:nth-child(2) > img').width()+'px');
+              })
+
+            $("#header-container").load("header.html");
+            $("#footer-container").load("footer.html");
+	});
+    </script>
+
+</head>
+	<body>
+		<div id="header-container"></div>
+		<div id="Blog" class="grid-3" style="margin:auto;text-align: left;"></div>
+		<Button class="moreButton">More </Button>
+		<div id="footer-container"></div>
+	</body>
+</html>

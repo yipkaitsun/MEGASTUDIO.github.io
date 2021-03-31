@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="./css/pgwslider.min.css" />
+    <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <!-- MyApi -->
+	<script src="./js/pgwslider.min.js"></script>
+  <script src="./js/AsynctTask.js"></script>
+	<script src="./js/ResizeSensor.js"></script>
+	<script src="./js/ElementQueries.js"></script>
+  <script src="./js/NumberSpinner.js"></script>
+	<link rel="stylesheet" href="./css/mystyle.css" />
+
+    <script>
+    function GetId()
+    {
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      const productId = urlParams.get('id');
+      return(productId);
+    }
+
+    $(function ()
+    {
+        $("#header-container").load("header.html");
+        var productId=GetId();
+
+        data =
+        {
+          "path": "https://api.vexpo.ai/megastore/product/"+productId,
+        }
+        var asyncTask = new AsyncTask(data);
+        asyncTask.post().then(function(response)
+        {
+          $("#name").append(response.content.product.name_zh);
+          $("#price").append('$ '+response.content.product.price +' HKD');
+          $(".pgwSlider").append("<li><img src='"+response.content.product.thumbnail+"' /></li>")
+          var pgwSlider = $('.pgwSlider').pgwSlider();
+          pgwSlider.reload(
+            {
+              listPosition : "left",
+              autoSlide:false
+            });
+          $("#addQty").htmlNumberSpinner();
+          $("#description").append(response.content.product.description);
+      		new ResizeSensor(jQuery('.ps-current'), function()
+          {
+            $('.pgwSlider').css('height', $('.ps-current').height()+'px');
+      			var width_productDes = $('#productDes').width();
+    			  var height_productDes = $('#productDes').height();
+    			  var height_productDetail = $('#productDetail').height();
+    			  var pos_productcol = $('#productDes').position();
+    			  var pos_ps_current = $('.ps-current').position();
+      			if($(window).width()<=768)
+            {
+              $("#productDetail").css(
+                {
+                  position: "relative",
+          				left: "0px",
+          				top: "0px",
+          				width:"100%",
+  					    })
+      			   $('#Product').css('height','100%');
+            }
+            else
+            {
+              $("#productDetail").css({
+              position: "absolute",
+              left: pos_ps_current.left + "px",
+              top: (pos_productcol.top+height_productDes) + "px",
+              width:(width_productDes-pos_ps_current.left)+ "px",
+      			})
+
+    		      $('#Product').css('height', height_productDes+height_productDetail+'px');
+            }
+            });
+
+          });
+
+            $("#footer-container").load("footer.html");
+
+
+				})
+    </script>
+
+</head>
+<body>
+    <div id="header-container"></div>
+    <div id="Product" style="text-align:center;width:85vw;">
+	<div id="productDes">
+	<div class="productcol">
+		 <ul class="pgwSlider">
+		</ul>
+	</div>
+	<div class="productcol" style="padding-left:10px">
+		<h2 id="name"/></h2>
+		<p id="price"></p>
+		<p id="detail" style="margin-bottom:20px;">Delivery cost will be calculated in checkout</p>
+		<p id="quantity">Quantity</p>
+
+		<div id="addQty" class="NumberSpinner" class="counter" min="1" max="20"step="1"></div>
+		<Button onclick="AddToCart()" class="addCart-btn">Add to Cart</Button>
+	</div>
+	</div>
+	<div id="productDetail" >
+	<h3>Product Detail</h3>
+
+  <div id="description">
+
+
+	</div>
+
+        </div>
+</div>
+
+
+<br/>
+
+
+        <div id="footer-container"></div>
+
+</body>
+</html>

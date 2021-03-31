@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <!-- MyApi -->
+    <script src="./js/api.js"></script>
+    <!-- BackendApi -->
+	<script src="./js/ResizeSensor.js"></script>
+	<script src="./js/ElementQueries.js"></script>
+    <script src="./js/AsynctTask.js"></script>
+	    <script>
+        $(function () {
+          const queryString = window.location.search;
+          const urlParams = new URLSearchParams(queryString);
+          const articleId = urlParams.get('id');
+          data = {
+              "path": "https://api.vexpo.ai/megastore/article/"+articleId,
+            }
+          var asyncTask = new AsyncTask(data);
+          asyncTask.post().then(
+              function(response)
+              {
+                $("#article").append(response.content.article.content);
+              });
+            $("#header-container").load("header.html");
+            $("#footer-container").load("footer.html");
+		})
+		</script>
+	<link rel="stylesheet" href="./css/mystyle.css" />
+
+</head>
+<body>
+    <div id="header-container"></div>
+    <div id="article" style="margin:auto;width:85vw;"> </div>
+    <br/>
+        <div id="footer-container"></div>
+
+</body>
+</html>
