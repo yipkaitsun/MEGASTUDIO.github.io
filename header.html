@@ -53,9 +53,8 @@
             asyncTask.post().then(
                 function(response)
                 {
-					console.log(response);
-					  /*var stripe = Stripe('pk_live_51IAoXJABhGS2yVElVPJpHJfgnRdqPeYna1bJVhMyGYqKGL6EPbyKtXcbj80tO9pYrbRmYpFtwMN56YJZXHWfPLFX00VenZCBZu');
-					  return stripe.redirectToCheckout({ sessionId: response.content.id });
+					  var stripe = Stripe('pk_live_51IAoXJABhGS2yVElVPJpHJfgnRdqPeYna1bJVhMyGYqKGL6EPbyKtXcbj80tO9pYrbRmYpFtwMN56YJZXHWfPLFX00VenZCBZu');
+                      return stripe.redirectToCheckout({ sessionId: response.content.id });
 						}).then(
 					  function(result)
 					  {
@@ -66,7 +65,7 @@
 					  }).catch(function(error)
 					  {
 						console.error('Error:', error);
-					  });*/
+					  });
 				})
             });  
 		}
