@@ -39,24 +39,37 @@
             }
           }
         var asyncTask = new AsyncTask(data);
-        asyncTask.post().then(function (order) {
-            data = {
+        asyncTask.post().then(function(order)
+            {
+              data = {
                 "path": "https://api.vexpo.ai/megastore/order/init-pay",
-                "param": {
-                    "order_id": order.content.id,
-                    "success_url": "https://vigorous-pare-c359c5.netlify.app/orderinfo.html",
-                    "cancel_url": "https://vigorous-pare-c359c5.netlify.app/orderinfo.htmll"
+                "param":{
+                 "order_id":order.content.id,
+                    "success_url":"https://vigorous-pare-c359c5.netlify.app/orderinfo.html",
+                    "cancel_url":"https://vigorous-pare-c359c5.netlify.app/orderinfo.htmll"
                 }
-            }
+              }
             var asyncTask = new AsyncTask(data);
             asyncTask.post().then(
-                function (response) {
-                    console.log(response.content.id);
-                   
-                });
-        });
-              
-		
+                function(response)
+                {
+					console.log(response);
+					  /*var stripe = Stripe('pk_live_51IAoXJABhGS2yVElVPJpHJfgnRdqPeYna1bJVhMyGYqKGL6EPbyKtXcbj80tO9pYrbRmYpFtwMN56YJZXHWfPLFX00VenZCBZu');
+					  return stripe.redirectToCheckout({ sessionId: response.content.id });
+						}).then(
+					  function(result)
+					  {
+						if (result.error)
+						{
+						  alert(result.error.message);
+						}
+					  }).catch(function(error)
+					  {
+						console.error('Error:', error);
+					  });*/
+				})
+            });  
+		}
 		
 		function Checkout(){
 			$("#header").append(
