@@ -53,7 +53,7 @@
             asyncTask.post().then(
                 function (response) {
 
-                    var stripe = Stripe('pk_live_51IAoXJABhGS2yVElVPJpHJfgnRdqPeYna1bJVhMyGYqKGL6EPbyKtXcbj80tO9pYrbRmYpFtwMN56YJZXHWfPLFX00VenZCBZu');
+                    var stripe = Stripe('pk_test_51IAoXJABhGS2yVElssZIRrueV8aQFICJ6zUt2pIYLjH718DgRzvlFegUQlfoECPZqanmoToWqgaBiMb1lX3MgiXp00W6oTR2z3');
                     return stripe.redirectToCheckout({ sessionId: response.content.id });
                 }).then(
                     function (result) {
