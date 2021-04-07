@@ -24,9 +24,20 @@
 				console.log(status);	
 				console.log(session_Id);	
 				console.log(order_id);	
-            
             $("#header-container").load("header.html");
-            $("#footer-container").load("footer.html");
+			$("#footer-container").load("footer.html");
+            data = {
+                "path": "https://api.vexpo.ai/megastore/order/pay-session",
+                "param": {
+                    "session ": session_Id,
+                }
+            }
+            var asyncTask = new AsyncTask(data);
+			asyncTask.post().then(function (response) {
+				console.log(response);
+
+			})
+            
         });
     </script>
 
