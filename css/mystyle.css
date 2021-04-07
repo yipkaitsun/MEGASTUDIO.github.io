@@ -530,7 +530,7 @@ a:-webkit-any-link {
 	border-radius: 50%;
 	width: 18px;
 	height: 18px;
-	
+	margin-left: 12px;
 }
 
 .creditcard-btn-text, .loader {
