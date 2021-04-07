@@ -15,7 +15,16 @@
 	<link rel="stylesheet" href="./css/mystyle.css" />
 
     <script>
-        $(function () {
+		$(function () {
+                const queryString = window.location.search;
+                const urlParams = new URLSearchParams(queryString);
+                const status = urlParams.get('a');
+				const session_Id = urlParams.get('s');
+				const order_id = urlParams.get('t');
+				console.log(status);	
+				console.log(session_Id);	
+				console.log(order_id);	
+            
             $("#header-container").load("header.html");
             $("#footer-container").load("footer.html");
         });
