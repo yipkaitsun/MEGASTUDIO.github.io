@@ -533,6 +533,11 @@ a:-webkit-any-link {
 	display: inline-block;
 }
 
+.creditcard-btn-text, .loader {
+	ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
 @keyframes spin {
 	0% {
 		transform: rotate(0deg);
