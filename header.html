@@ -20,7 +20,10 @@
         function submitDelivery() {
             $(".creditcard-btn").attr('disabled', 'disabled');
             $(".creditcard-btn").append("<div class='loader'></div>");
-            getCart(createOrder);
+            $.getScript('https://js.stripe.com/v3/', function () {
+                getCart(createOrder);
+            });
+            
       return false;
     }
 
@@ -53,6 +56,7 @@
             var asyncTask = new AsyncTask(data);
             asyncTask.post().then(
                 function (response) {
+
                     var stripe = Stripe('pk_test_51IAoXJABhGS2yVElssZIRrueV8aQFICJ6zUt2pIYLjH718DgRzvlFegUQlfoECPZqanmoToWqgaBiMb1lX3MgiXp00W6oTR2z3');
                     return stripe.redirectToCheckout({ sessionId: response.content.id });
                 }).then(
