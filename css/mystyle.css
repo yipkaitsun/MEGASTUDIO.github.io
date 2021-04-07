@@ -530,12 +530,13 @@ a:-webkit-any-link {
 	border-radius: 50%;
 	width: 18px;
 	height: 18px;
-	display: inline-block;
+	
 }
 
 .creditcard-btn-text, .loader {
 	ms-transform: translateY(-50%);
 	transform: translateY(-50%);
+	display: inline-block;
 }
 
 @keyframes spin {
