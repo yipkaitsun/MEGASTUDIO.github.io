@@ -374,13 +374,13 @@ overflow:auto;
 }
 
 .creditcard-btn {
-    height: 45px;
-    background-color: white;
-    font-family: "Roboto Mono";
-    outline: none;
-	display: block;
-	margin:auto;
-
+	height: 45px;
+	background-color: white;
+	font-family: "Roboto Mono";
+	outline: none;
+	margin: auto;
+	display: flex;
+	align-items: center;
 }
 
 #order{
@@ -534,8 +534,6 @@ a {
 }
 
 .creditcard-btn-text, .loader {
-	-ms-transform: translateY(-50%);
-	transform: translateY(-50%);
 	display: inline-block;
 }
 
