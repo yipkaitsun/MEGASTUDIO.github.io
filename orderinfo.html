@@ -34,8 +34,6 @@
             }
             var asyncTask = new AsyncTask(data);
 			asyncTask.post().then(function (response) {
-			
-
                 data = {
                     "path": "https://api.vexpo.ai/megastore/order/pay",
 					"param": {
@@ -48,14 +46,13 @@
                         "amount": parseFloat(response.content.session.amount_subtotal)
                     }
 				}
-				console.log(data);
+                console.log(response.content.session);
+                console.log(response.content.customer);
                 var asyncTask = new AsyncTask(data);
                 asyncTask.post().then(function (response) {
 					console.log(response);
 
                 })
-
-
 
 
 			})
