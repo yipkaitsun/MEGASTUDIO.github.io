@@ -18,7 +18,8 @@
       })
 
 
-    function submitDelivery(){
+        function submitDelivery() {
+      $(".creditcard-btn").append("<div class='loader'>Loading...</div>");
       getCart(createOrder);
       return false;
     }
