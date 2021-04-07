@@ -516,7 +516,7 @@ overflow:auto;
     word-wrap: break-word;
 }
 
-a:-webkit-any-link {
+a {
     color: grey;
     text-decoration-line: none;
 }
@@ -534,7 +534,7 @@ a:-webkit-any-link {
 }
 
 .creditcard-btn-text, .loader {
-	ms-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
 	transform: translateY(-50%);
 	display: inline-block;
 }
