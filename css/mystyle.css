@@ -528,8 +528,9 @@ a:-webkit-any-link {
 	animation: spin 1s linear infinite;
 	border-top: 5px solid #555;
 	border-radius: 50%;
-	width: 50px;
-	height: 50px;
+	width: 18px;
+	height: 18px;
+	display: inline-block;
 }
 
 @keyframes spin {
