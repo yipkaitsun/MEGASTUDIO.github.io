@@ -54,15 +54,8 @@
                 function(response)
                 {
 					  var stripe = Stripe('pk_live_51IAoXJABhGS2yVElVPJpHJfgnRdqPeYna1bJVhMyGYqKGL6EPbyKtXcbj80tO9pYrbRmYpFtwMN56YJZXHWfPLFX00VenZCBZu');
-                      return stripe.redirectToCheckout({ sessionId: response.content.id });
-						}).then(
-					  function(result)
-					  {
-						if (result.error)
-						{
-						  alert(result.error.message);
-						}
-					  })
+                      stripe.redirectToCheckout({ sessionId: response.content.id });
+						})
 				})
               
 		
