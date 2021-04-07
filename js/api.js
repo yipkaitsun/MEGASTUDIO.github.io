@@ -14,7 +14,6 @@ function GetCookies(name)
 
 function setCart()
 {
-  $("#cd-cart-items > li").remove();
   var array_cart=GetCookies("cart");
   var total=0;
   var indexflag=0;

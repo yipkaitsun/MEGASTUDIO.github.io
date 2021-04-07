@@ -58,7 +58,6 @@
                         return stripe.redirectToCheckout({ sessionId: response.content.id });
                     }).then(
                         function (result) {
-                            console.log(result);
                             if (result.error) {
                                 alert(result.error.message);
                             }
