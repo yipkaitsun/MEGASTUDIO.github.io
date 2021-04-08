@@ -26,7 +26,7 @@
                 response.content.product.forEach(function(product)
                 {
                  if (product.name_zh.length > 30)
-                  $("#product").append("<a href ='./product.html?id=" + product.id + "' class='grid'>  <img class='thumbnail' src='" + product.thumbnail + "' /> <p>" + product.name_zh.substring(0.30)+" ... " + "</p>  <p>$" + product.price + "</p></a>");
+                  $("#product").append("<a href ='./product.html?id=" + product.id + "' class='grid'>  <img class='thumbnail' src='" + product.thumbnail + "' /> <p>" + product.name_zh.substring(0,30)+" ... " + "</p>  <p>$" + product.price + "</p></a>");
                  else
                   $("#product").append("<a href ='./product.html?id=" + product.id + "' class='grid'>  <img class='thumbnail' src='" + product.thumbnail + "' /> <p>" + product.name_zh + "</p>  <p>$" + product.price + "</p></a>");
 
