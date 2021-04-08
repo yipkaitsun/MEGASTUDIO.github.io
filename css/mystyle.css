@@ -94,25 +94,22 @@ html, body {
 	text-align:center
 }
 
- .inputWithIcon > input[type=text] {
-	 	 width: 239px;
-     box-sizing: border-box;
-     border: 2px solid #ccc;
-     border-radius: 4px;
-     font-size: 16px;
-     background-color: white;
-     background-image: url(searchicon.png);
-     background-position: 10px 10px;
-     background-repeat: no-repeat;
-     padding: 12px 48px 13px 8px;
-     transition: width 0.4s ease-in-out;
-     padding-left: 40px;
-     max-width: 239px;
-	}
+.inputWithIcon > input[type=text] {
+	width: 239px;
+	border: 2px solid #ccc;
+	border-radius: 4px;
+	font-size: 16px;
+	background-color: white;
+	background-image: url(searchicon.png);
+	background-position: 10px 10px;
+	background-repeat: no-repeat;
+	padding: 12px 48px 13px 8px;
+	transition: width 0.4s ease-in-out;
+	padding-left: 40px;
+}
 
- .inputWithIcon> input[type=text]:focus {
-	 	max-width: 60%;
-		width: 60%;
+.inputWithIcon > input[type=text]:focus {
+		width: calc(100% - 128px);
 	}
 
 .inputWithIcon {
