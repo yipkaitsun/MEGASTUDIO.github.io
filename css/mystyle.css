@@ -84,9 +84,9 @@ html, body {
 	display:block;
 	margin:auto;
 }
-.moreButton:hover {
-	border-color:lightblue
-}
+	.moreButton:hover, .contact-btn:hover {
+		border-color: lightblue
+	}
 #FollowUs >.title{
 	margin-bottom:30px;
 }
