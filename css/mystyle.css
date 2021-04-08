@@ -95,7 +95,7 @@ html, body {
 }
 
 .inputWithIcon > input[type=text] {
-	width: 239px;
+	width: calc(239px - 128px);
 	border: 2px solid #ccc;
 	border-radius: 4px;
 	font-size: 16px;
