@@ -63,43 +63,32 @@ function AddToCart()
     })
 }
 
-function UpdateCart(id, qty, oerator)
+function UpdateCart(id, qty, operator)
 {
-    var elements = document.getElementsByClassName("cart-li");
-    for (var i = 0; i < elements.length; i++) {
-       console.log(elements[i])
-    }
-
     var array_cart=GetCookies("cart");
     var current_subtotal = 0;
     if ($("#subtotal").text()!=='') current_subtotal=parseInt($("#subtotal").text());
-    new AsyncTask({"path": "https://api.vexpo.ai/megastore/product/"+array_cart[id].id,}).post().then(function(response)
-    {
-      if(oerator=="add") $("#subtotal").text(current_subtotal+response.content.product.price).animate({'opacity': 1}, 400);
-      else if(oerator=="minus")
-      {
-         $("#subtotal").text(current_subtotal-response.content.product.price).animate({'opacity': 1}, 400);
-          if (qty <= 0)
-          {
-           array_cart.splice(id, 1);
-		   $("#cartNumber").text(array_cart.length);
-           var str_cart = JSON.stringify(array_cart);
-             document.cookie = "cart=" + str_cart;
-             var removeEl = $('[data-id="' + id + '"]');
-             removeEl.hide('normal', function ()
-             {
-                 for (var i = parseInt(id); i < $('.cart-li').length; i++) {
-                     $('#cd-cart-items li').eq(i + 1).attr({ 'data-id': i });
-                     $("#" + (i+1).toString()).attr({ 'id': i })
-                 }
-                 removeEl.remove();
-             });  
-          }
-      }
-      $('[data-id="'+id+'"]>.cd-cart-item >.cd-cart-item-detail >.cd-price').text("$"+response.content.product.price*qty).animate({'opacity': 1}, 400);
-    })
-     
-    
+    new AsyncTask({ "path": "https://api.vexpo.ai/megastore/product/" + array_cart[id].id, }).post().then(function (response) {
+        if (operator == "add") $("#subtotal").text(current_subtotal + response.content.product.price).animate({ 'opacity': 1 }, 400);
+        else if (operator == "minus") {
+            $("#subtotal").text(current_subtotal - response.content.product.price).animate({ 'opacity': 1 }, 400);
+            if (qty <= 0) {
+                array_cart.splice(id, 1);
+                $("#cartNumber").text(array_cart.length);
+                var str_cart = JSON.stringify(array_cart);
+                document.cookie = "cart=" + str_cart;
+                var removeEl = $('[data-id="' + id + '"]');
+                removeEl.hide('normal', function () {
+                    for (var i = parseInt(id); i < $('.cart-li').length; i++) {
+                        $('#cd-cart-items li').eq(i + 1).attr({ 'data-id': i });
+                        $("#" + (i + 1).toString()).attr({ 'id': i })
+                    }
+                    removeEl.remove();
+                });
+            }
+        }
+        $('[data-id="' + id + '"]>.cd-cart-item >.cd-cart-item-detail >.cd-price').text("$" + response.content.product.price * qty).animate({ 'opacity': 1 }, 400);
+    });
 }
 
 function getCart(callback){
