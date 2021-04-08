@@ -84,7 +84,7 @@ html, body {
 	display:block;
 	margin:auto;
 }
-.moreButton:hover, .contact-btn:hover, .creditcard-btn-text:hover {
+.moreButton:hover, .contact-btn:hover, .creditcard-btn:hover {
 		border-color: lightblue
 	}
 #FollowUs >.title{
