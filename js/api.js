@@ -43,28 +43,42 @@ function setCart()
     });
 }
 
-function AddToCart()
-{
-  var array_cart=GetCookies("cart");
-  var id=GetId();
-  var index=0;
-  var qty=$("#addQty > input").val();
-  var current_subtotal=0;
-  if ($("#subtotal").text()!=='') current_subtotal=parseInt($("#subtotal").text());
-  if(array_cart!==null)
-  {
-    index=array_cart.length;
-    array_cart.push({id:id,qty:qty});
-  }
-  else array_cart = [{id:id,qty:qty}];
-  $("#cartNumber").text(array_cart.length);
-  var str_cart = JSON.stringify(array_cart);
-  document.cookie = "cart="+str_cart;
-  new AsyncTask({"path": "https://api.vexpo.ai/megastore/product/"+id,}).post().then(function(response)
-    {
-      $("<li class='cart-li' data-id='"+index+"'><div class='cd-cart-img'><img class='cd-img' src='"+response.content.product.thumbnail+"'/></div><div class='cd-cart-item'><div class='cd-cart-item-detail'><div class='cd-name'>"+response.content.product.name_zh+"</div><div class='cd-price'>$"+response.content.product.price*qty+"</div></div><div class='cd-cart-item-spinner'><div id="+index+" class='NumberSpinner' min='0' max='20'step='1' default='"+qty+"'></div></div></div></li>").hide().appendTo ($('#cd-cart-items')).show('normal').ready($("#"+index).cart_htmlNumberSpinner());
-      $("#subtotal").text(current_subtotal+response.content.product.price*qty).animate({'opacity': 1}, 400)
-    })
+function AddToCart() {
+    var array_cart = GetCookies("cart");
+    var id = GetId();
+    var index = 0;
+    var qty = $("#addQty > input").val();
+    var current_subtotal = 0;
+    if ($("#subtotal").text() !== '') current_subtotal = parseInt($("#subtotal").text());
+
+
+    if (array_cart !== null && array_cart.findIndex((element) => element.id == id)!==-1) {
+        const isExist = array_cart.findIndex((element) => element.id == id);
+        newQty = parseInt(array_cart[isExist].qty) + parseInt(qty)
+        array_cart[isExist].qty = newQty;
+        var str_cart = JSON.stringify(array_cart);
+        document.cookie = "cart=" + str_cart;
+        new AsyncTask({ "path": "https://api.vexpo.ai/megastore/product/" + id, }).post().then(function (response) {
+            $("#subtotal").text(current_subtotal + response.content.product.price * qty).animate({ 'opacity': 1 }, 400)
+        })
+        $('#' + isExist).find('.number-input').val(newQty)
+
+    }
+    else {
+        if (array_cart !== null) {
+            index = array_cart.length;
+            array_cart.push({ id: id, qty: qty });
+        }
+        else array_cart = [{ id: id, qty: qty }];
+        $("#cartNumber").text(array_cart.length);
+        var str_cart = JSON.stringify(array_cart);
+        document.cookie = "cart=" + str_cart;
+        new AsyncTask({ "path": "https://api.vexpo.ai/megastore/product/" + id, }).post().then(function (response) {
+            $("<li class='cart-li' data-id='" + index + "'><div class='cd-cart-img'><img class='cd-img' src='" + response.content.product.thumbnail + "'/></div><div class='cd-cart-item'><div class='cd-cart-item-detail'><div class='cd-name'>" + response.content.product.name_zh + "</div><div class='cd-price'>$" + response.content.product.price * qty + "</div></div><div class='cd-cart-item-spinner'><div id=" + index + " class='NumberSpinner' min='0' max='20'step='1' default='" + qty + "'></div></div></div></li>").hide().appendTo($('#cd-cart-items')).show('normal').ready($("#" + index).cart_htmlNumberSpinner());
+            $("#subtotal").text(current_subtotal + response.content.product.price * qty).animate({ 'opacity': 1 }, 400)
+        })
+    }
+
 }
 
 function UpdateCart(id, qty, operator)
