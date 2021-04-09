@@ -48,6 +48,8 @@
                 console.log(response.content.customer);
                 var asyncTask = new AsyncTask(data);
                 asyncTask.post().then(function (response) {
+                    alert(response);
+                    console.log(response);
                     location.replace('https://vigorous-pare-c359c5.netlify.app/orderinfo.htmll?id='+order_id);
                 })
 
