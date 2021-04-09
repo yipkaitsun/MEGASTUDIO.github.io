@@ -51,7 +51,10 @@
                 $("#subtotal").append('<p class="order_title">Order Subtotal</p>'+
                 '<span class="space15" ></span >'+
                 '<div class="orderContent"><p>$'+subtotal+'</p></div>');
-
+				
+                $("#total").append('<p class="order_title total">Total</p>'+
+				'<span class="space15"></span>'+
+                    '<div class="orderContent"><p>$' + subtotal+'</p></div>')
 			})
             
         });
@@ -92,9 +95,7 @@
 		</div>
 		
 		<div id="total">
-			<p class="order_title total">Total</p>
-			<span class="space15"></span>
-			<div class="orderContent"><p>$2888</p></div>
+			
 		</div>
 		
 		</div>
