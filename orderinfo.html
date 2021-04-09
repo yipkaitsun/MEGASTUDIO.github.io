@@ -27,6 +27,7 @@
             }
             var asyncTask = new AsyncTask(data);
 			asyncTask.post().then(function (response) {
+				console.log(response);
 				response.content.order.product_list.forEach(function (product) {
 
                     $("#order_product").append('<div class="detail">'+
