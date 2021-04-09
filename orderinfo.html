@@ -54,7 +54,27 @@
 				
                 $("#total").append('<p class="order_title total">Total</p>'+
 				'<span class="space15"></span>'+
-                    '<div class="orderContent"><p>$' + subtotal+'</p></div>')
+					'<div class="orderContent"><p>$' + subtotal + '</p></div>')
+
+                $("#contactName").append('<p class= "order_title" >Contact Person</p>'+
+					'<span class="space15"></span>' +
+                    '<div class="orderContent"><p>' + response.content.order.delivery_info.name + '</p></div>');
+			
+				$("#phone").append('<p class= "order_title" >Phone Number</p>'+
+					'<span class="space15"></span>' +
+					'<div class="orderContent"><p>' + response.content.order.delivery_info.phone + '</p></div>');
+
+                $("#email").append('<p class= "order_title" >Email Address</p>' +
+					'<span class="space15"></span>' +
+                    '<div class="orderContent"><p>' + response.content.order.delivery_info.email + '</p></div>');
+
+                $("#deliveryDistrict").append('<p class= "order_title" >Delivery District</p>' +
+					'<span class="space15"></span>' +
+					'<div class="orderContent"><p>' + response.content.order.delivery_info.district + '</p></div>');
+
+                $("#address").append('<p class= "order_title" >Full Address</p>' +
+					'<span class="space15"></span>' +
+                    '<div class="orderContent"><p>' + response.content.order.delivery_info.address + '</p></div>');
 			})
             
         });
@@ -104,37 +124,15 @@
 		
 		<div id="OrderContact">
 		
-		<div id="contactName">
-			<p class="order_title">Contact Person</p>
-			<span class="space15"></span>
-			<div class="orderContent"><p>Mr. Chan</p></div>
-		</div>
+		<div id="contactName"></div>
 		
-		<div id="phone">
-			<p class="order_title">Phone Number</p>
-			<span class="space15"></span>
-			<div class="orderContent"><p>+852 63566078</p></div>
-		</div>
+		<div id="phone"></div>
 		
-		<div id="email">
-			<p class="order_title">Email Address</p>
-			<span class="space15"></span>
-			<div class="orderContent"><p>info@mega-root.com</p></div>
-		</div>
+		<div id="email"></div>
 		
-		<div id="deliveryDistrict">
-			<p class="order_title">Delivery District</p>
-			<span class="space15"></span>
-			<div class="orderContent"><p>New Territories</p></div>
-		</div>
+		<div id="deliveryDistrict"></div>
 		
-			<div id="address">
-			<p class="order_title">Full Address</p>
-			<span class="space15"></span>
-			<div class="orderContent">
-				<p>Unit 507, 5/F, Building 19W Hong Kong Science Park Pak Shek Kok</p>
-			</div>
-		</div>
+		<div id="address"></div>
 		
 		</div>
 		</div>
