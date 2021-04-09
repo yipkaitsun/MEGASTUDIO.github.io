@@ -74,7 +74,6 @@
             $("#checkoutForm").fadeIn();
             new ResizeSensor(jQuery('#checkoutForm'), function () {
                 var pos_checkoutForm = $(document).width() / 2;
-                console.log(pos_checkoutForm);
                 var width_checkoutForm = $('#checkoutForm').width() / 2;
                 $("#checkoutForm").css({ left: pos_checkoutForm - width_checkoutForm, position: 'absolute' });
                 $("#checkoutForm").fadeIn();

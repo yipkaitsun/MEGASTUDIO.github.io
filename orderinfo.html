@@ -27,7 +27,6 @@
             }
             var asyncTask = new AsyncTask(data);
 			asyncTask.post().then(function (response) {
-				console.log(response);
 				var subtotal = 0;
 				response.content.order.product_list.forEach(function (product) {
 					subtotal += parseInt(product.price) * parseInt(product.quantity);
@@ -139,8 +138,6 @@
 	</div>
 
 
-       
-       
         <div id="footer-container"></div>
 
 </body>

@@ -12,6 +12,10 @@ function GetCookies(name)
   return null;
 }
 
+function DeleteCookies(name) {
+    document.cookie = name+"=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;"
+}
+
 function setCart()
 {
   var array_cart=GetCookies("cart");
