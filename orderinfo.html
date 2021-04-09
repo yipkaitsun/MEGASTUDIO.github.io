@@ -27,7 +27,31 @@
             }
             var asyncTask = new AsyncTask(data);
 			asyncTask.post().then(function (response) {
-				console.log(response);
+				response.content.order.product_list.forEach(function (product) {
+
+					$("#order_product").append(
+					'< div class= "detail" >'+
+						'<div class="orderDetail_title">'+
+                        '<img class="order-img" src="' + product.thumbnail+'"/>'+
+						'</div>'+
+						'<div class="space50">'+
+                        '<p>' + product.name+'</p>'+
+							'<p>'+product.price+'</p>'+
+						'</div>'+
+						'<div class="orderDetailContent">'+
+						'<div class="orderQty">'+
+								'<p>x</p>'+
+                        '<p class="qty">' + product.quantity+'</p>'+
+						'</div>'+
+						'</div>'+
+					'</div>'
+                        );
+
+
+				})
+
+			
+
 			})
             
         });
@@ -52,55 +76,7 @@
 		
 		<div id="order_product">
 		
-		<div class="detail">
-			<div class="orderDetail_title">
-				<img class="order-img" src="https://img.joomcdn.net/f12ae245801c497319909caee632c7c1488d3774_original.jpeg"/>
-			</div>
-			<div class="space50">
-					<p>Orbi Pro by Netgear</p>
-					<p>$28888</p>
-			</div>
-			<div class="orderDetailContent">
-				<div class="orderQty">
-						<p>x</p>
-						<p class="qty">1</p>
-					</div>
-			</div>
-		</div>
-		
-		
-		<div class="detail">
-			<div class="orderDetail_title">
-				<img class="order-img" src="https://img.joomcdn.net/f12ae245801c497319909caee632c7c1488d3774_original.jpeg"/>
-			</div>
-			<div class="space50">
-			<p>Orbi Pro by Netgear</p>
-			<p>$28888</p>
-			</div>
-			<div class="orderDetailContent">
-				<div class="orderQty">
-						<p>x</p>
-						<p class="qty">1</p>
-					</div>
-			</div>
-		</div>
-		
-		<div class="detail">
-			<div class="orderDetail_title">
-				<img class="order-img" src="https://img.joomcdn.net/f12ae245801c497319909caee632c7c1488d3774_original.jpeg"/>
-			</div>
-			<div class="space50">
-			<p>Orbi Pro by Netgear</p>
-			<p>$28888</p>
-			</div>
-			<div class="orderDetailContent">
-				<div class="orderQty">
-						<p>x</p>
-						<p class="qty">1</p>
-				</div>
-			</div>
-		</div>
-		
+	
 		
 		</div>
 		
