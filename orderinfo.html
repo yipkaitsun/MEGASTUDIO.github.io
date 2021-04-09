@@ -28,29 +28,29 @@
             var asyncTask = new AsyncTask(data);
 			asyncTask.post().then(function (response) {
 				console.log(response);
+				var subtotal = 0;
 				response.content.order.product_list.forEach(function (product) {
-
-                    $("#order_product").append('<div class="detail">'+
-						'<div class="orderDetail_title">'+
-                        '<img class="order-img" src="' + product.thumbnail+'"/>'+
-						'</div>'+
-						'<div class="space50">'+
-                        '<p>' + product.name+'</p>'+
-							'<p>'+product.price+'</p>'+
-						'</div>'+
-						'<div class="orderDetailContent">'+
-						'<div class="orderQty">'+
-								'<p>x</p>'+
-                        '<p class="qty">' + product.quantity+'</p>'+
-						'</div>'+
-						'</div>'+
-					'</div>'
-                        );
-
-
-				})
-
-			
+					subtotal += parseInt(product.price);
+					$("#order_product").append('<div class="detail">' +
+						'<div class="orderDetail_title">' +
+						'<img class="order-img" src="' + product.thumbnail + '"/>' +
+						'</div>' +
+						'<div class="space50">' +
+						'<p>' + product.name + '</p>' +
+						'<p>' + product.price + '</p>' +
+						'</div>' +
+						'<div class="orderDetailContent">' +
+						'<div class="orderQty">' +
+						'<p>x</p>' +
+						'<p class="qty">' + product.quantity + '</p>' +
+						'</div>' +
+						'</div>' +
+						'</div>'
+					);
+				});
+                $("#subtotal").append('<p class="order_title">Order Subtotal</p>'+
+                '<span class="space15" ></span >'+
+                '<div class="orderContent"><p>$'+subtotal+'</p></div>');
 
 			})
             
@@ -83,11 +83,7 @@
 		<hr/>
 		<div id="OrderPrice">
 		
-		<div id="subtotal">
-			<p class="order_title">Order Subtotal</p>
-			<span class="space15"></span>
-			<div class="orderContent"><p>$2888</p></div>
-		</div>
+		<div id="subtotal"></div>
 		
 		<div id="devlivery">
 			<p class="order_title">Devlivery Fee</p>
