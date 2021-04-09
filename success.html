@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="./css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="./css/owl.carousel.min.css" />
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <!-- MyApi -->
+    <script src="./js/api.js"></script>
+    <!-- BackendApi -->
+    <script src="./js/AsynctTask.js"></script>
+    <script src="./js/owl.carousel.js"></script>
+    <script src="./js/drawer.js"></script>
+
+    <link rel="stylesheet" href="./css/mystyle.css" />
+
+    <script>
+        $(function () {
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            const status = urlParams.get('a');
+            const session_Id = urlParams.get('s');
+            const order_id = urlParams.get('t');
+
+            $("#header-container").load("header.html");
+            $("#footer-container").load("footer.html");
+            data = {
+                "path": "https://api.vexpo.ai/megastore/order/pay-session",
+                "param": {
+                    "session": session_Id,
+                }
+            }
+            var asyncTask = new AsyncTask(data);
+            asyncTask.post().then(function (response) {
+                data = {
+                    "path": "https://api.vexpo.ai/megastore/order/pay",
+                    "param": {
+                        "order_id": order_id,
+                        "payment_type": "credit-card",
+                        "payment_detail": JSON.stringify({
+                            "session": response.content.session,
+                            "customer": response.content.customer
+                        }),
+                        "amount": parseFloat(response.content.session.amount_subtotal)
+                    }
+                }
+                console.log(response.content.session);
+                console.log(response.content.customer);
+                var asyncTask = new AsyncTask(data);
+                asyncTask.post().then(function (response) {
+                    location.replace('https://vigorous-pare-c359c5.netlify.app/orderinfo.htmll?id='+order_id);
+                })
+
+            })
+
+        });
+    </script>
+
+</head>
+<body>
+  
+    
+    <div id="footer-container"></div>
+
+</body>
+</html>

@@ -18,41 +18,16 @@
 		$(function () {
                 const queryString = window.location.search;
                 const urlParams = new URLSearchParams(queryString);
-                const status = urlParams.get('a');
-				const session_Id = urlParams.get('s');
-				const order_id = urlParams.get('t');
-
+				const order_id = urlParams.get('id');
+			
             $("#header-container").load("header.html");
 			$("#footer-container").load("footer.html");
-            data = {
-                "path": "https://api.vexpo.ai/megastore/order/pay-session",
-                "param": {
-                    "session": session_Id,
-                }
+			data = {
+				"path": "https://api.vexpo.ai/megastore/order/" + order_id,
             }
             var asyncTask = new AsyncTask(data);
 			asyncTask.post().then(function (response) {
-                data = {
-                    "path": "https://api.vexpo.ai/megastore/order/pay",
-					"param": {
-						"order_id": order_id,
-                        "payment_type": "credit-card",
-                        "payment_detail": JSON.stringify({
-							"session": response.content.session,
-                            "customer":response.content.customer
-						}),
-                        "amount": parseFloat(response.content.session.amount_subtotal)
-                    }
-				}
-                console.log(response.content.session);
-                console.log(response.content.customer);
-                var asyncTask = new AsyncTask(data);
-                asyncTask.post().then(function (response) {
-					console.log(response);
-
-                })
-
-
+				console.log(response);
 			})
             
         });
