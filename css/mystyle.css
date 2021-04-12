@@ -13,6 +13,7 @@ html, body {
     overflow-x: hidden;
     margin: auto;
 		max-width:1000px;
+    position: unset !important;
 }
 #nevigation {
 	text-align: center;
