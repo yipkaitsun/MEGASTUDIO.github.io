@@ -260,10 +260,7 @@ svg.cd-cart-trigger {
 		display:inline-block!important;
 		vertical-align:top!important;
 		}
-	#Product > div:nth-child(2){
-		margin-left:20px;
 
-	}
 	#Product >.productcol> #name {
 	text-align: left;
 	}
