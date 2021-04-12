@@ -485,9 +485,28 @@ overflow:auto;
 	resize: none;
 }
 .form-container textarea::placeholder,.form-container input[type=text]::placeholder{
+	font-size: 14px
+}
 
-	font-family: inherit;
-	font-size: 20px
+.form-container textarea::-webkit-input-placeholder,.form-container input[type=text]::-webkit-input-placeholder {
+  font-family:  Arial, Helvetica, sans-serif;
+}
+
+.form-container textarea::-ms-input-placeholder,.form-container input[type=text]::-webkit-input-placeholder {
+  font-family:  Arial, Helvetica, sans-serif;
+}
+
+.form-container textarea::-moz-placeholder,.form-container input[type=text]::-webkit-input-placeholder {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-container textarea::-moz-placeholder,.form-container input[type=text]::-webkit-input-placeholder {
+  font-family:  Arial, Helvetica, sans-serif;
+}
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus, .form-container textarea:focus {
+	background-color: #ddd;
+	outline: none;
 }
 
 
