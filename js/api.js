@@ -69,7 +69,11 @@ function AddToCart() {
         new AsyncTask({ "path": "https://api.vexpo.ai/megastore/product/" + id, }).post().then(function (response) {
             $("#subtotal").text(current_subtotal + response.content.product.price * qty).animate({ 'opacity': 1 }, 400)
         })
-        $('#' + isExist).find('.number-input').val(newQty)
+        $('#' + isExist).find('.number-input').val(newQty);
+        new ResizeSensor(jQuery('#cd-cart'), function () {
+          var width=($("#cd-cart-items > li").width()*0.7 - 95)+"px" ;
+            $('.cd-cart-item-detail').css('width',width);
+        });
 
     }
     else {
@@ -83,7 +87,7 @@ function AddToCart() {
         document.cookie = "cart=" + str_cart;
         new AsyncTask({ "path": "https://api.vexpo.ai/megastore/product/" + id, }).post().then(function (response) {
             $("<li class='cart-li' data-id='" + index + "'><div class='cd-cart-img'><img class='cd-img' src='" + response.content.product.thumbnail + "'/></div><div class='cd-cart-item'><div class='cd-cart-item-detail'><div class='cd-name'>" + response.content.product.name_zh + "</div><div class='cd-price'>$" + response.content.product.price * qty + "</div></div><div class='cd-cart-item-spinner'><div id=" + index + " class='NumberSpinner' min='0' max='20'step='1' default='" + qty + "'></div></div></div></li>").hide().appendTo($('#cd-cart-items')).show('normal').ready($("#" + index).cart_htmlNumberSpinner());
-            $("#subtotal").text(current_subtotal + response.content.product.price * qty).animate({ 'opacity': 1 }, 400)
+            $("#subtotal").text(current_subtotal + response.content.product.price * qty).animate({ 'opacity': 1 }, 400);
             new ResizeSensor(jQuery('#cd-cart'), function () {
               var width=($("#cd-cart-items > li").width()*0.7 - 95)+"px" ;
                 $('.cd-cart-item-detail').css('width',width);
