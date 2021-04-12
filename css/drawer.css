@@ -1,5 +1,5 @@
 
-/* -------------------------------- 
+/* --------------------------------
 
 Modules - reusable parts of our design
 
@@ -26,9 +26,9 @@ Modules - reusable parts of our design
   white-space: nowrap;
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
-xheader 
+xheader
 
 -------------------------------- */
 
@@ -210,7 +210,7 @@ xheader
 }
 #cd-cart .cd-cart-items li {
   position: relative;
-  padding: 1em;
+  padding: 12px 15px;;
   border-top: 1px solid #e0e6ef;
 }
 #cd-cart .cd-cart-items li:last-child {
@@ -275,16 +275,16 @@ xheader
     padding: 0 2em;
   }
   #cd-cart .cd-cart-items li {
-    padding: 1em 2em;
+    padding: 12px 15px;;
   }
   #cd-cart .cd-item-remove {
     right: 2em;
   }
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
-xgallery 
+xgallery
 
 -------------------------------- */
 main {
@@ -357,9 +357,9 @@ main {
   animation: cd-fade-in 0.3s;
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
-xkeyframes 
+xkeyframes
 
 -------------------------------- */
 @-webkit-keyframes cd-fade-in {
@@ -407,7 +407,7 @@ xkeyframes
 .cd-cart-item{
     width: 70%;
     margin-left: 10px;
-  
+
 }
 .cd-cart-img{
 	width: 20%;
