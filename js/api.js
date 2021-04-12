@@ -38,7 +38,7 @@ function setCart()
             .sort(function(a, b) { return $(a).data("id") - $(b).data("id"); })
             .appendTo("#cd-cart-items");
             new ResizeSensor(jQuery('#cd-cart'), function () {
-                $("#cd-cart-item-detail").css({ width: ($("#cd-cart-items > li").width()*0.7 - 85)+"px" });
+              console.log(($("#cd-cart-items > li").width()*0.7 - 85)+"px" );
             });
           }
         })
