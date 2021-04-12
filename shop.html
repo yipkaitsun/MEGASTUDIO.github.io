@@ -26,16 +26,16 @@
                 response.content.product.forEach(function(product)
                 {
                  if (product.name_zh.length > 30)
-                  $("#product").append("<a href ='./product.html?id=" + product.id + "' class='grid'>  <img class='thumbnail' src='" + product.thumbnail + "' /> <p>" + product.name_zh.substring(0,30)+" ... " + "</p>  <p>$" + product.price + "</p></a>");
+                  $("#product").append("<a href ='./product.html?id=" + product.id + "' class='grid'>  <div class='thumbnail' style=background-image:url('" + product.thumbnail + "');background-size:cover /> <p>" + product.name_zh.substring(0,30)+" ... " + "</p>  <p>$" + product.price + "</p></a>");
                  else
-                  $("#product").append("<a href ='./product.html?id=" + product.id + "' class='grid'>  <img class='thumbnail' src='" + product.thumbnail + "' /> <p>" + product.name_zh + "</p>  <p>$" + product.price + "</p></a>");
+                  $("#product").append("<a href ='./product.html?id=" + product.id + "' class='grid'>  <div class='thumbnail' style=background-image:url('" + product.thumbnail + "');background-size:cover /> <p>" + product.name_zh + "</p>  <p>$" + product.price + "</p></a>");
 
                 });
                 }
             );
-            new ResizeSensor(jQuery('#product'), function()
+            new ResizeSensor(jQuery(document.body), function()
               {
-                $('.thumbnail').css('height', $('#product > a:nth-child(2) > img').width()+'px');
+                $('.thumbnail').css('height',  ($('body').width())* 0.313 +'px');
               })
             $("#header-container").load("header.html");
             $("#footer-container").load("footer.html");
@@ -60,7 +60,7 @@
 
         </div>
           <div id="product" class="grid-3" style="margin:auto;text-align: left;"></div>
-            
+
     </div>
         <div id="footer-container"></div>
 
