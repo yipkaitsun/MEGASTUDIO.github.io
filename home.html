@@ -64,8 +64,9 @@
             $("#header-container").load("header.html");
             $("#footer-container").load("footer.html");
             var thumbnail=$("#FeactureProduct > a:nth-child(1) > div");
-            new ResizeSensor($("#FeactureProduct > a:nth-child(1) > div"), function()
+            new ResizeSensor($("#FeactureProduct > a:nth-child(1) > div") , function()
               {
+                console.log(thumbnail.width());
                 $('.thumbnail').css('height',  (thumbnail.width())+'px');
               })
 
