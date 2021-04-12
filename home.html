@@ -65,8 +65,8 @@
             $("#footer-container").load("footer.html");
             new ResizeSensor(jQuery(document.body), function()
               {
-                console.log(jQuery(document.body).width()* 31.3% +'px');
-                $('.thumbnail').css('height', jQuery(document.body).width()* 31.3% +'px');
+                console.log($('body').width());
+                $('.thumbnail').css('height', $('body').width()* 31.3% +'px');
               })
 
 
