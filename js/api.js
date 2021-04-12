@@ -39,7 +39,8 @@ function setCart()
             .appendTo("#cd-cart-items");
             new ResizeSensor(jQuery('#cd-cart'), function () {
               var width=($("#cd-cart-items > li").width()*0.7 - 95)+"px" ;
-                $('.cd-cart-item-detail').css('width',width);
+                $('.cd-cart-item-detail').css('width',);
+
             });
           }
         })
@@ -69,11 +70,7 @@ function AddToCart() {
         new AsyncTask({ "path": "https://api.vexpo.ai/megastore/product/" + id, }).post().then(function (response) {
             $("#subtotal").text(current_subtotal + response.content.product.price * qty).animate({ 'opacity': 1 }, 400)
         })
-        $('#' + isExist).find('.number-input').val(newQty);
-        new ResizeSensor(jQuery('#cd-cart'), function () {
-          var width=($("#cd-cart-items > li").width()*0.7 - 95)+"px" ;
-            $('.cd-cart-item-detail').css('width',width);
-        });
+        $('#' + isExist).find('.number-input').val(newQty)
 
     }
     else {
@@ -90,7 +87,8 @@ function AddToCart() {
             $("#subtotal").text(current_subtotal + response.content.product.price * qty).animate({ 'opacity': 1 }, 400);
             new ResizeSensor(jQuery('#cd-cart'), function () {
               var width=($("#cd-cart-items > li").width()*0.7 - 95)+"px" ;
-                $('.cd-cart-item-detail').css('width',width);
+                $('.cd-cart-item-detail').css('width',);
+
             });
         })
     }
