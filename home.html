@@ -63,10 +63,10 @@
                 });
             $("#header-container").load("header.html");
             $("#footer-container").load("footer.html");
-            new ResizeSensor(jQuery(body), function()
+            new ResizeSensor(jQuery(document.body), function()
               {
-                console.log($(body).width()* 31.3% +'px');
-                $('.thumbnail').css('height', $(body).width()* 31.3% +'px');
+                console.log($(document.body).width()* 31.3% +'px');
+                $('.thumbnail').css('height', $(document.body).width()* 31.3% +'px');
               })
 
 
