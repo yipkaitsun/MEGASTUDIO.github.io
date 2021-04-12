@@ -39,7 +39,7 @@ function setCart()
             .appendTo("#cd-cart-items");
             new ResizeSensor(jQuery('#cd-cart'), function () {
               var width=($("#cd-cart-items > li").width()*0.7 - 95)+"px" ;
-                $('.cd-cart-item-detail').css('width',width);
+                console.log(width);
 
             });
           }
