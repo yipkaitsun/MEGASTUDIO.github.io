@@ -83,6 +83,7 @@ html, body {
 	outline: none;
 	display:block;
 	margin:auto;
+	font-size:large;
 }
 .moreButton:hover, .contact-btn:hover, .creditcard-btn:hover {
 		border-color: lightblue
