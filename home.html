@@ -66,7 +66,7 @@
             var thumbnail=$("#FeactureProduct > a:nth-child(1) > div");
             new ResizeSensor(jQuery("#FeactureProduct"), function()
               {
-                console.log(thumbnail.width());
+                $('.thumbnail').css('height',  ($('#FeactureProduct').width())* 0.313 +'px');
               })
 
 
