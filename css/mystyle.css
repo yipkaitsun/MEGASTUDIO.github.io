@@ -67,11 +67,13 @@ html, body {
 .grid {
 	width: calc(31.3%);
 	display: inline-block;
-	margin-left: 1%;
-	margin-right: 1%;
 	vertical-align: top;
 	text-align: center;
 	margin-bottom: 1%;
+}
+.grid2{
+	margin-left: 3%;
+	margin-right: 3%;
 }
 .grid>img {
 	width:100%;
