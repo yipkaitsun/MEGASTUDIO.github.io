@@ -32,14 +32,14 @@
                   response.content.product.forEach(function(product)
                   {
                    if (product.name_zh.length > 30)
-                    $("#FeactureProduct").append('<a href ="./product.html?id=' + product.id + '" class="grid"><div class="thumbnail" style=background-image:url("' + product.thumbnail + '");background-size:cover;height:313px/><p>' + product.name_zh.substring(0,30)+" ... " + '</p><p>$' + product.price + '</p></a>');
+                    $("#FeactureProduct").append('<a href ="./product.html?id=' + product.id + '" class="grid"><div class="thumbnail" style=background-image:url("' + product.thumbnail + '");background-size:cover/><p>' + product.name_zh.substring(0,30)+" ... " + '</p><p>$' + product.price + '</p></a>');
                    else
-                    $("#FeactureProduct").append('<a href ="./product.html?id=' + product.id + '" class="grid"><div class="thumbnail" style=background-image:url("' + product.thumbnail + '");background-size:cover;height:313px/><p>'+product.name_zh+'</p><p>$'+product.price+'</p></a>');
+                    $("#FeactureProduct").append('<a href ="./product.html?id=' + product.id + '" class="grid"><div class="thumbnail" style=background-image:url("' + product.thumbnail + '");background-size:cover/><p>'+product.name_zh+'</p><p>$'+product.price+'</p></a>');
                   });
 
                   response.content.article.forEach(function(article)
                   {
-                    $("#article").append('<a href="./article.html?id='+article.id+'" class="grid"><div class="thumbnail" style=background-image:url("'+article.thumbnail+'");background-size:cover;height:calc(26.605vw)/></a>');
+                    $("#article").append('<a href="./article.html?id='+article.id+'" class="grid"><div class="thumbnail" style=background-image:url("'+article.thumbnail+'");background-size:cover;/></a>');
                   });
 
 
@@ -63,7 +63,12 @@
                 });
             $("#header-container").load("header.html");
             $("#footer-container").load("footer.html");
+            new ResizeSensor(jQuery('body'), function()
+              {
+                $('.thumbnail').css('height', ($('body').width()* 31.3%) +'px');
+              })
 
+          });
 
         });
     </script>
