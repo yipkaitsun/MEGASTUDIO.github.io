@@ -88,7 +88,11 @@ function AddToCart() {
                 $('.cd-cart-item-detail').css('width',width);
 
 
-        
+            new ResizeSensor(jQuery('#cd-cart'), function () {
+               var width=(($("#cd-cart-items").width()-30)*0.7 - 95)+"px" ;
+                $('.cd-cart-item-detail').css('width',width);
+
+            });
         })
     }
 
