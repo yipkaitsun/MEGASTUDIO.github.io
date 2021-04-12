@@ -33,7 +33,7 @@
                 });
                 }
             );
-            new ResizeSensor(jQuery(document.body), function()
+            new ResizeSensor($('body'), function()
               {
                 console.log(($('body').width())* 0.313 +'px')
                 $('.thumbnail').css('height',  ($('body').width())* 0.313 +'px');
