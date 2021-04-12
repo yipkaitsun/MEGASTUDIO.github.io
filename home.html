@@ -32,9 +32,9 @@
                   response.content.product.forEach(function(product)
                   {
                    if (product.name_zh.length > 30)
-                    $("#FeactureProduct").append('<a href ="./product.html?id=' + product.id + '" class="grid"><image class="thumbnail" src=' + product.thumbnail + '/><p>' + product.name_zh.substring(0,30)+" ... " + '</p><p>$' + product.price + '</p></a>');
+                    $("#FeactureProduct").append('<a href ="./product.html?id=' + product.id + '" class="grid"><div class="thumbnail" style=background-image:url（"' + product.thumbnail + '");background-size:cover;height:calc(31.3vw)/><p>' + product.name_zh.substring(0,30)+" ... " + '</p><p>$' + product.price + '</p></a>');
                    else
-                    $("#FeactureProduct").append('<a href ="./product.html?id=' + product.id + '" class="grid"><image class="thumbnail" src=' + product.thumbnail + '/><p>'+product.name_zh+'</p><p>$'+product.price+'</p></a>');
+                    $("#FeactureProduct").append('<a href ="./product.html?id=' + product.id + '" class="grid"><div class="thumbnail" style=background-image:url（"' + product.thumbnail + '");background-size:cover;height:calc(31.3vw)/><p>'+product.name_zh+'</p><p>$'+product.price+'</p></a>');
                   });
 
                   response.content.article.forEach(function(article)
@@ -63,10 +63,7 @@
                 });
             $("#header-container").load("header.html");
             $("#footer-container").load("footer.html");
-            new ResizeSensor(jQuery('#FeactureProduct'), function()
-              {
-                $('.thumbnail').css('height', $('#FeactureProduct > a:nth-child(4) > img').width()+'px');
-              })
+
 
         });
     </script>
