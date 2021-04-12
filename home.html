@@ -32,9 +32,9 @@
                   response.content.product.forEach((product,index) =>
                   {
                    if (product.name_zh.length > 30)
-                    $("#FeactureProduct").append('<a href ="./product.html?id=' + product.id + '" class="grid"><div class="thumbnail" style=background-image:url("' + product.thumbnail + '");background-size:cover/><p>' + product.name_zh.substring(0,30)+" ... " + '</p><p>$' + product.price + '</p></a>');
+                    $("#FeactureProduct").append('<a href ="./product.html?id=' + product.id + '" class="grid grid'+(index+1)+'"><div class="thumbnail" style=background-image:url("' + product.thumbnail + '");background-size:cover/><p>' + product.name_zh.substring(0,30)+" ... " + '</p><p>$' + product.price + '</p></a>');
                    else
-                    $("#FeactureProduct").append('<a href ="./product.html?id=' + product.id + '" class="grid"><div class="thumbnail" style=background-image:url("' + product.thumbnail + '");background-size:cover/><p>'+product.name_zh+'</p><p>$'+product.price+'</p></a>');
+                    $("#FeactureProduct").append('<a href ="./product.html?id=' + product.id + '" class="grid grid'+(index+1)+'"><div class="thumbnail" style=background-image:url("' + product.thumbnail + '");background-size:cover/><p>'+product.name_zh+'</p><p>$'+product.price+'</p></a>');
                   });
 
                   response.content.article.forEach(function(article)
