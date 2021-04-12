@@ -37,8 +37,11 @@ function setCart()
             $("#cd-cart-items > li")
             .sort(function(a, b) { return $(a).data("id") - $(b).data("id"); })
             .appendTo("#cd-cart-items");
-              var width=($("#cd-cart-items > li").width()*0.7 - 95)+"px" ;
+            new ResizeSensor(jQuery('#cd-cart'), function () {
+               var width=(($("#cd-cart-items").width()-30)*0.7 - 95)+"px" ;
                 $('.cd-cart-item-detail').css('width',width);
+
+            });
 
 
           }
