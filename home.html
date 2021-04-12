@@ -32,14 +32,14 @@
                   response.content.product.forEach(function(product)
                   {
                    if (product.name_zh.length > 30)
-                    $("#FeactureProduct").append('<a href ="./product.html?id=' + product.id + '" class="grid"><div class="thumbnail" style=background-image:url("' + product.thumbnail + '");background-size:cover;height:calc(31.3vw)/><p>' + product.name_zh.substring(0,30)+" ... " + '</p><p>$' + product.price + '</p></a>');
+                    $("#FeactureProduct").append('<a href ="./product.html?id=' + product.id + '" class="grid"><div class="thumbnail" style=background-image:url("' + product.thumbnail + '");background-size:cover;height:calc(26.605vw)/><p>' + product.name_zh.substring(0,30)+" ... " + '</p><p>$' + product.price + '</p></a>');
                    else
-                    $("#FeactureProduct").append('<a href ="./product.html?id=' + product.id + '" class="grid"><div class="thumbnail" style=background-image:url("' + product.thumbnail + '");background-size:cover;height:calc(31.3vw)/><p>'+product.name_zh+'</p><p>$'+product.price+'</p></a>');
+                    $("#FeactureProduct").append('<a href ="./product.html?id=' + product.id + '" class="grid"><div class="thumbnail" style=background-image:url("' + product.thumbnail + '");background-size:cover;height:calc(26.605vw)/><p>'+product.name_zh+'</p><p>$'+product.price+'</p></a>');
                   });
 
                   response.content.article.forEach(function(article)
                   {
-                    $("#article").append("<a href='./article.html?id="+article.id+"' class='grid'><img class='thumbnail' src='"+article.thumbnail+"'/></a>");
+                    $("#article").append("<a href='./article.html?id="+article.id+"' class='grid'><div class='thumbnail' style=background-image:url('"+article.thumbnail+"';background-size:cover;height:calc(26.605vw)/></a>");
                   });
 
 
