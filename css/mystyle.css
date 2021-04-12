@@ -166,7 +166,7 @@ img.footer-icon {
     width: 9em;
     height: 9em;
     background-color: #fff;
-    position: absolute;
+    position: fixed;
     right: 0px;
     top: 0px;
 	z-index: -1;
