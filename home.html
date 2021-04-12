@@ -29,7 +29,7 @@
                     $(".owl-carousel").append('<div class="item"><img style="width:100%;height:auto" src="'+slide.src+'" /></div>');
                   });
 
-                  response.content.product.forEach((index,product)=>
+                  response.content.product.forEach((product) =>
                   {
                    if (product.name_zh.length > 30)
                     $("#FeactureProduct").append('<a href ="./product.html?id=' + product.id + '" class="grid"><div class="thumbnail" style=background-image:url("' + product.thumbnail + '");background-size:cover/><p>' + product.name_zh.substring(0,30)+" ... " + '</p><p>$' + product.price + '</p></a>');
