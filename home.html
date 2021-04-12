@@ -37,9 +37,9 @@
                     $("#FeactureProduct").append('<a href ="./product.html?id=' + product.id + '" class="grid grid'+(index+1)+'"><div class="thumbnail" style=background-image:url("' + product.thumbnail + '");background-size:cover/><p>'+product.name_zh+'</p><p>$'+product.price+'</p></a>');
                   });
 
-                  response.content.article.forEach(function(article)
+                  response.content.article.forEach((article,index)=>
                   {
-                    $("#article").append('<a href="./article.html?id='+article.id+'" class="grid"><div class="thumbnail" style=background-image:url("'+article.thumbnail+'");background-size:cover;/></a>');
+                    $("#article").append('<a href="./article.html?id='+article.id+'" class="grid grid'+(index+1)+'"><div class="thumbnail" style=background-image:url("'+article.thumbnail+'");background-size:cover;/></a>');
                   });
 
 
