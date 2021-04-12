@@ -11,7 +11,7 @@
     <script src="./js/AsynctTask.js"></script>
 	<script src="./js/owl.carousel.js"></script>
 	<script src="./js/drawer.js"></script>
-	
+
 	<link rel="stylesheet" href="./css/mystyle.css" />
 
     <script>
@@ -19,7 +19,7 @@
                 const queryString = window.location.search;
                 const urlParams = new URLSearchParams(queryString);
 				const order_id = urlParams.get('id');
-			
+
             $("#header-container").load("header.html");
 			$("#footer-container").load("footer.html");
 			data = {
@@ -53,7 +53,7 @@
 				 $("#subtotal").append('<p class="order_title">Order Subtotal</p>'+
                 '<span class="space15" ></span >'+
                 '<div class="orderContent"><p>$'+subtotal+'</p></div>');
-				
+
                 $("#total").append('<p class="order_title total">Total</p>'+
 				'<span class="space15"></span>'+
 					'<div class="orderContent"><p>$' + subtotal + '</p></div>')
@@ -61,7 +61,7 @@
                 $("#contactName").append('<p class= "order_title" >Contact Person</p>'+
 					'<span class="space15"></span>' +
                     '<div class="orderContent"><p>' + response.content.order.delivery_info.name + '</p></div>');
-			
+
 				$("#phone").append('<p class= "order_title" >Phone Number</p>'+
 					'<span class="space15"></span>' +
 					'<div class="orderContent"><p>' + response.content.order.delivery_info.phone + '</p></div>');
@@ -77,8 +77,12 @@
                 $("#address").append('<p class= "order_title" >Full Address</p>' +
 					'<span class="space15"></span>' +
                     '<div class="orderContent"><p>' + response.content.order.delivery_info.address + '</p></div>');
+
+                $("#devlivery").append('<p class= "order_title" >Devlivery Fee</p>' +
+              '<span class="space15"></span>' +
+                        '<div class="orderContent"><p>' + "free" + '</p></div>');
 			})
-            
+
         });
     </script>
 
@@ -86,53 +90,53 @@
 <body>
     <div id="header-container"></div>
 	<div id="order">
-	
+
 		<div id="orderId"></div>
-		
+
 		<div id="status">
 			<h3>Status:</h3>
 			<h3 id="status">Pending Delivery</h3>
 		</div>
-		
+
 	<div id="info">
-		
+
 		<div id="order_product">
-		
-	
-		
+
+
+
 		</div>
-		
+
 		<hr/>
 		<div id="OrderPrice">
-		
+
 		<div id="subtotal"></div>
-		
+
 		<div id="devlivery">
 			<p class="order_title">Devlivery Fee</p>
 			<span class="space15"></span>
 			<div class="orderContent"><p>free</p></div>
 		</div>
-		
+
 		<div id="total">
-			
+
 		</div>
-		
+
 		</div>
-		
+
 		<hr/>
-		
+
 		<div id="OrderContact">
-		
+
 		<div id="contactName"></div>
-		
+
 		<div id="phone"></div>
-		
+
 		<div id="email"></div>
-		
+
 		<div id="deliveryDistrict"></div>
-		
+
 		<div id="address"></div>
-		
+
 		</div>
 		</div>
 	</div>
