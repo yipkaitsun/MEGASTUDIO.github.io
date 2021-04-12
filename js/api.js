@@ -37,11 +37,10 @@ function setCart()
             $("#cd-cart-items > li")
             .sort(function(a, b) { return $(a).data("id") - $(b).data("id"); })
             .appendTo("#cd-cart-items");
-            new ResizeSensor(jQuery('#cd-cart'), function () {
               var width=($("#cd-cart-items > li").width()*0.7 - 95)+"px" ;
-                console.log(width);
+                $('.cd-cart-item-detail').css('width',width);
 
-            });
+
           }
         })
       });
@@ -85,6 +84,10 @@ function AddToCart() {
         new AsyncTask({ "path": "https://api.vexpo.ai/megastore/product/" + id, }).post().then(function (response) {
             $("<li class='cart-li' data-id='" + index + "'><div class='cd-cart-img'><img class='cd-img' src='" + response.content.product.thumbnail + "'/></div><div class='cd-cart-item'><div class='cd-cart-item-detail'><div class='cd-name'>" + response.content.product.name_zh + "</div><div class='cd-price'>$" + response.content.product.price * qty + "</div></div><div class='cd-cart-item-spinner'><div id=" + index + " class='NumberSpinner' min='0' max='20'step='1' default='" + qty + "'></div></div></div></li>").hide().appendTo($('#cd-cart-items')).show('normal').ready($("#" + index).cart_htmlNumberSpinner());
             $("#subtotal").text(current_subtotal + response.content.product.price * qty).animate({ 'opacity': 1 }, 400);
+
+              var width=($("#cd-cart-items > li").width()*0.7 - 95)+"px" ;
+                $('.cd-cart-item-detail').css('width',width);
+
             new ResizeSensor(jQuery('#cd-cart'), function () {
               var width=($("#cd-cart-items > li").width()*0.7 - 95)+"px" ;
                 $('.cd-cart-item-detail').css('width',width);
