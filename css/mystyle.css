@@ -38,7 +38,8 @@ html, body {
 .owl-nav {
 	width: 100%;
 	position: absolute;
-	top: calc(50% - 1rem);
+	top: calc(50% );
+	max-width: 1000px;
 }
 .owl-prev,.owl-next{
 	position: absolute;
