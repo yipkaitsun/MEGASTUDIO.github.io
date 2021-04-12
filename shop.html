@@ -33,11 +33,11 @@
                 });
                 }
             );
-            new ResizeSensor($('body'), function()
+            new ResizeSensor(jQuery("#product"), function()
               {
-                console.log(($('body').width())* 0.313 +'px')
-                $('.thumbnail').css('height',  ($('body').width())* 0.313 +'px');
+                $('.thumbnail').css('height',  ($('#product').width())* 0.313 +'px');
               })
+
             $("#header-container").load("header.html");
             $("#footer-container").load("footer.html");
       });
