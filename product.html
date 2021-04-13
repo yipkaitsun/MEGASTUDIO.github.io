@@ -44,7 +44,7 @@
             });
           $("#addQty").htmlNumberSpinner();
           $("#description").append(response.content.product.description);
-          
+
       		new ResizeSensor(jQuery('#productDes'), function()
           {
             $('.pgwSlider').css('height', $('.ps-current').height()+'px');
@@ -66,6 +66,8 @@
             }
             else
             {
+              console.log(pos_productcol.top);
+              console.log(height_productDes);
               $("#productDetail").css({
               position: "absolute",
               left: pos_ps_current.left + "px",
