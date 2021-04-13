@@ -101,12 +101,9 @@ xheader
 #main-nav, #cd-cart {
   position: fixed;
   top: 0;
-  height: 100%;
   width: 260px;
   /* header height */
   padding-top: 25px;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   z-index: 3;
 }
@@ -205,9 +202,12 @@ xheader
   text-transform: uppercase;
   margin: 1em 0;
 }
-#cd-cart .cd-cart-items {
-  padding: 0;
-}
+    #cd-cart .cd-cart-items {
+        padding: 0;
+        height: calc(100vh - 290px);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
 #cd-cart .cd-cart-items li {
   position: relative;
   padding: 12px 15px;;

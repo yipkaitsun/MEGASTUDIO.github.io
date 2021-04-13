@@ -351,12 +351,6 @@ svg.cd-cart-trigger {
 }
 
 
-#cd-cart > ul > li{
-
-	height:auto;
-min-height: 100%;
-overflow:auto;
-}
 
 
 .productcol>#price,.productcol>#quantity,.price_title.total{
