@@ -81,7 +81,7 @@
             new ResizeSensor(jQuery('#checkoutForm'), function () {
                 var pos_checkoutForm = $(document).width() / 2;
                 var width_checkoutForm = $('#checkoutForm').width() / 2;
-                $("#checkoutForm").css({ left: pos_checkoutForm - width_checkoutForm, position: 'absolute' });
+                $("#checkoutForm").css({ left: pos_checkoutForm - width_checkoutForm, position: 'fixed' });
                 $("#checkoutForm").fadeIn();
             });
 
