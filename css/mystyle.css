@@ -1,6 +1,6 @@
 @font-face {
   font-family:"RobotoMono-Regular";
-  src: url("./font/RobotoMono-Regular.ttf") format("truetype");
+  src: url("../font/RobotoMono-Regular.ttf") format("truetype");
 }
 #header > img {
 	height: 7vh;
