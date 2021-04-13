@@ -201,6 +201,7 @@ xheader
   font-weight: bold;
   text-transform: uppercase;
   margin: 1em 0;
+  width:80%
 }
     #cd-cart .cd-cart-items {
         padding: 0;
