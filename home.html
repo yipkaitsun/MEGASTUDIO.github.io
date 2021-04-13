@@ -45,7 +45,14 @@
                   });
 
 
-                   $('.owl-carousel').slick();
+                   $('.owl-carousel').slick({
+                     dots: true,
+                     infinite: true,
+                     speed: 300,
+                     slidesToShow: 1,
+                     adaptiveHeight: true
+
+                   });
                 });
             $("#header-container").load("header.html");
             $("#footer-container").load("footer.html");
