@@ -45,7 +45,7 @@
           $("#addQty").htmlNumberSpinner();
           $("#description").append(response.content.product.description);
 
-      		new ResizeSensor(jQuery('#productDes'), function()
+      		new ResizeSensor(jQuery(window), function()
           {
             $('.pgwSlider').css('height', $('.ps-current').height()+'px');
       			var width_productDes = $('#productDes').width();
@@ -64,10 +64,9 @@
   					    })
       			   $('#Product').css('height','100%');
             }
+
             else
             {
-              console.log(pos_productcol);
-              console.log(height_productDes);
               $("#productDetail").css({
               position: "absolute",
               left: pos_ps_current.left + "px",
