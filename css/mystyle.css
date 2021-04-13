@@ -596,6 +596,7 @@ a {
 .backTo >* {
 	display:inline-block;
 	vertical-align: middle;
+	font-size: 14px;
 }
 .backIcon{
 	padding-right:10px;
