@@ -45,7 +45,7 @@
           $("#addQty").htmlNumberSpinner();
           $("#description").append(response.content.product.description);
 
-      		new ResizeSensor(jQuery(body), function()
+      		new ResizeSensor($(body), function()
           {
             $('.pgwSlider').css('height', $('.ps-current').height()+'px');
       			var width_productDes = $('#productDes').width();
