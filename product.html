@@ -51,7 +51,7 @@
     			  var height_productDes = $('#productDes').height();
     			  var height_productDetail = $('#productDetail').height();
     			  var pos_productcol = $('#productDes').position();
-    			  var pos_ps_current = $('.ps-current').position();
+    			  var pos_ps_current = $('.ps-current').offset();
       			if($(window).width()<=768)
             {
               $("#productDetail").css(
@@ -67,7 +67,7 @@
             {
               $("#productDetail").css({
               position: "absolute",
-              left: pos_ps_current.left+250 + "px",
+              left: pos_ps_current.left + "px",
               top: (pos_productcol.bottom) + "px",
               width:(width_productDes-pos_ps_current.left)+ "px",
       			})
