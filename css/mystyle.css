@@ -626,3 +626,8 @@ html.overflow-hiden {
 	background-color: rgba(0,0,0,0.5);
 	z-index: 2;
 }
+
+button {
+    border-width: thin;
+    border-color: #7b7b7b;
+}
