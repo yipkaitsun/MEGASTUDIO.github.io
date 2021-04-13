@@ -208,6 +208,7 @@ xheader
         height: calc(100vh - 290px);
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
+        margin-top: 0px;
     }
 #cd-cart .cd-cart-items li {
   position: relative;
