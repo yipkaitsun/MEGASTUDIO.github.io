@@ -592,3 +592,11 @@ a {
 #nevigation > .item > a{
 	color:#000;
 }
+
+#backTo >* {
+	display:inline-block;
+	vertical-align: middle;
+}
+#backIcon{
+	padding-right:10px;
+}
