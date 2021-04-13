@@ -1,6 +1,11 @@
 @font-face {
-  font-family:"RobotoMono-Regular";
+  font-family:"RobotoMono-Regular",;
   src: url("../font/RobotoMono-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family:"NotoSans-Regular",;
+  src: url("../font/NotoSans-Regular.ttf") format("truetype");
 }
 #header > img {
 	height: 7vh;
