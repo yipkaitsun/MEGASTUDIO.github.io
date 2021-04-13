@@ -93,10 +93,10 @@
     color: black;
     content: '';
     display: inline-block;
-    height: 25px;
-    width: 25px;
+    height: 20px;
+    width: 20px;
     margin-right: 5px;
-    background-size: 25px 25px;
+    background-size: 20px 20px;
 }
 [dir='rtl'] .slick-prev:before
 {
@@ -118,10 +118,10 @@
     color: black;
     content: '';
     display: inline-block;
-    height: 25px;
-    width: 25px;
+    height: 20px;
+    width: 20px;
     margin-right: 5px;
-    background-size: 25px 25px;
+    background-size: 20px 20px;
 }
 [dir='rtl'] .slick-next:before
 {
