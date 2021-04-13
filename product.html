@@ -35,7 +35,7 @@
         {
           $("#name").append(response.content.product.name_zh);
           $("#price").append('$ '+response.content.product.price +' HKD');
-          $(".pgwSlider").append("<li><img src='"+response.content.product.thumbnail+"'/></li><li><img src='"+response.content.product.thumbnail+"' /></li><li><img src='"+response.content.product.thumbnail+"' /></li>")
+          $(".pgwSlider").append("<li><img src='"+response.content.product.thumbnail+"' /></li>")
           var pgwSlider = $('.pgwSlider').pgwSlider();
           pgwSlider.reload(
             {
