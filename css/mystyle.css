@@ -611,3 +611,7 @@ a {
 .backIcon{
 	padding-right:8px;
 }
+
+.overflow-hidden{
+	overflow: hidden;
+}
