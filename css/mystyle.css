@@ -612,7 +612,7 @@ a {
 	padding-right:8px;
 }
 
-.overflow-hidden{
+html.overflow-hiden {
 	overflow: hidden;
 }
 #overlay{
