@@ -31,8 +31,7 @@
 				response.content.order.product_list.forEach(function (product) {
 					subtotal += parseInt(product.price) * parseInt(product.quantity);
 					$("#order_product").append('<div class="detail">' +
-						'<div class="orderDetail_title">' +
-						'<img class="order-img" src="' + product.thumbnail + '"/>' +
+                        '<div class="orderDetail_title" style=url("'+ product.thumbnail+'")>' +
 						'</div>' +
 						'<div class="space50">' +
 						'<p>' + product.name + '</p>' +
