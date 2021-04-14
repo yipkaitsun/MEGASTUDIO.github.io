@@ -11,7 +11,7 @@
     <script src="./js/api.js"></script>
     <script src="./js/cart_NumberSpinner.js"></script>
     <script>
-
+        var sensor = null;
         $(function () {
             setCart();
 
@@ -80,17 +80,18 @@
 
 
             $("#checkoutForm").fadeIn();
-            new ResizeSensor(jQuery('html'), function () {
+            sensor=new ResizeSensor(jQuery('html'), function () {
                 var pos_checkoutForm = $(document).width() / 2;
                 var width_checkoutForm = $('#checkoutForm').width() / 2;
                 $("#checkoutForm").css({ left: pos_checkoutForm - width_checkoutForm, position: 'fixed' });
 
             });
 
-
         }
 
         function Closeform() {
+            ResizeSensor.detach(jQuery('html'));
+            sensor.detach();
             $("#checkoutForm").fadeOut(
                 "normal", function () {
                     $(this).remove();
