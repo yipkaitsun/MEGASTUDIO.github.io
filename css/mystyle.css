@@ -136,9 +136,6 @@
 	padding-left: 11px;
 }
 
-.inputWithIcon > input[type=text]:focus {
-		width: calc(100% - 128px);
-	}
 
 .inputWithIcon {
 	position: relative;
