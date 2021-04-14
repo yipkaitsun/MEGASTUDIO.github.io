@@ -415,7 +415,8 @@ xkeyframes
     width: 20%;
     height: 0px;
     padding-bottom: 20%;
-    background-size: contain;
+    background-size: cover;
+    background-position: center;
 }
 
 .cd-cart-item-detail{
