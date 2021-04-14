@@ -122,16 +122,18 @@
 }
 
 .inputWithIcon > input[type=text] {
-	width: calc(239px - 128px);
+	width: 184px;
 	border: 2px solid #ccc;
 	border-radius: 4px;
 	font-size: 16px;
 	background-color: white;
 	background-position: 10px 10px;
 	background-repeat: no-repeat;
-	padding: 12px 48px 13px 8px;
 	transition: width 0.4s ease-in-out;
-	padding-left: 40px;
+	padding-right: 40px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 11px;
 }
 
 .inputWithIcon > input[type=text]:focus {
@@ -143,6 +145,7 @@
 	display: inline-block;
 	overflow: hidden; 
 	white-space: nowrap;
+	width:239px;
 }
 
 .inputWithIcon svg {
