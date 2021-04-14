@@ -445,12 +445,12 @@ svg.cd-cart-trigger {
 
 
 .orderProduct,#info>*>div>.space50{
-	width: 64%;
+	width: 62%;
     display: inline-block;
     vertical-align: middle;
     text-align: left;
 	word-wrap: break-word;
-	padding-left:2%;
+	padding-left:4%;
 }
 
 .space15{
