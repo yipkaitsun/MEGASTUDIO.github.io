@@ -50,15 +50,15 @@
                      adaptiveHeight: true
 
                    });
+
+                    new ResizeSensor($('.slick-current > div > div > img'), function () {
+                        $('.slick-list').css('height', $('.slick-current > div > div > img').height() + 'px');
+                    })
                 });
             $("#header-container").load("header.html");
             $("#footer-container").load("footer.html");
 
-            new ResizeSensor(jQuery("#FeactureProduct"), function()
-              {
-                $('.thumbnail').css('height',  ($('#FeactureProduct').width())* 0.313 +'px');
-              })
-
+       
 
 
         });
