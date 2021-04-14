@@ -140,6 +140,9 @@
 
 .inputWithIcon {
 	position: relative;
+	display: inline-block;
+	overflow: hidden; 
+	white-space: nowrap;
 }
 
 .inputWithIcon svg {
