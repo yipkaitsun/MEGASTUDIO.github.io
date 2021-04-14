@@ -124,11 +124,11 @@
     margin-bottom: 30px;
 }
 
-.slick-dots
-{
+.slick-dots {
     margin-top: 10px;
     list-style: none;
     text-align: center;
+    padding: 0px;
 }
 .slick-dots li
 {
