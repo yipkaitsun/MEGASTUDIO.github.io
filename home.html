@@ -25,7 +25,21 @@
                 {
                   response.content.slide.forEach(function(slide)
                   {
-                    $(".owl-carousel").append('<div class="item"><img style="width:100%;height:auto" src="'+slide.src+'" /></div>');
+
+                      var itemsProcessed = 0;
+                      $(".owl-carousel").append('<div class="item"><img style="width:100%;height:auto" src="' + slide.src + '" /></div>').ready(function () {
+                          itemsProcessed++;
+                          if (itemsProcessed === response.content.slide.length) {
+                              $('.owl-carousel').slick({
+                                  dots: true,
+                                  infinite: true,
+                                  speed: 300,
+                                  slidesToShow: 1,
+                                  adaptiveHeight: true
+                              });
+                              $('.slick-list').css('height', $('.slick-current > div > div > img').height() + 'px');
+                          }
+                      });
                   });
 
                   response.content.product.forEach((product,index) =>
@@ -42,17 +56,8 @@
                   });
 
 
-                   $('.owl-carousel').slick({
-                     dots: true,
-                     infinite: true,
-                     speed: 300,
-                     slidesToShow: 1,
-                     adaptiveHeight: true
-
-                   });
-
-                    $('body > div.banner > div > div').css('height', $('.slick-current > div > div > img').height() + 'px');
-                    
+                 
+              
                 });
             $("#header-container").load("header.html");
             $("#footer-container").load("footer.html");
