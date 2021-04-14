@@ -395,7 +395,7 @@ svg.cd-cart-trigger {
 .creditcard-btn {
 	height: 45px;
 	background-color: white;
-	font-family: "Roboto Mono";
+	font-family: 'NotoSans-Regular';
 	outline: none;
 	margin: auto;
 	display: flex;
