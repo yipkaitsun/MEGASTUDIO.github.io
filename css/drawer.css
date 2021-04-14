@@ -205,7 +205,7 @@ xheader
 }
     #cd-cart .cd-cart-items {
         padding: 0;
-        height: calc(100vh - 290px);
+        height: calc(100% - 290px);
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
         margin-top: 0px;
@@ -395,7 +395,7 @@ xkeyframes
 #cd-cart.speed-in {
     right: 0;
     margin-right: -15px;
-    height: 100vh;
+    height: 100%;
 }
 
 
