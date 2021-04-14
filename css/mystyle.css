@@ -600,6 +600,7 @@ a {
 .backTo {
 	display: block;
 	padding-bottom: 5px;
+	display:inline-block;
 }
 .backTo >* {
 	display:inline-block;
