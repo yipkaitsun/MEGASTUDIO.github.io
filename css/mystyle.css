@@ -148,7 +148,7 @@
 
 	.inputWithIcon svg {
 		color: #aaa;
-		transform: translate(-37px, 0px) !important;
+		transform: translate(-37px, -2px) !important;
 		padding-right: -28px;
 		vertical-align: middle;
 	}
