@@ -26,10 +26,10 @@
                   var itemsProcessed = 0;
                   response.content.slide.forEach(function(slide)
                   {
-                      $(".owl-carousel").append('<div class="item"><img style="width:100%;height:auto" src="' + slide.src + '" /></div>').ready(function () {
+                      $(".slick-banner").append('<div class="item"><img style="width:100%;height:auto" src="' + slide.src + '" /></div>').ready(function () {
                           itemsProcessed++;
                           if (itemsProcessed === response.content.slide.length) {
-                              $('.owl-carousel').slick({
+                              $('.slick-banner').slick({
                                   dots: true,
                                   infinite: true,
                                   speed: 300,
@@ -71,7 +71,7 @@
     <div id="header-container"></div>
 
     <div class="banner">
-        <div class="owl-carousel" style="width:100%; margin:auto;"></div>
+        <div class="slick-banner" style="width:100%; margin:auto;"></div>
     </div>
     <div id="FeatureProducts">
         <div class="title">Feature Products</div>
