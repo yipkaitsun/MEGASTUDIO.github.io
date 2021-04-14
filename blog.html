@@ -29,6 +29,10 @@
                 });
                 }
             );
+            new ResizeSensor(jQuery('#Blog'), function()
+              {
+                $('.thumbnail').css('height', $('#Blog > a:nth-child(2) > img').width()+'px');
+              })
 
             $("#header-container").load("header.html");
             $("#footer-container").load("footer.html");
