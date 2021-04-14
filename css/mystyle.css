@@ -105,11 +105,11 @@
 	height: 74px;
 	background-color: white;
 	margin-top: 3.5% !important;
-	font-family :"Roboto Mono";
+	font-family: "Noto sans-serif";
 	outline: none;
-	display:block;
-	margin:auto;
-	font-size:large;
+	display: block;
+	margin: auto;
+	font-size: 28px;
 }
 .moreButton:hover, .contact-btn:hover, .creditcard-btn:hover {
 		border-color: lightblue
