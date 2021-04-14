@@ -40,7 +40,8 @@
           pgwSlider.reload(
             {
               listPosition : "left",
-              autoSlide:false
+                  autoSlide: false,
+                  adaptiveHeight: true,
             });
           $("#addQty").htmlNumberSpinner();
           $("#description").append(response.content.product.description);
@@ -48,12 +49,7 @@
             new ResizeSensor($('.ps-current'), function()
           {
             $('.pgwSlider').css('height', $('.ps-current').height()+'px');
-      			var width_productDes = $('#productDes').width();
-    			  var height_productDes = $('#productDes').height();
-    			  var height_productDetail = $('#productDetail').height();
-    			  var pos_productcol = $('#productDes').offset();
-    			  var pos_ps_current = $('.ps-current').offset();
-      			if($(window).width()<=768)
+      			  if($(window).width()<=768)
             {
               $("#productDetail").css(
                 {
@@ -72,7 +68,6 @@
                         })
                   $('#name').css('margin-top', '0px');
                   $('.info').css('padding-left','3%');      
-    		      $('#Product').css('height', height_productDes+height_productDetail+'px');
             }
             });
 
