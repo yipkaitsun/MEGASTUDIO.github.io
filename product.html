@@ -57,20 +57,24 @@
             {
               $("#productDetail").css(
                 {
-                  position: "relative",
+                        position: "relative",
           				left: "0px",
           				top: "0px",
-          				width:"100%",
-  					    })
-      			   $('#Product').css('height','100%');
+                        width: "100%",
+
+                  })
+                        $('#Product').css('height', '100%');
+                        $('#name').css('margin-top', '0px');
             }
 
             else
             {
-              $("#productDetail").css({
-                  position: "relative",
-                  width: "75%",
-      			})
+                        $("#productDetail").css({
+                            position: "relative",
+                            width: "75%",
+                            
+                        })
+                  $('#name').css('margin-top', '0.83em');
 
     		      $('#Product').css('height', height_productDes+height_productDetail+'px');
             }
