@@ -64,7 +64,7 @@
 
 .title {
 	text-align: center;
-	margin-top: 3.5%;
+	margin-top: 8.5%;
 	font-family: "Roboto Mono";
 	font-size: 23px;
 	margin-bottom: 3.5%;
@@ -117,13 +117,14 @@
 #FollowUs >.title{
 	margin-bottom:30px;
 }
-#FollowUs  {
-	text-align:center
+#FollowUs {
+	text-align: center;
+	padding-top: 15px;
 }
 
 .inputWithIcon > input[type=text] {
 	width: 184px;
-	border: 2px solid #ccc;
+	border: 1px solid #000;
 	border-radius: 4px;
 	font-size: 16px;
 	background-color: white;
