@@ -146,13 +146,12 @@
 	width:239px;
 }
 
-.inputWithIcon svg {
-	color: #aaa;
-	transform: translate(-100%, 10px) !important;
-	margin-left: -8px;
-	padding-right: 8px;
-
-}
+	.inputWithIcon svg {
+		color: #aaa;
+		transform: translate(-37px, 0px) !important;
+		padding-right: -28px;
+		vertical-align: middle;
+	}
 
 .inputWithIcon input[type=text]:focus + svg {
 		color: dodgerBlue;
