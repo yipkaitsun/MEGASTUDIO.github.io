@@ -2,7 +2,7 @@
     $.fn.cart_htmlNumberSpinner = function () {
 
         /* creating the counter buttons */
-        $(this).append("<div class='btn cart_decrementer'>-</div> <input class='number-input' type='number'/> <div class='btn cart_incrementer'>+</div>");
+        $(this).append("<div class='btn cart_decrementer'>-</div> <input class='number-input' type='number' readonly/> <div class='btn cart_incrementer'>+</div>");
 
         /* default value and variables and jquery elements*/
         var defaultValue = 0, inputValue;
