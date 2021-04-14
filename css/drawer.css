@@ -411,8 +411,11 @@ xkeyframes
     margin-left: 10px;
 
 }
-.cd-cart-img{
-	width: 20%;
+.cd-cart-img {
+    width: 20%;
+    height: 0px;
+    padding-bottom: 20%;
+    background-size: contain;
 }
 
 .cd-cart-item-detail{

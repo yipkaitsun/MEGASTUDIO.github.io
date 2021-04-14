@@ -27,7 +27,7 @@ function setCart()
     new AsyncTask({"path": "https://api.vexpo.ai/megastore/product/"+cart.id,}).post().then(function(response)
       {
         total+=response.content.product.price*cart.qty;
-        $("#cd-cart-items").append("<li class='cart-li' data-id='"+index+"'><div class='cd-cart-img'><img class='cd-img' src='"+response.content.product.thumbnail+"'/></div><div class='cd-cart-item'><div class='cd-cart-item-detail'><div class='cd-name'>"+response.content.product.name_zh+"</div><div class='cd-price'>$"+response.content.product.price*cart.qty+"</div></div><div class='cd-cart-item-spinner'><div id="+index+" class='NumberSpinner' min='0' max='20'step='1' default='"+cart.qty+"'></div></div></div></li>").ready(()=>
+        $("#cd-cart-items").append("<li class='cart-li' data-id='" + index + "'><div class='cd-cart-img' style='background-image:url("+ response.content.product.thumbnail+")'></div><div class='cd-cart-item'><div class='cd-cart-item-detail'><div class='cd-name'>"+response.content.product.name_zh+"</div><div class='cd-price'>$"+response.content.product.price*cart.qty+"</div></div><div class='cd-cart-item-spinner'><div id="+index+" class='NumberSpinner' min='0' max='20'step='1' default='"+cart.qty+"'></div></div></div></li>").ready(()=>
         {
           $("#"+index).cart_htmlNumberSpinner();
           indexflag++;
@@ -82,7 +82,7 @@ function AddToCart() {
         var str_cart = JSON.stringify(array_cart);
         document.cookie = "cart=" + str_cart;
         new AsyncTask({ "path": "https://api.vexpo.ai/megastore/product/" + id, }).post().then(function (response) {
-            $("<li class='cart-li' data-id='" + index + "'><div class='cd-cart-img'><img class='cd-img' src='" + response.content.product.thumbnail + "'/></div><div class='cd-cart-item'><div class='cd-cart-item-detail'><div class='cd-name'>" + response.content.product.name_zh + "</div><div class='cd-price'>$" + response.content.product.price * qty + "</div></div><div class='cd-cart-item-spinner'><div id=" + index + " class='NumberSpinner' min='0' max='20'step='1' default='" + qty + "'></div></div></div></li>").hide().appendTo($('#cd-cart-items')).show('normal').ready($("#" + index).cart_htmlNumberSpinner());
+            $("<li class='cart-li' data-id='" + index + "'><div class='cd-cart-img' style='background-image:url(" + response.content.product.thumbnail+")'></div><div class='cd-cart-item'><div class='cd-cart-item-detail'><div class='cd-name'>" + response.content.product.name_zh + "</div><div class='cd-price'>$" + response.content.product.price * qty + "</div></div><div class='cd-cart-item-spinner'><div id=" + index + " class='NumberSpinner' min='0' max='20'step='1' default='" + qty + "'></div></div></div></li>").hide().appendTo($('#cd-cart-items')).show('normal').ready($("#" + index).cart_htmlNumberSpinner());
             $("#subtotal").text(current_subtotal + response.content.product.price * qty).animate({ 'opacity': 1 }, 400);
               var width=(($("#cd-cart-items").width()-30)*0.7 - 95)+"px" ;
                 $('.cd-cart-item-detail').css('width',width);
