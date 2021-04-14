@@ -25,14 +25,11 @@
               {
                 response.content.article.forEach(function(article)
                 {
-                  $("#Blog").append("<a href ='./article.html?id="+article.id+"' class='grid'>  <img class='thumbnail' src='"+article.thumbnail+"' /></a>");
+                  $("#Blog").append("<a href ='./article.html?id="+article.id+"' class='grid'>  <div class='thumbnail' style='background-image:url("+article.thumbnail+");' /></div>");
                 });
                 }
             );
-            new ResizeSensor(jQuery('#Blog'), function()
-              {
-                $('.thumbnail').css('height', $('#Blog > a:nth-child(2) > img').width()+'px');
-              })
+       
 
             $("#header-container").load("header.html");
             $("#footer-container").load("footer.html");
