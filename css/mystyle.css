@@ -640,7 +640,9 @@ button {
 	background-position:center;
 }
 #Blog > a > .thumbnail > .layer {
-	display: none;
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0s, opacity 0.5s linear;
 }
 #Blog > a > .thumbnail:hover > .layer {
 	background-color: rgb(255 255 255 / 74%);
@@ -649,6 +651,8 @@ button {
 	height: 100%;
 	display: flex;
 	align-items: center;
+	visibility: visible;
+	opacity: 1;
 }
 
 #Blog > a > .thumbnail:hover > .layer > div {

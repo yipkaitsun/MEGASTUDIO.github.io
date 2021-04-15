@@ -59,7 +59,6 @@ function AddToCart() {
     }
     if ($("#subtotal").text() !== '') current_subtotal = parseInt($("#subtotal").text());
 
-
     if (array_cart !== null && array_cart.findIndex((element) => element.id == id)!==-1) {
         const isExist = array_cart.findIndex((element) => element.id == id);
         newQty = parseInt(array_cart[isExist].qty) + parseInt(qty)
@@ -95,7 +94,6 @@ function AddToCart() {
             });
         })
     }
-
 }
 
 function UpdateCart(id, qty, operator)

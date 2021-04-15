@@ -12,13 +12,14 @@
     <script src="./js/cart_NumberSpinner.js"></script>
     <script>
         var sensor = null;
-        $(function () {
-            setCart();
-
+        $(function ()
+        {
+           setCart();
         })
 
 
-        function submitDelivery() {
+        function submitDelivery()
+        {
             $(".creditcard-btn").attr('disabled', 'disabled');
             $(".creditcard-btn").append("<div class='loader'></div>");
             $.getScript('https://js.stripe.com/v3/', function () {
@@ -28,7 +29,8 @@
             return false;
         }
 
-        function createOrder(json_cart) {
+        function createOrder(json_cart)
+        {
             var array_delivery = $("#deliveryForm").serializeArray();
             var json_delivery = {};
             array_delivery.forEach((element) => {
@@ -68,7 +70,8 @@
             });
         }
 
-        function Checkout() {
+        function Checkout()
+        {
             $('html').addClass("overflow-hiden");
             $('body').prepend('<div id="overlay"></div>');
             $("#header").append(
@@ -77,27 +80,22 @@
             var pos_checkoutForm = $(document).width() / 2;
             var width_checkoutForm = $('#checkoutForm').width() / 2;
             $("#checkoutForm").css({ left: pos_checkoutForm - width_checkoutForm, position: 'fixed' });
-
-
             $("#checkoutForm").fadeIn();
                 sensor=new ResizeSensor(jQuery('html'), function () {
                 var pos_checkoutForm = $(document).width() / 2;
                 var width_checkoutForm = $('#checkoutForm').width() / 2;
                 $("#checkoutForm").css({ left: pos_checkoutForm - width_checkoutForm, position: 'fixed' });
-
             });
-
         }
 
-        function Closeform() {
+        function Closeform()
+        {
             sensor.detach();
             $("#checkoutForm").fadeOut(
                 "normal", function () {
                     $(this).remove();
                     $('#overlay').remove();
                     $('html').removeClass("overflow-hiden");
-
-
                 });
         }
     </script>
@@ -136,7 +134,7 @@
         <ul id="cd-cart-items" class="cd-cart-items"></ul> <!-- cd-cart-items -->
 
         <div class="cd-cart-total">
-            <p>Order Subtotal <div><span>$</span><span id="subtotal">0</span></div></p>
+            <p>Order Subtotal <div ><span>$</span><span id="subtotal">0</span></div></p>
 
         </div> <!-- cd-cart-total -->
         <Button onclick="Checkout()" class="checkout-btn cd-cart-trigger">Secure Checkout</Button>
