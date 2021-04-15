@@ -661,5 +661,6 @@ button {
 	}
 
 #order > #info > hr {
-	margin-bottom: 15px;
+	margin-bottom: 20px;
+	margin-top:20px;
 }
