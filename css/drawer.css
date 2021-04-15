@@ -243,8 +243,11 @@ xheader
   background-color: #e0e6ef;
 }
 #cd-cart .cd-cart-total {
-  padding-top: 1em;
-  padding-bottom: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-top: 1px solid #e0e6ef;
+    border-bottom: 1px solid #e0e6ef;
+    margin-bottom: 10px;
 }
 #cd-cart .cd-cart-total div {
 	float: right;
