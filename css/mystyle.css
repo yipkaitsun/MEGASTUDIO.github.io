@@ -421,8 +421,16 @@ svg.cd-cart-trigger {
 	display:inline-block;
 }
 
-#status >h3{
-	padding-right:10px;
+#orderId {
+	font-family: 'NotoSans-Regular';
+	font-weight: bold;
+}
+#status {
+	font-family: 'RobotoMono-Regular';
+}
+
+#status > h3 {
+	padding-right: 10px;
 }
 
 .order-img {
