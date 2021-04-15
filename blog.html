@@ -28,14 +28,17 @@
             );
        
 
-            $("#header-container").load("header.html");
+            $("#header-container").load("header.html", function () {
+                var page = $('#header-container').data("page");
+                $("#nevigation > div: nth - child("+page+") > a").css({ color:"grey"}); 
+            });
             $("#footer-container").load("footer.html");
 	});
     </script>
 
 </head>
 	<body>
-		<div id="header-container" data-content="0"></div>
+		<div id="header-container" data-page="3"></div>
 		<div id="Blog" class="grid-3" style="margin:auto;text-align: left;"></div>
 		<div id="footer-container"></div>
 	</body>
