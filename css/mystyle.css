@@ -649,9 +649,12 @@ button {
 	display: flex;
 	align-items: center;
 }
-	#Blog > a > .thumbnail:hover > .layer > div {
+
+#Blog > a > .thumbnail:hover > .layer > div {
 		padding-left: 15px;
 		padding-right: 15px;
 		text-align: left;
 		font-family: RobotoMono-Regular;
+		max-height: calc(100% - 30px);
+		overflow: hidden;
 	}
