@@ -430,9 +430,11 @@ xkeyframes
     background-position: center;
 }
 
-.cd-cart-item-detail{
-	padding-right: 9px
+.cd-cart-item-detail {
+    padding-right: 9px;
+    width: calc(100% - 95px);
 }
+
 
 .cd-cart-item-spinner{
 	width: 85px;
