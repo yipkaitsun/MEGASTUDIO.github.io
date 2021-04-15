@@ -197,21 +197,21 @@ xheader
   padding: 0 1em;
 }
 #cd-cart h2 {
-  font-size: 14px;
-  font-size: 0.875rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin: 1em 0;
-  width:80%
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 1em 0;
+    width:calc(95% - 20px);
 }
-    #cd-cart .cd-cart-items {
-        padding: 0;
-        height: calc(100% - 290px);
-        overflow-y: auto;
-        -webkit-overflow-scrolling: touch;
-        margin-top: 0px;
-        list-style-type:none;
-    }
+#cd-cart .cd-cart-items {
+    padding: 0;
+    height: calc(100% - 290px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-top: 0px;
+    list-style-type:none;
+}
 #cd-cart .cd-cart-items li {
   position: relative;
   padding: 12px 15px;
