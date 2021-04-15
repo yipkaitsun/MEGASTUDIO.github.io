@@ -213,7 +213,7 @@ xheader
     }
 #cd-cart .cd-cart-items li {
   position: relative;
-  padding: 12px 15px;;
+  padding: 12px 15px;
   border-top: 1px solid #e0e6ef;
 }
 
@@ -251,6 +251,7 @@ xheader
     border-top: 1px solid #e0e6ef;
     border-bottom: 1px solid #e0e6ef;
     margin-bottom: 10px;
+    font-family: 'NotoSans-Regular';
 }
 #cd-cart .cd-cart-total div {
 	float: right;
@@ -260,6 +261,7 @@ xheader
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
+    font-weight:bold;
 }
 #cd-cart .cd-cart-total p {
 	display:inline-block;
@@ -283,7 +285,7 @@ xheader
     padding: 0 2em;
   }
   #cd-cart .cd-cart-items li {
-    padding: 12px 15px;;
+    padding: 12px 15px;
   }
   #cd-cart .cd-item-remove {
     right: 2em;
