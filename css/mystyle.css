@@ -24,6 +24,9 @@
 		max-width:1000px;
     position: unset !important;
 }
+	body.overflow-hidden {
+		overflow: hidden;
+	}
 #nevigation {
 	text-align: center;
 	margin-top: 75px;
