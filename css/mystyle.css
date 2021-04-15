@@ -432,7 +432,8 @@ svg.cd-cart-trigger {
     display: inline-block;
     vertical-align: middle;
 	text-align: left;
-	background-size:contain;
+	background-size:cover;
+	background-position:center;
 }
 
 .order_title{
