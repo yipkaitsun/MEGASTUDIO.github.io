@@ -404,9 +404,8 @@ svg.cd-cart-trigger {
 
 #order{
 	text-align:center;
-	padding-left: 5vw;
-    padding-right: 5vw;
 }
+
 #orderId>*,#status>*,.orderQty>*,.orderQty{
 	display:inline-block;
 }
