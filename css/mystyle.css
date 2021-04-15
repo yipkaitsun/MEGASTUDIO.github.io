@@ -234,9 +234,10 @@ img.footer-icon {
 	vertical-align: middle;
 }
 
-.cartBtn{
-display: inline-block;
-vertical-align: middle;
+.cartBtn {
+	display: inline-block;
+	vertical-align: middle;
+	font-family: 'NotoSans-Regular';
 }
 
 svg.cd-cart-trigger {
