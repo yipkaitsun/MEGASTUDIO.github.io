@@ -50,7 +50,7 @@
 
                   response.content.article.forEach((article,index)=>
                   {
-                    $("#article").append('<a href="./article.html?id=' + article.id + '" class="homegrid grid' + (index + 1) + '"><div class="thumbnail" style="background-image:url(' + article.thumbnail +');background-size:cover; background-position:center;"/></a>');
+                    $("#Blog").append('<a href="./article.html?id=' + article.id + '" class="homegrid grid' + (index + 1) + '"><div class="thumbnail" style="background-image:url(' + article.thumbnail +');background-size:cover; background-position:center;"/></a>');
                   });
 
 
@@ -82,7 +82,7 @@
 
     <div id="OurBlog">
         <div class="title">Our Blog</div>
-        <div id="article" class="grid-3" style="margin:auto;text-align: center;"></div>
+        <div id="Blog" class="grid-3" style="margin:auto;text-align: center;"></div>
         <a href="./blog.html"><Button class="moreButton">More</Button></a>
 
 
