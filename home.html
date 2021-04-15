@@ -57,7 +57,10 @@
                  
               
                 });
-            $("#header-container").load("header.html");
+            $("#header-container").load("header.html", function () {
+                    var page = $('#header-container').data("page");
+                    $("#nevigation > div:nth-child(" + page + ") > a").css({ color: "grey" });
+                });
             $("#footer-container").load("footer.html");
 
        
@@ -68,7 +71,8 @@
 
 </head>
 <body style="position: unset !important;">
-    <div id="header-container"></div>
+
+    <div id="header-container" data-page="1"></div>
 
     <div class="banner">
         <div class="slick-banner" style="width:100%; margin:auto;"></div>
@@ -76,7 +80,7 @@
     <div id="FeatureProducts">
         <div class="title">Feature Products</div>
         <div id="FeactureProduct" class="grid-3" style="margin:auto;text-align: center;"></div>
-        <a href ="./shop.html"><Button class="moreButton">More</Button></a>
+        <a href="./shop.html"><Button class="moreButton">More</Button></a>
     </div>
 
 
@@ -100,8 +104,8 @@
 
 
         </div>
-        </div>
-        <div id="footer-container"></div>
+    </div>
+    <div id="footer-container"></div>
 
 </body>
 </html>
