@@ -10,6 +10,10 @@
     <script src="./js/AsynctTask.js"></script>
 	    <script>
         $(function () {
+            $("#header-container").load("header.html", function () {
+                var page = $('#header-container').data("page");
+                $("#nevigation > div:nth-child(" + page + ") > a").css({ color: "grey" });
+            });
           const queryString = window.location.search;
           const urlParams = new URLSearchParams(queryString);
           const articleId = urlParams.get('id');
@@ -22,10 +26,7 @@
               {
                 $("#article").append(response.content.article.content);
               });
-            $("#header-container").load("header.html", function () {
-                var page = $('#header-container').data("page");
-                $("#nevigation > div:nth-child(" + page + ") > a").css({ color: "grey" });
-            });
+      
             $("#footer-container").load("footer.html");
 		})
 		</script>

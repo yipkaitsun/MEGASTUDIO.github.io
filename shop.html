@@ -14,6 +14,11 @@
 
     <script>
         $(function () {
+
+            $("#header-container").load("header.html", function () {
+                var page = $('#header-container').data("page");
+                $("#nevigation > div:nth-child(" + page + ") > a").css({ color: "grey" });
+            });
           data = {
               "path": "https://api.vexpo.ai/megastore/product",
             }
@@ -32,10 +37,7 @@
                 }
             );
           
-            $("#header-container").load("header.html", function () {
-                var page = $('#header-container').data("page");
-                $("#nevigation > div:nth-child(" + page + ") > a").css({ color: "grey" });
-            });
+           
             $("#footer-container").load("footer.html");
       });
     </script>
