@@ -12,12 +12,15 @@ jQuery(document).ready(function($){
 	$cart_trigger.on('click', function(event){
 		event.preventDefault();
 		//close lateral menu (if it's open)
+		$("body").prepend("<div id='overlay'/>");
 		$menu_navigation.removeClass('speed-in');
 		toggle_panel_visibility($lateral_cart, $shadow_layer, $('body'));
 	});
 
 	//close lateral cart or lateral menu
-	$shadow_layer.on('click', function(){
+	$shadow_layer.on('click', function () {
+
+		$('#overlay').remove();
 		$shadow_layer.removeClass('is-visible');
 		// firefox transitions break when parent overflow is changed, so we need to wait for the end of the trasition to give the body an overflow hidden
 		if( $lateral_cart.hasClass('speed-in') ) {
