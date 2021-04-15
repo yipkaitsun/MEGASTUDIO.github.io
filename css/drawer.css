@@ -218,12 +218,13 @@ xheader
   border-top: 1px solid #e0e6ef;
 }
 
-#cd-cart .cd-qty, #cd-cart .cd-price, #cd-cart .cd-name {
+#cd-cart .cd-qty, #cd-cart .cd-price {
     color: black;
     font-family: 'RobotoMono-Regular';
 }
 #cd-cart .cd-name {
-    font-weight:bold;
+    font-weight: bold;
+    font-family: 'NotoSans-Regular'
 }
 #cd-cart .cd-price {
     margin-top: .4em;
