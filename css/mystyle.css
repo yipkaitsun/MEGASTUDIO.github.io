@@ -638,6 +638,9 @@ button {
 	background-size:cover;
 	background-position:center;
 }
+#Blog > a > .thumbnail > .layer {
+	display: none;
+}
 #Blog > a > .thumbnail:hover > .layer {
 	background-color: rgba(248, 247, 216, 0.7);
 	position: absolute;
