@@ -218,9 +218,10 @@ xheader
 }
 #cd-cart .cd-cart-items li:last-child {
 }
-#cd-cart .cd-qty, #cd-cart .cd-price {
-  color: #a5aebc;
-}
+    #cd-cart .cd-qty, #cd-cart .cd-price, #cd-cart .cd-name {
+        color: black;
+        font-family: 'RobotoMono-Regular';
+    }
 #cd-cart .cd-price {
   margin-top: .4em;
 }
