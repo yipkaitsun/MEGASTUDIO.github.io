@@ -659,3 +659,7 @@ button {
 		max-height: calc(100% - 30px);
 		overflow: hidden;
 	}
+
+#order > #info > hr {
+	margin-bottom: 15px;
+}
