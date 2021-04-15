@@ -658,6 +658,7 @@ button {
 		font-family: RobotoMono-Regular;
 		max-height: calc(100% - 30px);
 		overflow: hidden;
+		color:black;
 	}
 
 #order > #info > hr {
