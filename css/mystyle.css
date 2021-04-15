@@ -380,6 +380,8 @@ svg.cd-cart-trigger {
 	background-color: #fff0;
 	border-width: thin;
 	border-color: black;
+	border-width: 1px 1px 0px 1px;
+	
 }
 
 .contact_textArea {
