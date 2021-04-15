@@ -13,7 +13,10 @@
 
     <script>
         $(function () {
-            $("#header-container").load("header.html");
+            $("#header-container").load("header.html", function () {
+                var page = $('#header-container').data("page");
+                $("#nevigation > div:nth-child(" + page + ") > a").css({ color: "grey" });
+            });
             $("#footer-container").load("footer.html");
       
         });
@@ -38,26 +41,26 @@
     </script>
 
 </head>
-	<body>
-		<div id="header-container"></div>
-			<div id="contact">
-				<div class="contact-col">
-				<h1>Hi, contact us & work together!</h1>
-				<p>+852 6356 6078</p>
-				<p>info@mega-root.com</p>
-				</div>
-				<div class="contact-col">
-				<form onsubmit='return submitContact();'>  
-					  <input type="text" id="name" class="contact_input" name="name" placeholder="Name" required><br>
-					  <input type="text" id="email" class="contact_input" name="email" placeholder="Email" required><br>
-					  <input type="text" id="phone" class="contact_input" name="phone" placeholder="Phone" required><br>
-					  <textarea class="contact_textArea" id="message" name="message" placeholder="Message" required></textarea>
-					  <br/>
-					  <br/>
-					  <Button class="contact-btn" type="submit" value="Submit">Submit</Button>
-				</form> 
-				</div>
-			</div>
-		<div id="footer-container"></div>
-	</body>
+<body>
+	<div id="header-container" data-page="4"></div>
+	<div id="contact">
+		<div class="contact-col">
+			<h1>Hi, contact us & work together!</h1>
+			<p>+852 6356 6078</p>
+			<p>info@mega-root.com</p>
+		</div>
+		<div class="contact-col">
+			<form onsubmit='return submitContact();'>
+				<input type="text" id="name" class="contact_input" name="name" placeholder="Name" required><br>
+				<input type="text" id="email" class="contact_input" name="email" placeholder="Email" required><br>
+				<input type="text" id="phone" class="contact_input" name="phone" placeholder="Phone" required><br>
+				<textarea class="contact_textArea" id="message" name="message" placeholder="Message" required></textarea>
+				<br />
+				<br />
+				<Button class="contact-btn" type="submit" value="Submit">Submit</Button>
+			</form>
+		</div>
+	</div>
+	<div id="footer-container"></div>
+</body>
 </html>
