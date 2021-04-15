@@ -210,6 +210,7 @@ xheader
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
         margin-top: 0px;
+        list-style-type:none;
     }
 #cd-cart .cd-cart-items li {
   position: relative;
