@@ -55,7 +55,8 @@ function AddToCart() {
     var current_subtotal = 0;
     var openedCart = $('#cd-cart').attr('class')=="speed-in";
     if(!openedCart){
-      $('#cd-cart').addClass("speed-in")
+        $('#cd-cart').addClass("speed-in")
+        $("body").prepend("<div id='overlay'/>");
     }
     if ($("#subtotal").text() !== '') current_subtotal = parseInt($("#subtotal").text());
 
