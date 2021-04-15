@@ -371,18 +371,23 @@ svg.cd-cart-trigger {
     padding-left: 13%;
 }
 
-.contact_input{
-  width: 78%;
-  padding: 12px 20px;
-
+.contact_input {
+	width: 78%;
+	padding: 12px 20px;
+	background-color: #fff0;
+	border-width: thin;
+	border-color: black;
 }
 
-.contact_textArea{
-  width: 78%;
-  height: 150px;
-  padding: 12px 20px;
-  font-size: 16px;
-  resize: none;
+.contact_textArea {
+	width: 78%;
+	height: 150px;
+	padding: 12px 20px;
+	font-size: 16px;
+	resize: none;
+	background-color: #fff0;
+	border-width: thin;
+	border-color: black;
 }
 .contact-btn {
     width: 150px;
@@ -391,6 +396,7 @@ svg.cd-cart-trigger {
     font-family: 'RobotoMono-Regular';
     outline: none;
 	display: block;
+	background-color:#fff0;
 }
 
 .creditcard-btn {
