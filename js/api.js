@@ -58,7 +58,6 @@ function AddToCart() {
         var lateral_cart = $('#cd-cart');
         var shadow_layer = $('#cd-shadow-layer');
         $('#cd-cart').addClass("speed-in");
-        toggle_panel_visibility(lateral_cart, shadow_layer, $('body'));
     }
     if ($("#subtotal").text() !== '') current_subtotal = parseInt($("#subtotal").text());
 
