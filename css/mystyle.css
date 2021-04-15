@@ -312,6 +312,7 @@ svg.cd-cart-trigger {
     outline: none;
     display: block;
     margin-left: 20px;
+	font-size:15px;
 }
 
 .checkout-btn:hover {
