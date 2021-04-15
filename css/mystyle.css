@@ -647,7 +647,10 @@ button {
 	width: 100%;
 	height: 50%;
 	padding-top: 50%;
+	display: flex;
+	align-items: center;
 }
-#Blog > a > .thumbnail:hover > .layer:after {
-	content: attr(data-content);
-}
+#Blog > a > .thumbnail:hover > .layer > div {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
