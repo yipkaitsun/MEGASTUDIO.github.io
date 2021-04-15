@@ -55,9 +55,10 @@ function AddToCart() {
     var current_subtotal = 0;
     var openedCart = $('#cd-cart').attr('class')=="speed-in";
     if (!openedCart) {
-        var lateral_cart = $('#cd-cart'),
+        var lateral_cart = $('#cd-cart');
         var shadow_layer = $('#cd-shadow-layer');
         $('#cd-cart').addClass("speed-in");
+        toggle_panel_visibility(lateral_cart, shadow_layer, $('body'));
     }
     if ($("#subtotal").text() !== '') current_subtotal = parseInt($("#subtotal").text());
 
