@@ -188,6 +188,7 @@ xheader
   -webkit-transition: right 0.3s;
   -moz-transition: right 0.3s;
   transition: right 0.3s;
+  height:100%;
 }
 #cd-cart.speed-in {
   right: 0;
