@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html>
+<head>
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <!-- MyApi -->
     <script src="./js/api.js"></script>
@@ -21,22 +22,25 @@
               {
                 $("#article").append(response.content.article.content);
               });
-            $("#header-container").load("header.html");
+            $("#header-container").load("header.html", function () {
+                var page = $('#header-container').data("page");
+                $("#nevigation > div:nth-child(" + page + ") > a").css({ color: "grey" });
+            });
             $("#footer-container").load("footer.html");
 		})
 		</script>
 	<link rel="stylesheet" href="./css/mystyle.css" />
-
 </head>
-<body>
-    <div id="header-container"></div>
-    <a class="backTo" href="./blog.html">
-      <svg class="backIcon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14" height="14" viewBox="0 0 14 14">
-      <image id="arrow-left" width="14" height="14" xlink:href="data:image/png;base64,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"/>
-  </svg><p>Back to Blogs</p></a>
-    <div id="article" style="margin:auto"> </div>
-    <br/>
+    <body>
+        <div id="header-container" data-page="3"></div>
+        <a class="backTo" href="./blog.html">
+            <svg class="backIcon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14" height="14" viewBox="0 0 14 14">
+                <image id="arrow-left" width="14" height="14" xlink:href="data:image/png;base64,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" />
+            </svg><p>Back to Blogs</p>
+        </a>
+        <div id="article" style="margin:auto"> </div>
+        <br />
         <div id="footer-container"></div>
 
-</body>
+    </body>
 </html>
