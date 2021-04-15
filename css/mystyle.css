@@ -40,7 +40,7 @@
 
 #nevigation > .item > a {
 			text-decoration: none;
-			font-family: "Roboto Mono"
+			font-family: 'RobotoMono-Regular'
 }
 
 
@@ -65,7 +65,7 @@
 .title {
 	text-align: center;
 	margin-top: 8.5%;
-	font-family: "Roboto Mono";
+	font-family: 'RobotoMono-Regular';
 	font-size: 23px;
 	margin-bottom: 3.5%;
 }
@@ -308,7 +308,7 @@ svg.cd-cart-trigger {
 	width: 60%;
     height: 50px;
     background-color: white;
-    font-family: "Roboto Mono";
+    font-family: 'RobotoMono-Regular';
     outline: none;
     display: block;
     margin-left: 20px;
@@ -324,7 +324,7 @@ svg.cd-cart-trigger {
     height: 45px;
     background-color: white;
     margin-top: 28px !important;
-    font-family: "Roboto Mono";
+    font-family: 'RobotoMono-Regular';
     outline: none;
 	display: block;
 	}
@@ -387,7 +387,7 @@ svg.cd-cart-trigger {
     width: 150px;
     height: 45px;
     background-color: white;
-    font-family: "Roboto Mono";
+    font-family: 'RobotoMono-Regular';
     outline: none;
 	display: block;
 }
