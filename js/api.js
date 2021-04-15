@@ -68,7 +68,7 @@ function AddToCart() {
         var str_cart = JSON.stringify(array_cart);
         document.cookie = "cart=" + str_cart;
         new AsyncTask({ "path": "https://api.vexpo.ai/megastore/product/" + id, }).post().then(function (response) {
-            $("#subtotal").text(current_subtotal + response.content.product.price * qty).animate({ 'opacity': 1 }, 400)
+            $("#subtotal").text(current_subtotal + response.content.product.price * qty);
         })
         $('#' + isExist).find('.number-input').val(newQty)
 
@@ -84,7 +84,7 @@ function AddToCart() {
         document.cookie = "cart=" + str_cart;
         new AsyncTask({ "path": "https://api.vexpo.ai/megastore/product/" + id, }).post().then(function (response) {
             $("<li class='cart-li' data-id='" + index + "'><div class='cd-cart-img' style='background-image:url(" + response.content.product.thumbnail+")'></div><div class='cd-cart-item'><div class='cd-cart-item-detail'><div class='cd-name'>" + response.content.product.name_zh + "</div><div class='cd-price'>$" + response.content.product.price * qty + "</div></div><div class='cd-cart-item-spinner'><div id=" + index + " class='NumberSpinner' min='0' max='20'step='1' default='" + qty + "'></div></div></div></li>").hide().appendTo($('#cd-cart-items')).show('normal').ready($("#" + index).cart_htmlNumberSpinner());
-            $("#subtotal").text(current_subtotal + response.content.product.price * qty).animate({ 'opacity': 1 }, 400);
+            $("#subtotal").text(current_subtotal + response.content.product.price * qty);
               var width=(($("#cd-cart-items").width()-30)*0.7 - 95)+"px" ;
                 $('.cd-cart-item-detail').css('width',width);
 
@@ -104,9 +104,9 @@ function UpdateCart(id, qty, operator)
     var current_subtotal = 0;
     if ($("#subtotal").text()!=='') current_subtotal=parseInt($("#subtotal").text());
     new AsyncTask({ "path": "https://api.vexpo.ai/megastore/product/" + array_cart[id].id, }).post().then(function (response) {
-        if (operator == "add") $("#subtotal").text(current_subtotal + response.content.product.price).animate({ 'opacity': 1 }, 400);
+        if (operator == "add") $("#subtotal").text(current_subtotal + response.content.product.price);
         else if (operator == "minus") {
-            $("#subtotal").text(current_subtotal - response.content.product.price).animate({ 'opacity': 1 }, 400);
+            $("#subtotal").text(current_subtotal - response.content.product.price);
             if (qty <= 0) {
                 array_cart.splice(id, 1);
                 $("#cartNumber").text(array_cart.length);
