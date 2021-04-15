@@ -216,14 +216,16 @@ xheader
   padding: 12px 15px;;
   border-top: 1px solid #e0e6ef;
 }
-#cd-cart .cd-cart-items li:last-child {
+
+#cd-cart .cd-qty, #cd-cart .cd-price, #cd-cart .cd-name {
+    color: black;
+    font-family: 'RobotoMono-Regular';
 }
-    #cd-cart .cd-qty, #cd-cart .cd-price, #cd-cart .cd-name {
-        color: black;
-        font-family: 'RobotoMono-Regular';
-    }
+#cd-cart .cd-name {
+    font-weight:bold;
+}
 #cd-cart .cd-price {
-  margin-top: .4em;
+    margin-top: .4em;
 }
 #cd-cart .cd-item-remove {
   position: absolute;
