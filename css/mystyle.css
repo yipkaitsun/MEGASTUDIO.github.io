@@ -382,6 +382,7 @@ svg.cd-cart-trigger {
 	border-color: black;
 	border-width: 1px 1px 0px 1px;
 	-webkit-appearance: none;
+	border-radius: 0;
 }
 
 .contact_textArea {
@@ -394,6 +395,7 @@ svg.cd-cart-trigger {
 	border-width: thin;
 	border-color: black;
 	-webkit-appearance: none;
+	border-radius: 0;
 }
 .contact-btn {
     width: 150px;
@@ -510,6 +512,7 @@ svg.cd-cart-trigger {
 	border-width: thin;
 	border-bottom: none;
 	-webkit-appearance: none;
+	border-radius: 0;
 }
 
 .form-container textarea {
@@ -522,6 +525,7 @@ svg.cd-cart-trigger {
 	height: 152px;
 	resize: none;
 	-webkit-appearance: none;
+	border-radius: 0;
 }
 .form-container textarea::placeholder,.form-container input[type=text]::placeholder{
 	font-size: 14px
