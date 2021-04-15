@@ -216,7 +216,6 @@ xheader
   border-top: 1px solid #e0e6ef;
 }
 #cd-cart .cd-cart-items li:last-child {
-  border-bottom: 1px solid #e0e6ef;
 }
 #cd-cart .cd-qty, #cd-cart .cd-price {
   color: #a5aebc;
