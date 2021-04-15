@@ -648,3 +648,6 @@ button {
 	height: 50%;
 	padding-top: 50%;
 }
+#Blog > a > .thumbnail:hover > .layer:after {
+	content: attr(data-content);
+}
