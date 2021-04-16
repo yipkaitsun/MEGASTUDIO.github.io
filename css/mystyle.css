@@ -333,7 +333,7 @@ svg.cd-cart-trigger {
 	.checkout-btn:hover {
 		background-color: #f9f9f9;
 	}
-.checkout-btn, .addCart-btn {
+ .addCart-btn {
 	transition: 0.3s;
 }
 	.addCart-btn {
