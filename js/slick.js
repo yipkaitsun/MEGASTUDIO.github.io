@@ -585,10 +585,10 @@
             _.$slider.children().children().css("text-align", "center");
             _.$slider.children().children().children()
                 .css({
-                    'width':'calc(100% - 40px)',
+                    'width':'100%',
                     'display': 'inline-block',
                     'height': '0px',
-                    'padding-bottom': '100%',
+                    'padding-bottom': '50.%',
                      'background-size':'cover'
                 });
 
