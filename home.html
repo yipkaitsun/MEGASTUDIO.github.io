@@ -31,7 +31,7 @@
                   var itemsProcessed = 0;
                   response.content.slide.forEach(function(slide)
                   {
-                      $(".slick-banner").append('<div class="item"><img style="width:100%;height:auto" src="' + slide.src + '" /></div>').ready(function () {
+                      $(".slick-banner").append('<div class="item" style="background-image:url('+slide.src+')/></div>').ready(function () {
                           itemsProcessed++;
                           if (itemsProcessed === response.content.slide.length) {
                               $('.slick-banner').slick({

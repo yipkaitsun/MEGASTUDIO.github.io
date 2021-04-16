@@ -585,7 +585,10 @@
             _.$slider.children().children().children()
                 .css({
                     'width':'calc(100% - 40px)',
-                    'display': 'inline-block'
+                    'display': 'inline-block',
+                    'height': '0px',
+                    'padding-bottom': '50.4%',
+                     'background-size':'cover'
                 });
 
         }
