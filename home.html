@@ -9,12 +9,12 @@
     <script src="./js/api.js"></script>
     <!-- BackendApi -->
     <script src="./js/AsynctTask.js"></script>
-  	<script src="./js/ResizeSensor.js"></script>
+    <script src="./js/ResizeSensor.js"></script>
     <script src="./js/slick.js"></script>
-<link rel="stylesheet" href="./css/mystyle.css" />
+    <link rel="stylesheet" href="./css/mystyle.css" />
 
     <script>
-        var response=null;
+        var response = null;
         $(function () {
 
             $("#header-container").load("header.html", function () {
@@ -23,49 +23,45 @@
             });
             data = {
                 "path": "https://api.vexpo.ai/megastore/home",
-              }
+            }
             var asyncTask = new AsyncTask(data);
             asyncTask.post().then(
-                function(response)
-                {
-                  var itemsProcessed = 0;
-                  response.content.slide.forEach(function(slide)
-                  {
-                      $(".slick-banner").append('<div class="item" style="background-image:url('+slide.src+')/><img/></div>').ready(function () {
-                          itemsProcessed++;
-                          if (itemsProcessed === response.content.slide.length) {
-                              $('.slick-banner').slick({
-                                  dots: true,
-                                  infinite: true,
-                                  speed: 300,
-                                  slidesToShow: 1,
-                                  adaptiveHeight: true
-                              });
-                          }
-                      });
-                  });
+                function (response) {
+                    var itemsProcessed = 0;
+                    response.content.slide.forEach(function (slide) {
+                        $(".slick-banner").append('<div class="item" style="background-image:url(' + slide.src + ')"></div>').ready(function () {
+                            itemsProcessed++;
+                            if (itemsProcessed === response.content.slide.length) {
+                                $('.slick-banner').slick({
+                                    dots: true,
+                                    infinite: true,
+                                    speed: 300,
+                                    slidesToShow: 1,
+                                    adaptiveHeight: true
+                                });
+                            }
+                        });
+                    });
 
-                  response.content.product.forEach((product,index) =>
-                  {
-                   if (product.name_zh.length > 30)
-                    $("#FeactureProduct").append('<a href ="./product.html?id=' + product.id + '" class="homegrid grid'+(index+1)+'"><div class="thumbnail" style="background-image:url(' + product.thumbnail + ');background-size:cover; background-position:center;"/><p>' + product.name_zh.substring(0,30)+" ... " + '</p><p>$' + product.price + '</p></a>');
-                   else
-                    $("#FeactureProduct").append('<a href ="./product.html?id=' + product.id + '" class="homegrid grid'+(index+1)+'"><div class="thumbnail" style="background-image:url(' + product.thumbnail + ');background-size:cover ; background-position:center;"/><p>'+product.name_zh+'</p><p>$'+product.price+'</p></a>');
-                  });
+                    response.content.product.forEach((product, index) => {
+                        if (product.name_zh.length > 30)
+                            $("#FeactureProduct").append('<a href ="./product.html?id=' + product.id + '" class="homegrid grid' + (index + 1) + '"><div class="thumbnail" style="background-image:url(' + product.thumbnail + ');background-size:cover; background-position:center;"/><p>' + product.name_zh.substring(0, 30) + " ... " + '</p><p>$' + product.price + '</p></a>');
+                        else
+                            $("#FeactureProduct").append('<a href ="./product.html?id=' + product.id + '" class="homegrid grid' + (index + 1) + '"><div class="thumbnail" style="background-image:url(' + product.thumbnail + ');background-size:cover ; background-position:center;"/><p>' + product.name_zh + '</p><p>$' + product.price + '</p></a>');
+                    });
 
-                  response.content.article.forEach((article,index)=>
-                  {
-                      $("#Blog").append('<a href="./article.html?id=' + article.id + '" class="homegrid grid' + (index + 1) + '"><div class="thumbnail" style="background-image:url(' + article.thumbnail + ');background-size:cover; background-position:center; position:relative;"><div class="layer"><div>' + article.title +'</div></div></div></a>');
-                  });
+                    response.content.article.forEach((article, index) => {
+                        $("#Blog").append('<a href="./article.html?id=' + article.id + '" class="homegrid grid' + (index + 1) + '"><div class="thumbnail" style="background-image:url(' + article.thumbnail + ');background-size:cover; background-position:center; position:relative;"><div class="layer"><div>' + article.title + '</div></div></div></a>');
+                    });
 
 
-                 
-              
+
+
                 });
-           
+
             $("#footer-container").load("footer.html");
 
-       
+
 
 
         });
