@@ -113,7 +113,6 @@
 
 .moreButton {
 	width: 239px;
-	height: 63px;
 	background-color: white;
 	margin-top: 3.5% !important;
 	font-family: "NotoSans-Regular";
@@ -121,6 +120,8 @@
 	display: block;
 	margin: auto;
 	font-size: 20px;
+	align-items: center;
+	line-height: 55px;
 }
 .moreButton:hover, .contact-btn:hover, .creditcard-btn:hover {
 		border-color: lightblue
