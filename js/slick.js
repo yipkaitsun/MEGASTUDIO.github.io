@@ -589,7 +589,8 @@
                     'display': 'inline-block',
                     'height': '0px',
                     'padding-bottom': '52.5%',
-                     'background-size':'cover'
+                    'background-size': 'cover',
+                    'background-position': 'center';
                 });
 
         }
