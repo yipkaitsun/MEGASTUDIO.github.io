@@ -199,7 +199,7 @@ img.footer-icon {
 }
 
 .triangle {
-	background-image: url(./eshop icons/line.png);
+	background-image: url('../eshop icons/line.png');
     height: 0px;
     background-size: contain;
     position: fixed;
