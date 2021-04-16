@@ -125,10 +125,8 @@
 }
 .moreButton:hover, .contact-btn:hover, .creditcard-btn:hover {
 		background-color: #f9f9f9;
-		opacity: 1;
 	}
 .moreButton, .contact-btn, .creditcard-btn {
-	opacity: 0.6;
 	transition: 0.3s;
 }
 	#FollowUs > .title {
@@ -334,10 +332,8 @@ svg.cd-cart-trigger {
 
 	.checkout-btn:hover {
 		background-color: #f9f9f9;
-		opacity: 1
 	}
 .checkout-btn, .addCart-btn {
-	opacity: 0.6;
 	transition: 0.3s;
 }
 	.addCart-btn {
