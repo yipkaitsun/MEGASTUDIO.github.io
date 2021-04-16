@@ -127,7 +127,7 @@
 		background-color: #f9f9f9;
 		opacity: 1;
 	}
-moreButton, .contact-btn, .creditcard-btn {
+.moreButton, .contact-btn, .creditcard-btn {
 	opacity: 0.6;
 	transition: 0.3s;
 }
