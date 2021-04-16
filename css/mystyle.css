@@ -232,7 +232,7 @@ img.footer-icon {
 }*/
 	.triangle > .content {
 		display: inline-block;
-		padding-left: calc(46% + 7px);
+		padding-left: calc(46% + 8px);
 		padding-top: calc(18% + 12px);
 		/*
 	position: absolute;
