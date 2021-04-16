@@ -49,8 +49,7 @@ jQuery(document).ready(function($){
 	});
 });
 
-function toggle_panel_visibility($lateral_panel, $background_layer, $body) {
-
+function toggle_panel_visibility ($lateral_panel, $background_layer, $body) {
 	if( $lateral_panel.hasClass('speed-in') ) {
 		// firefox transitions break when parent overflow is changed, so we need to wait for the end of the trasition to give the body an overflow hidden
 		$lateral_panel.removeClass('speed-in').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
@@ -65,7 +64,7 @@ function toggle_panel_visibility($lateral_panel, $background_layer, $body) {
 				$(this).remove();
 			});
 		$lateral_panel.addClass('speed-in').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function () {
-			alert("helo");
+
 			$("body").prepend("<div id='overlay'/>");
 			$body.addClass('overflow-hidden');
 		});
