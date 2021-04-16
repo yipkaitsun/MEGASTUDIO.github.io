@@ -588,7 +588,7 @@
                     'width':'calc(100% - 40px)',
                     'display': 'inline-block',
                     'height': '0px',
-                    'padding-bottom': '50.4%',
+                    'padding-bottom': '100%',
                      'background-size':'cover'
                 });
 
