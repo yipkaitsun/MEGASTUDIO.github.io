@@ -80,7 +80,6 @@ function AddToCart() {
 }
 
 function UpdateCart(id, qty, operator) {
-    console.log(subtotal);
     var array_cart = GetCookies("cart");
     new AsyncTask({ "path": "https://api.vexpo.ai/megastore/product/" + array_cart[id].id, }).post().then(function (response) {
         if (operator == "add") {
