@@ -57,8 +57,9 @@ function AddToCart() {
         new AsyncTask({ "path": "https://api.vexpo.ai/megastore/product/" + id, }).post().then(function (response) {
             subtotal += response.content.product.price * qty;
             $("#subtotal").text(subtotal);
+            $('#' + isExist).find('.number-input').val(newQty);
+            $('[data-id="' + isExist + '"]>.cd-cart-item >.cd-cart-item-detail >.cd-price').text("$" + response.content.product.price * newQty);
         })
-        $('#' + isExist).find('.number-input').val(newQty)
 
     }
     else {
@@ -74,7 +75,6 @@ function AddToCart() {
             $("<li class='cart-li' data-id='" + index + "'><div class='cd-cart-img' style='background-image:url(" + response.content.product.thumbnail + ")'></div><div class='cd-cart-item'><div class='cd-cart-item-detail'><div class='cd-name'>" + response.content.product.name_zh + "</div><div class='cd-price'>$" + response.content.product.price * qty + "</div></div><div class='cd-cart-item-spinner'><div id=" + index + " class='NumberSpinner' min='0' max='20'step='1' default='" + qty + "'></div></div></div></li>").hide().appendTo($('#cd-cart-items')).show('normal').ready($("#" + index).cart_htmlNumberSpinner());
             subtotal += response.content.product.price * qty;
             $("#subtotal").text(subtotal);
-
         })
     }
 }
