@@ -711,3 +711,11 @@ button {
 	margin-bottom: 20px;
 	margin-top:20px;
 }
+
+
+.footer-icon {
+	width: 22px;
+	height: 22px;
+	background-size: contain;
+	display: inline-block;
+}
