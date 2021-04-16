@@ -124,11 +124,16 @@
 	line-height: 55px;
 }
 .moreButton:hover, .contact-btn:hover, .creditcard-btn:hover {
-		border-color: lightblue
+		background-color: #f9f9f9;
+		opacity: 1;
 	}
-#FollowUs >.title{
-	margin-bottom:30px;
+moreButton, .contact-btn, .creditcard-btn {
+	opacity: 0.6;
+	transition: 0.3s;
 }
+	#FollowUs > .title {
+		margin-bottom: 30px;
+	}
 #FollowUs {
 	text-align: center;
 	padding-top: 15px;
@@ -327,24 +332,28 @@ svg.cd-cart-trigger {
 	font-size:15px;
 }
 
-.checkout-btn:hover {
-	border-color:lightblue
+	.checkout-btn:hover {
+		background-color: #f9f9f9;
+		opacity: 1
+	}
+.checkout-btn, .addCart-btn {
+	opacity: 0.6;
+	transition: 0.3s;
 }
-
-
-.addCart-btn {
-    width: 150px;
-    height: 45px;
-    background-color: white;
-    margin-top: 28px !important;
-    font-family: 'RobotoMono-Regular';
-    outline: none;
-	display: block;
+	.addCart-btn {
+		width: 150px;
+		height: 45px;
+		background-color: white;
+		margin-top: 28px !important;
+		font-family: 'RobotoMono-Regular';
+		outline: none;
+		display: block;
 	}
 
-.addCart-btn:hover {
-	border-color:lightblue
-}
+	.addCart-btn:hover {
+		background-color: #f9f9f9;
+		opacity: 1
+	}
 
 
 .number-input {
