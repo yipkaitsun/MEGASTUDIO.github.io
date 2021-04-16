@@ -584,7 +584,7 @@
             _.$slider.empty().append(newSlides);
             _.$slider.children().children().children()
                 .css({
-                    'width':calc(100% - 40px),
+                    'width':'calc(100% - 40px)',
                     'display': 'inline-block'
                 });
 
