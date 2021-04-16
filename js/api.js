@@ -16,6 +16,7 @@ function DeleteCookies(name) {
 }
 
 function setCart() {
+    subtotal = 0;
     var array_cart = GetCookies("cart");
     var indexflag = 0;
     $("#cartNumber").text(array_cart.length);
