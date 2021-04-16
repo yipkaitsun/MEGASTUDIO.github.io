@@ -256,7 +256,6 @@ img.footer-icon {
 	display: inline-block;
 	vertical-align: middle;
 	font-family: 'NotoSans-Regular';
-	width: min(20px, 2vw);
 	height: min(20px, 2vw);
 }
 
