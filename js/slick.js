@@ -582,6 +582,7 @@
             }
 
             _.$slider.empty().append(newSlides);
+            _.$slider.children().children().css("text-align", "center");
             _.$slider.children().children().children()
                 .css({
                     'width':'calc(100% - 40px)',
