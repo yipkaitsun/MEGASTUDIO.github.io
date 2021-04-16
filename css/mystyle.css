@@ -718,4 +718,5 @@ button {
 	height: 22px;
 	background-size: contain;
 	display: inline-block;
+	margin: 5px;
 }
