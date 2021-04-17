@@ -23,8 +23,14 @@
         $(function () {
             var width = $(window).width();
             if (width < 900) {
-                console.log("init mobile header");
-            }//init mobile header;
+                $('body').prepend(
+                    '<div id="header">' +
+                    '<div onclick="CartControl()" >' +
+                    '<div id="mobile-nevigation" style="width:25%" />'+
+                    '<div style="width:50%">' +
+                    '<div style="width25%"/>'+
+                    '</div></div>')
+            }
             else {
                 $('body').prepend(
                     '<div id="header">' +
