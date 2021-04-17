@@ -727,3 +727,8 @@ button {
 	display: inline-block;
 	margin: 5px;
 }
+
+div#mobile-header {
+	height: 0px;
+	padding-bottom: 69px;
+}
