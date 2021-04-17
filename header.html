@@ -26,7 +26,7 @@
                 $('#header-container').prepend(
                     '<div id="mobile-header">' +
                     '<div id="mobile-nevigation" style="width:25%" />'+
-                    '<div style="width:50%"/>' +
+                    '<div style="background-image:url("./eahop icons/logo.png");width:50%"/>' +
                     '<div style="width:25%"/>'+
                     '</div>')
             }
@@ -53,9 +53,9 @@
 
             $(window).on('resize', function () {
                 if ($(this).width() !== width) {
-                    if (width >= 900 && $(this).width() < 900) //change to mobile header
-                    {
+                    if (width >= 900 && $(this).width() < 900) //change to mobile heade
                         $('#header').remove();
+                        $
                     }
                     else if (width < 900 && $(this).width() >= 900) //change to desktop header
                     {
@@ -73,7 +73,7 @@
                             '<img src="./eshop icons/logo.png" />' +
 
                             '<div id="nevigation">' +
-                            '<div class="item"><a href="./">Home</a></div>' +
+                            '<div class=" "><a href="./">Home</a></div>' +
                             '<div class="item"><a href="./shop.html">Shop</a></div>' +
                             '<div class="item"><a href="./blog.html">Blog</a></div>' +
                             '<div class="item"><a href="./contact.html">Contact</a></div>' +
