@@ -732,6 +732,6 @@ div#mobile-header {
 	height: 0px;
 	padding-bottom: 70px;
 }
-mobile-nevigation >* {
+#mobile-nevigation >* {
 padding-bottom:70px;
 }
