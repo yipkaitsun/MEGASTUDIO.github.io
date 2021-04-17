@@ -71,7 +71,9 @@
                             '<div class="item"><a href="./blog.html">Blog</a></div>' +
                             '<div class="item"><a href="./contact.html">Contact</a></div>' +
                             '</div>' +
-                            '</div>')
+                            '</div>').ready(function () {
+                                setCartNum();
+                            })
                     }
                     width = $(this).width();
 
