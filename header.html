@@ -23,7 +23,7 @@
         $(function () {
             var width = $(window).width();
             if (width < 900) {
-                $('body').prepend(
+                $('#header-container').prepend(
                     '<div id="mobile-header">' +
                     '<div id="mobile-nevigation" style="width:25%" />'+
                     '<div style="width:50%"/>' +
@@ -31,7 +31,7 @@
                     '</div>')
             }
             else {
-                $('body').prepend(
+                $('#header-container').prepend(
                     '<div id="header">' +
                     '<div onclick="CartControl()" class="triangle">' +
                     '<div class="content">' +
@@ -59,7 +59,9 @@
                     }
                     else if (width < 900 && $(this).width() >= 900) //change to desktop header
                     {
-                        $('body').prepend(
+
+                        $('#mobile-header').remove();
+                        $('#header-container').prepend(
                             '<div id="header">' +
                             '<div onclick="CartControl()" class="triangle">' +
                             '<div class="content">' +
