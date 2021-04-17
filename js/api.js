@@ -27,7 +27,6 @@ function setCartNum() {
 function setCart() {
     var array_cart = GetCookies("cart");
     var indexflag = 0;
-    setCartNum();
     array_cart.forEach((cart, index) => {
         new AsyncTask({ "path": "https://api.vexpo.ai/megastore/product/" + cart.id, }).post().then(function (response) {
             subtotal += response.content.product.price * cart.qty;
