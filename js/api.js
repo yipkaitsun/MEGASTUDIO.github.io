@@ -18,7 +18,13 @@ function DeleteCookies(name) {
 function setCart() {
     var array_cart = GetCookies("cart");
     var indexflag = 0;
-    $("#cartNumber").text(array_cart.length);
+    try {
+        $("#cartNumber").text(array_cart.length);
+    }
+    catch (err) {
+        $("#cartNumber").text("0");
+    }
+
     array_cart.forEach((cart, index) => {
         new AsyncTask({ "path": "https://api.vexpo.ai/megastore/product/" + cart.id, }).post().then(function (response) {
             subtotal += response.content.product.price * cart.qty;
