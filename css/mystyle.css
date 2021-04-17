@@ -734,4 +734,5 @@ div#mobile-header {
 }
 #mobile-header > * {
 	padding-bottom: 70px;
+	display:inline-block;
 }
