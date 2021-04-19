@@ -22,9 +22,9 @@
         }
         function navControl() {
             var openedNav = $('#cd-nav').attr('class') == "speed-in";
+            var lateral_cart = $('#cd-nav');
+            var shadow_layer = $('#cd-shadow-layer');
             if (!openedNav) {
-                var lateral_cart = $('#cd-nav');
-                var shadow_layer = $('#cd-shadow-layer');
                 toggle_panel_visibility(lateral_cart, shadow_layer, $('body'));
             }
             else {
@@ -151,6 +151,9 @@
             });
         }
         function Checkout() {
+
+            $("body").prepend("<div id='overlay'/>");
+            $body.addClass('overflow-hidden');
             $('html').addClass("overflow-hiden");
             $('body').prepend('<div id="overlay"></div>');
             $("#header").append(
