@@ -730,7 +730,7 @@ button {
 
 div#mobile-header {
 	height: 0px;
-	padding-bottom: 14.4%;
+	padding-bottom: 13.5%;
 }
 #mobile-header > * {
 	padding-bottom: 13.5%;
@@ -752,6 +752,6 @@ div#mobile-header {
 }
 
 #mobile-nevigation {
-	padding-bottom: 8.1%;
+	padding-bottom: calc(8.3% - 15px);
 	padding-left: 20px;
 }
