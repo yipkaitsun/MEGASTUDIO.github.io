@@ -62,7 +62,7 @@
                             '<div style="width:25%"/>' +
                             '</div>')
                     }
-                }
+
                     else if (width < 900 && $(this).width() >= 900) //change to desktop header
                     {
 
@@ -88,11 +88,10 @@
                                 setCartNum();
                             })
                     }
-                    width = $(this).width();
 
+                    width = $(this).width();
+                }
                 })
-            
-            
             setCart();
         })
 
