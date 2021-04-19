@@ -54,6 +54,8 @@
             $(window).on('resize', function () {
                 if ($(this).width() !== width) {
                     if (width >= 900 && $(this).width() < 900) //change to mobile heade
+                        console.log("oldWidth:"+width);
+                        console.log("newWidth:"+$(this).width());
                         $('#header').remove();
                     $('#header-container').prepend(
                         '<div id="mobile-header">' +
