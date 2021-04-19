@@ -736,3 +736,9 @@ div#mobile-header {
 	padding-bottom: 70px;
 	display:inline-block;
 }
+
+#mobile-header > #logo {
+	background-image:url('./eshop icons/logo.png');
+	width:50%;
+}
+
