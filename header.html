@@ -21,27 +21,14 @@
             }
         } 
 		
-		function navControl() {
-            var openedNav = $('#cd-nav').attr('class') == "speed-in";
-            if (!openedNav) {
-                var lateral_cart = $('#cd-nav');
-                var shadow_layer = $('#cd-shadow-layer');
-                toggle_panel_visibility(lateral_cart, shadow_layer, $('body'));
-            }
-            else {
-                console.log("remove-speedin")
-                $('#cd-nav').removeClass("speed-in");
-                $('#overlay').remove();
-
-            }
-        }
+	
         var sensor = null;
         $(function () {
             var width = $(window).width();
             if (width < 900) {
                 $('#header-container').prepend(
                     "<div id='mobile-header'>" +
-                    "<div id='mobile-nevigation' style='width:calc(25% - 25px)'><div onclick='navControl()' id='nav-logo'/></div>"+
+                    "<div id='mobile-nevigation' style='width:calc(25% - 25px)'><div id='nav-logo'/></div>"+
                     "<div id='logo'/>" +
                     "<div style='width:25%'/>"+
                     "</div>")
