@@ -738,7 +738,7 @@ div#mobile-header {
 }
 
 #mobile-header > #logo {
-	background-image:url('./eshop icons/logo.png');
+	background-image:url('../eshop icons/logo.png');
 	width:50%;
 }
 
