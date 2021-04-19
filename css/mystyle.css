@@ -744,15 +744,14 @@ div#mobile-header {
 }
 
 #nav-logo {
-	width: 30%;
+	width: 20%;
 	height: 0px;
-	padding-bottom: 30%;
+	padding-bottom: 20%;
 	background-image: url('../eshop icons/threeDot.png');
 	background-size: contain;
 }
 
 #mobile-nevigation {
-	padding-top: 4.575%;
-	padding-bottom: 2.575%;
+	padding-bottom: 4.75%;
 	padding-left: 25px;
 }
