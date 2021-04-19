@@ -64,9 +64,6 @@ function toggle_panel_visibility ($lateral_panel, $background_layer, $body) {
 				$(this).remove();
 			});
 		$lateral_panel.addClass('speed-in').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function () {
-
-			$("body").prepend("<div id='overlay'/>");
-			$body.addClass('overflow-hidden');
 		});
 		$background_layer.addClass('is-visible');
 	}
