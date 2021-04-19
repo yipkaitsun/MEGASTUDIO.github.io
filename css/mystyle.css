@@ -747,6 +747,8 @@ div#mobile-header {
 	width: 30%;
 	height: 0px;
 	padding-bottom: 30%;
+	background-image: url('../eshop icons/threeDot.png');
+	background-size: contain;
 }
 
 #mobile-nevigation {
