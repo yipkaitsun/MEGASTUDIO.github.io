@@ -743,3 +743,14 @@ div#mobile-header {
 	background-size: contain;
 }
 
+#nav-logo {
+	width: 30%;
+	height: 0px;
+	padding-bottom: 30%;
+}
+
+#mobile-nevigation {
+	padding-top: 4.575%;
+	padding-bottom: 2.575%;
+	padding-left: 25px;
+}
