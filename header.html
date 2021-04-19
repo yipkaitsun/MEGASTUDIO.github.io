@@ -17,7 +17,7 @@
             if (!openedCart) {
                 var lateral_cart = $('#cd-cart');
                 var shadow_layer = $('#cd-shadow-layer');
-                toggle_panel_visibility(lateral_cart, shadow_layer, $('body'));
+                    (lateral_cart, shadow_layer, $('body'));
             }
         } 
 		
@@ -27,6 +27,11 @@
                 var lateral_cart = $('#cd-nav');
                 var shadow_layer = $('#cd-shadow-layer');
                 toggle_panel_visibility(lateral_cart, shadow_layer, $('body'));
+            }
+            else {
+                $('#cd-nav').removeClass("speed-in");
+                $('#overlay').remove();
+
             }
         }
         var sensor = null;
