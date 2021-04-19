@@ -730,15 +730,16 @@ button {
 
 div#mobile-header {
 	height: 0px;
-	padding-bottom: 70px;
+	padding-bottom: 14.4%;
 }
 #mobile-header > * {
-	padding-bottom: 70px;
+	padding-bottom: 14.4%;
 	display:inline-block;
 }
 
 #mobile-header > #logo {
-	background-image:url('../eshop icons/logo.png');
-	width:50%;
+	background-image: url('../eshop icons/logo.png');
+	width: 50%;
+	background-size: contain;
 }
 
