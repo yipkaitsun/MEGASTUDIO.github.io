@@ -25,6 +25,7 @@
     {
         $("#header-container").load("header.html", function () {
             var page = $('#header-container').data("page");
+            console.log("#nevigation > div:nth-child(" + page + ") > a");
             $("#nevigation > div:nth-child(" + page + ") > a").css({ color: "grey" });
         });
         var productId=GetId();
