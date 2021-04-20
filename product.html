@@ -27,7 +27,7 @@
 
             var page = $('#header-container').data("page");
             console.log($("#nevigation > div:nth-child(" + page + ") > a"));
-            $("#nevigation > div:nth-child(" + page + ") > a").css( "color", "grey" );
+            $("#nevigation > div:nth-child(" + page + ") > a").addClass("target");
         });
         var productId=GetId();
 
