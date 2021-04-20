@@ -776,7 +776,7 @@ div#mobile-header {
 }
 
 .nav-logo {
-	width: calc(70% - 20px - 1em);
+	width: calc(75% - 20px );
 	height: 0px;
 	padding-bottom: 18%;
 	display: inline-block;
