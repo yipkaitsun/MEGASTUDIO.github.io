@@ -21,8 +21,7 @@
         }
 
         $(function () {
-            $("#header-container").load("header.html", function (response, status, xhr) {
-                
+            $("#header-container").load("header.html?page=3", function (response, status, xhr) {
                 var page = $('#header-container').data("page");
                 var selector = "#nevigation > div:nth-child(" + page + ") > a";
                 $("head").append('<style type="text/css">' + selector + ' {color:grey;}</style>');
