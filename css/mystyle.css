@@ -750,9 +750,17 @@ div#mobile-header {
 	width: 20%;
 	height: 0px;
 	padding-bottom: 20%;
-	background-image: url('../eshop icons/threeDot.png');
 	background-size: contain;
 	display: inline-block;
+}
+
+#nav-logo{
+	background-image: url('../eshop icons/threeDot.png');
+
+}
+
+#cart-logo {
+	background-image: url('../eshop icons/shopping-cart.png');
 }
 
 
