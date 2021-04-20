@@ -26,7 +26,7 @@
         $("#header-container").load("header.html", function (response, status, xhr) {
             console.log(response);
             var page = $('#header-container').data("page");
-            $("#nevigation > div:nth-child(" + page + ") > a").css({ color: "grey" });
+            $("#nevigation > div:nth-child(" + page + ") > a").css( "color", "grey" );
         });
         var productId=GetId();
 
