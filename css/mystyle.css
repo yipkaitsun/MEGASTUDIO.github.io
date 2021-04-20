@@ -752,6 +752,8 @@ div#mobile-header {
 }
 
 #mobile-nevigation {
-	padding-bottom: calc(8.3% - 15px);
-	padding-left: 20px;
+	display: inline-block;
+	vertical-align: top;
+	padding-top: 5.7%;
+	padding-bottom: 4%;
 }
