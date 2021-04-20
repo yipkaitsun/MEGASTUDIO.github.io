@@ -13,10 +13,7 @@
     <script src="./js/api.js"></script>
     <script src="./js/cart_NumberSpinner.js"></script>
     <script>
-        function GetURLParameter(sParam) {
-            var sPageURL = window.location;
-            alert(sPageURL);
-        }
+      
 
         function CartControl() {
             var openedCart = $('#cd-cart').attr('class') == "speed-in";
@@ -41,7 +38,6 @@
         }
         var sensor = null;
         $(function () {
-            GetURLParameter('page');
             var width = $(window).width();
             if (width < 900) {
                 $('#header-container').prepend(
