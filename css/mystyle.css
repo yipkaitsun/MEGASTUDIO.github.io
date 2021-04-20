@@ -730,10 +730,10 @@ button {
 
 div#mobile-header {
 	height: 0px;
-	padding-bottom: 13.5%;
+	padding-bottom: 14.1%;
 }
 #mobile-header > * {
-	padding-bottom: 13.5%;
+	padding-bottom: 14.1%;
 	display:inline-block;
 }
 
