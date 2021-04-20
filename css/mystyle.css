@@ -731,7 +731,10 @@ button {
 div#mobile-header {
 	height: 0px;
 	padding-bottom: 14.2%;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
+
 #mobile-header > * {
 	padding-bottom: 14.2%;
 	display:inline-block;
