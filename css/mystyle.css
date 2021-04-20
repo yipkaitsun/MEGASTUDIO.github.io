@@ -57,27 +57,13 @@
 
 
 	.inputWithIcon > input[type=text] {
-		width: 247px;
-		border: 1px solid #000;
-		border-radius: 4px;
-		font-size: 16px;
-		background-color: white;
-		background-position: 10px 10px;
-		background-repeat: no-repeat;
-		transition: width 0.4s ease-in-out;
-		padding-right: 40px;
-		padding-top: 15px;
-		padding-bottom: 15px;
-		padding-left: 11px;
+		width: 247px !important;
+
 	}
 
 
 	.inputWithIcon {
-		position: relative;
-		display: inline-block;
-		overflow: hidden;
-		white-space: nowrap;
-		width: 300px;
+		width: 300px !important;
 	}
 
 }
