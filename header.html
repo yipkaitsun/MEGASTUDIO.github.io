@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,12 +12,16 @@
     <script src="./js/api.js"></script>
     <script src="./js/cart_NumberSpinner.js"></script>
     <script>
-        function GetId() {
-            const queryString = window.location.search;
-            const urlParams = new URLSearchParams(queryString);
-            const productId = urlParams.get('page');
-            return (productId);
-        }
+        function GetURLParameter(sParam) {
+            var sPageURL = window.location.search.substring(1);
+            var sURLVariables = sPageURL.split('&');
+            for (var i = 0; i < sURLVariables.length; i++) {
+                var sParameterName = sURLVariables[i].split('=');
+                if (sParameterName[0] == sParam) {
+                    return sParameterName[1];
+                }
+            }
+        }​
 
         function CartControl() {
             var openedCart = $('#cd-cart').attr('class') == "speed-in";
@@ -42,7 +46,7 @@
         }
         var sensor = null;
         $(function () {
-            alert(GetId());
+            alert(GetURLParameter('page'));
             var width = $(window).width();
             if (width < 900) {
                 $('#header-container').prepend(
