@@ -182,11 +182,13 @@ xheader
 #cd-nav .cd-nav-items {
   padding: 0;
 }
+   
 #cd-nav .cd-nav-items li {
         position: relative;
         font-size: x-large;
         padding-left: 1em;
         padding-top: 40px;
+        font-family: 'RobotoMono-Regular';
     }
 #cd-nav .cd-qty, #cd-nav .cd-price {
   color: #a5aebc;
