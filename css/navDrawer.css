@@ -77,7 +77,7 @@ xheader
   height: 100%;
   width: 70%;
   /* header height */
-  padding-top: 50px;
+  padding-top: 20px;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
