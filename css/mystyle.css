@@ -744,7 +744,7 @@ div#mobile-header {
 	margin-bottom: 10px;
 }
 
-#mobile-header > * {
+#mobile-header > #logo {
 	padding-bottom: 14.2%;
 	display:inline-block;
 }
