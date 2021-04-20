@@ -15,7 +15,8 @@
     <script>
         function GetURLPath() {
             var pathname = window.location.pathname;
-            return(pathname.substring(1,pathname.indexOf('.html')));
+            const index = paragraph.indexOf('.html');
+            return (pathname.substring(1, index));
         }
 
         function CartControl() {
