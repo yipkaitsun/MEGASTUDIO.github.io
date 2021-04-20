@@ -746,17 +746,23 @@ div#mobile-header {
 	background-size: contain;
 }
 
-#nav-logo {
+#nav-logo, #cart-logo {
 	width: 20%;
 	height: 0px;
 	padding-bottom: 20%;
 	background-image: url('../eshop icons/threeDot.png');
 	background-size: contain;
+	display: inline-block;
 }
 
-#mobile-nevigation {
+
+#mobile-nevigation, #mobile-cart {
 	display: inline-block;
 	vertical-align: top;
 	padding-top: 5.7%;
 	padding-bottom: 4.5%;
+}
+
+#mobile-cart {
+	text-align: right;
 }
