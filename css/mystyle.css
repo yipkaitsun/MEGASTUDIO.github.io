@@ -770,10 +770,10 @@ div#mobile-header {
 }
 
 #nav-logo, #cart-logo {
-	width: 19.5%;
+	width: 20%;
 	height: 0px;
 	padding-bottom: 20%;
-	background-size: contain;
+	background-size: cover;
 	display: inline-block;
 }
 
