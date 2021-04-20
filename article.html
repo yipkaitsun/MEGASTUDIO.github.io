@@ -12,7 +12,8 @@
         $(function () {
             $("#header-container").load("header.html", function () {
                 var page = $('#header-container').data("page");
-                $("#nevigation > div:nth-child(" + page + ") > a").css({ color: "grey" });
+                var selector = "#nevigation > div:nth-child(" + page + ") > a";
+                $("head").append('<style type="text/css">' + selector + ' {color:grey;}</style>');
             });
           const queryString = window.location.search;
           const urlParams = new URLSearchParams(queryString);
