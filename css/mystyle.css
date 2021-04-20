@@ -39,6 +39,9 @@
 		margin: auto;
 		max-width: 1000px;
 	}
+	.backTo {
+	display:none;
+	}
 }
 	body.overflow-hidden {
 		overflow: hidden;
