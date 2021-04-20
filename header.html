@@ -13,9 +13,9 @@
     <script src="./js/api.js"></script>
     <script src="./js/cart_NumberSpinner.js"></script>
     <script>
-        function GetURLParameter(sParam) {
-            var sPageURL = window.location.pathname;
-            alert(sPageURL);
+        function GetURLPath() {
+            var pathname = window.location.pathname;
+            return(pathname.substring(1,pathname.indexOf('.html')));
         }
 
         function CartControl() {
@@ -41,7 +41,7 @@
         }
         var sensor = null;
         $(function () {
-            GetURLParameter('page');
+            alert(GetURLPath());
             var width = $(window).width();
             if (width < 900) {
                 $('#header-container').prepend(
