@@ -34,7 +34,15 @@
 .backTo {
 	display: none;
 }
+@media only screen and (max-width: 900px) {
+	.search > input[type=text] {
+		width: calc(100% - 53px) !important;
+	}
 
+	.search {
+		width: 100% !important;
+	}
+}
 @media only screen and (min-width: 900px) {
 	body {
 		width: 80vw;
@@ -54,17 +62,6 @@
 			font-size: 14px;
 			color: #000;
 		}
-
-
-	.inputWithIcon > input[type=text] {
-		width: 247px !important;
-
-	}
-
-
-	.inputWithIcon {
-		width: 300px !important;
-	}
 
 }
 	body.overflow-hidden {
@@ -172,9 +169,8 @@
 	padding-top: 15px;
 }
 
-
 .inputWithIcon > input[type=text] {
-	width: calc(100% - 53px);
+	width: 247px;
 	border: 1px solid #000;
 	border-radius: 4px;
 	font-size: 16px;
@@ -194,9 +190,8 @@
 	display: inline-block;
 	overflow: hidden; 
 	white-space: nowrap;
-	width:100%;
+	width:300px;
 }
-
 
 	.inputWithIcon svg {
 		color: #aaa;
@@ -775,7 +770,7 @@ div#mobile-header {
 }
 
 #nav-logo, #cart-logo {
-	width: 19.5%;
+	width: 20%;
 	height: 0px;
 	padding-bottom: 19.5%;
 	background-size: contain;
