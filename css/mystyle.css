@@ -55,6 +55,31 @@
 			color: #000;
 		}
 
+
+	.inputWithIcon > input[type=text] {
+		width: 247px;
+		border: 1px solid #000;
+		border-radius: 4px;
+		font-size: 16px;
+		background-color: white;
+		background-position: 10px 10px;
+		background-repeat: no-repeat;
+		transition: width 0.4s ease-in-out;
+		padding-right: 40px;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		padding-left: 11px;
+	}
+
+
+	.inputWithIcon {
+		position: relative;
+		display: inline-block;
+		overflow: hidden;
+		white-space: nowrap;
+		width: 300px;
+	}
+
 }
 	body.overflow-hidden {
 		overflow: hidden;
@@ -161,8 +186,9 @@
 	padding-top: 15px;
 }
 
+
 .inputWithIcon > input[type=text] {
-	width: 247px;
+	width: calc(100% - 53px);
 	border: 1px solid #000;
 	border-radius: 4px;
 	font-size: 16px;
@@ -182,8 +208,9 @@
 	display: inline-block;
 	overflow: hidden; 
 	white-space: nowrap;
-	width:300px;
+	width:100%;
 }
+
 
 	.inputWithIcon svg {
 		color: #aaa;
