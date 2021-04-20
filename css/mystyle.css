@@ -265,7 +265,7 @@ img.footer-icon {
 	display: inline-block;
 	vertical-align: middle;
 	font-family: 'NotoSans-Regular';
-	height: min(32px, 6vw);
+	height: min(24px, 6vw);
 }
 
 svg.cd-cart-trigger {
