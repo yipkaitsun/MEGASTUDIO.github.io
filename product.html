@@ -23,9 +23,9 @@
 
     $(function ()
     {
-        $("#header-container").load("header.html", function () {
+        $("#header-container").load("header.html", function (response, status, xhr) {
+            console.log(response);
             var page = $('#header-container').data("page");
-            alert("#nevigation > div:nth-child(" + page + ") > a");
             $("#nevigation > div:nth-child(" + page + ") > a").css({ color: "grey" });
         });
         var productId=GetId();
