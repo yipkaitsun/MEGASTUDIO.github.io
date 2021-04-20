@@ -763,10 +763,14 @@ div#mobile-header {
 	display: inline-block;
 }
 
-#nav-logo{
+#nav-logo.dots{
 	background-image: url('../eshop icons/threeDot.png');
 
 }
+
+#nav-logo.back {
+		background-image: url('../eshop icons/arrow-left.png');
+	}
 
 #cart-logo {
 	background-image: url('../eshop icons/shopping-cart.png');
