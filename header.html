@@ -15,7 +15,7 @@
     <script>
         function GetURLPath() {
             var pathname = window.location.pathname;
-            const index = paragraph.indexOf('.html');
+            const index = pathname.indexOf('.html');
             return (pathname.substring(1, index));
         }
 
