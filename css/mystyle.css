@@ -776,8 +776,10 @@ div#mobile-header {
 }
 
 .nav-logo {
-	width: calc(100% - 20px - 1em);
+	width: calc(70% - 20px - 1em);
 	height: 0px;
-	padding-bottom: 1em;
+	padding-bottom: 18%;
 	display: inline-block;
+	background-image: url(../eshop icons/logo.png);
+	background-size: cover;
 }
