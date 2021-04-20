@@ -780,6 +780,6 @@ div#mobile-header {
 	height: 0px;
 	padding-bottom: 18%;
 	display: inline-block;
-	background-image: url(../eshop icons/logo.png);
+	background-image: url('../eshop icons/logo.png');
 	background-size: cover;
 }
