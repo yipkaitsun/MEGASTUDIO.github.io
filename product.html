@@ -53,11 +53,14 @@
                     });
                 $("#addQty").htmlNumberSpinner();
                 $("#description").append(response.content.product.description);
-                resizeCall(768, () => { $('.pgwSlider').parent().addClass("mobile") }, () => { }, () => { $('.pgwSlider').parent().addClass("mobile") }, () => { $('.pgwSlider').parent().removeClass("mobile"); });
-
-                new ResizeSensor($('.ps-current'), function () {
-                    $('.pgwSlider').css('height', $('.ps-current').height() + 'px');
-                    if ($(window).width() <= 768) {
+                resizeCall(
+                    768,
+                    () => {
+                        $('.pgwSlider').parent().addClass("mobile")
+                    },
+                    () => { },
+                    () => {
+                        $('.pgwSlider').parent().addClass("mobile");
                         $("#productDetail").css(
                             {
                                 position: "relative",
@@ -65,17 +68,19 @@
                             })
                         $('#name').css('margin-top', '0.83em');
                         $('.info').css('padding-left', '0%');
-                    }
-
-                    else {
-                        $("#productDetail").css({
+                    },
+                    () => {
+                        $('.pgwSlider').parent().removeClass("mobile");
+                        $("#productDetail").css(
+                            {
                             position: "relative",
                             "margin-left": "11.125%"
-                        })
+                            })
                         $('#name').css('margin-top', '0px');
                         $('.info').css('padding-left', '3%');
                     }
-                });
+                );
+
 
             });
 
