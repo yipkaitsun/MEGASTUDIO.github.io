@@ -17,6 +17,8 @@
                 var page = $('#header-container').data("page");
                 var selector = "#nevigation > div:nth-child(" + page + ") > a";
                 $("head").append('<style type="text/css">' + selector + ' {color:grey;}</style>');
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0; 
             });
           data = {
               "path": "https://api.vexpo.ai/megastore/article",
