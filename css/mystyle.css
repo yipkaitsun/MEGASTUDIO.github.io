@@ -74,7 +74,7 @@ body {
 @media only screen and (min-width: 900px) {
 
 	.checkout-btn {
-		width:60%
+		width:60% !important;
 	}
 		body {
 		width: 80vw;
