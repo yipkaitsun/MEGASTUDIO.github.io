@@ -323,7 +323,9 @@ svg.cd-cart-trigger {
     background-color: white;
 	}
 
-
+.contact-form {
+    max-width: 95% !important;
+	}
 
 	#Blog>.grid-3,#Shop>.grid-3{
 
