@@ -20,7 +20,10 @@
                 const urlParams = new URLSearchParams(queryString);
 				const order_id = urlParams.get('id');
 
-            $("#header-container").load("header.html");
+			$("#header-container").load("header.html", function () {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0; 
+			});
 			$("#footer-container").load("footer.html");
 			data = {
 				"path": "https://api.vexpo.ai/megastore/order/" + order_id,

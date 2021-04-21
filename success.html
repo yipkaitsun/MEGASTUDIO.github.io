@@ -22,7 +22,10 @@
             const session_Id = urlParams.get('s');
             const order_id = urlParams.get('t');
 
-            $("#header-container").load("header.html");
+            $("#header-container").load("header.html", function () {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            });
             $("#footer-container").load("footer.html");
             data = {
                 "path": "https://api.vexpo.ai/megastore/order/pay-session",
