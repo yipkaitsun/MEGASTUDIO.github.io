@@ -25,7 +25,8 @@
             $("#header-container").load("header.html?page=3", function () {
                 var page = $('#header-container').data("page");
                 var selector = "#nevigation > div:nth-child(" + page + ") > a";
-                $("head").append('<style type="text/css">' + selector + ' {color:grey;}</style>');
+                var selector2 = "#cd-nav-items>li:nth-child(" + page + ") > a";
+                $("head").append('<style type="text/css">' + selector + ' {color:grey;}' + selector2 + '{color:grey;}</style>');
                 document.body.scrollTop = 0; // For Safari
                 document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
             });
