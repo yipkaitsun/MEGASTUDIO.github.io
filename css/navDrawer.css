@@ -72,21 +72,23 @@ xheader
 }
 
 #main-nav, #cd-nav {
-  position: fixed;
-  top: 0;
-  height: 100%;
-  width: 72%;
-  /* header height */
-  padding-top: 20px;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  z-index: 3;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    /* header height */
+    padding-top: 20px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    z-index: 3;
+    max-width: 350px;
 }
 @media only screen and (min-width: 768px) {
-  #main-nav, #cd-nav {
-    width: 350px;
-  }
+    #main-nav, #cd-nav {
+        width: 100%;
+        max-width: 350px;
+    }
 }
 @media only screen and (min-width: 1200px) {
   #main-nav, #cd-nav {
