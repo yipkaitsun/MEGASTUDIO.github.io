@@ -324,9 +324,7 @@ svg.cd-cart-trigger {
 	}
 
 	.contact-form {
-    max-width: 70vw;
-    padding: 10px;
-    background-color: white;
+    max-width: 100%;
 	}
 
 	#Blog>.grid-3,#Shop>.grid-3{
@@ -361,9 +359,7 @@ svg.cd-cart-trigger {
 		background-color: white;
 	}
 	.contact-form{
-		max-width: 380px;
-		padding: 10px;
-		background-color: white;
+		width: 100% !important;
 	}
 
 	#Blog>.grid-3,#Shop>.grid-3{
@@ -591,16 +587,7 @@ svg.cd-cart-trigger {
 }
 
 .contact-form input[type=text] {
-	width: 85%;
-	padding: 15px;
-	border: solid;
-	background: #ffffff;
-	border-color: grey;
-	border-width: thin;
-	border-bottom: none;
-	-webkit-appearance: none;
-	border-radius: 0;
-	margin-top: -1px;
+	width: 95%!important;
 }
 
 .form-container textarea {
@@ -618,7 +605,7 @@ svg.cd-cart-trigger {
 }
 
 .contact-form textarea {
-	width: 85%;
+	width: 95% !important;
 }
 
 .form-container textarea::placeholder,.form-container input[type=text]::placeholder{
