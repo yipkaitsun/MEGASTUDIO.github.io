@@ -51,8 +51,6 @@
                     });
                 $("#addQty").htmlNumberSpinner();
                 $("#description").append(response.content.product.description);
-
-
                 resizeCall(768, () => { $('.pgwSlider').parent().addClass("mobile") }, () => { }, () => { $('.pgwSlider').parent().addClass("mobile") }, () => { $('.pgwSlider').parent().removeClass("mobile"); });
 
                 new ResizeSensor($('.ps-current'), function () {

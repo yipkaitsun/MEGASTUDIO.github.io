@@ -12,6 +12,7 @@
 
     <script>
         $(function () {
+            resizeCall(900, () => { $('#product').addClass("grid-2") }, () => { $('#product').addClass("grid-3") }, () => { $('#product').addClass("grid-2").removeClass("grid-3") }, () => { $('#product').addClass("grid-3").removeClass("grid-2") });
 
             $("#header-container").load("header.html", function () {
                 var page = $('#header-container').data("page");
@@ -64,7 +65,7 @@
 
 
             </div>
-            <div id="product" class="grid-3" style="text-align: left;"></div>
+            <div id="product"  style="text-align: left;"></div>
 
         </div>
     </div>
