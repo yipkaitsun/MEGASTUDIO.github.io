@@ -812,6 +812,6 @@ div#mobile-header {
 	background-size: cover;
 }
 
-#cd-nav-items > li {
+#cd-nav-items > li>a {
 	color:black;
 }
