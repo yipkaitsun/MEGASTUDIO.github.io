@@ -195,6 +195,7 @@ body {
 	font-size: 20px;
 	align-items: center;
 	line-height: 55px;
+	margin-bottom: min(22%, 100px);
 }
 .moreButton:hover, .contact-btn:hover, .creditcard-btn:hover {
 		background-color: #f9f9f9;
