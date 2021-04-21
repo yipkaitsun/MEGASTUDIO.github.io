@@ -318,7 +318,13 @@ svg.cd-cart-trigger {
 	text-align: center;
 	}
 	.form-container {
-    width: 70vw;
+    max-width: 70vw;
+    padding: 10px;
+    background-color: white;
+	}
+
+	.contact-form {
+    max-width: 70vw;
     padding: 10px;
     background-color: white;
 	}
@@ -350,6 +356,11 @@ svg.cd-cart-trigger {
 	}
 
 	.form-container {
+		max-width: 380px;
+		padding: 10px;
+		background-color: white;
+	}
+	.contact-form{
 		max-width: 380px;
 		padding: 10px;
 		background-color: white;
@@ -579,6 +590,19 @@ svg.cd-cart-trigger {
 	margin-top: -1px;
 }
 
+.contact-form input[type=text] {
+	width: 85%;
+	padding: 15px;
+	border: solid;
+	background: #ffffff;
+	border-color: grey;
+	border-width: thin;
+	border-bottom: none;
+	-webkit-appearance: none;
+	border-radius: 0;
+	margin-top: -1px;
+}
+
 .form-container textarea {
 	width: 85%;
 	padding: 15px;
@@ -592,6 +616,11 @@ svg.cd-cart-trigger {
 	border-radius: 0;
 	margin-top: -1px;
 }
+
+.contact-form textarea {
+	width: 85%;
+}
+
 .form-container textarea::placeholder,.form-container input[type=text]::placeholder{
 	font-size: 14px
 }
@@ -765,6 +794,7 @@ div#mobile-header {
 	height: 0px;
 	padding-bottom: 14.2%;
 	margin-top: 15px;
+	margin-bottom: 15px;
 }
 
 #mobile-header > #logo {
