@@ -811,3 +811,7 @@ div#mobile-header {
 	background-image: url('../eshop icons/logo.png');
 	background-size: cover;
 }
+
+#cd-nav-items > li {
+	color:black;
+}
