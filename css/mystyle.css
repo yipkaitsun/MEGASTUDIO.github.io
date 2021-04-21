@@ -318,7 +318,7 @@ svg.cd-cart-trigger {
 	text-align: center;
 	}
 	.form-container {
-    max-width: 70vw;
+    width: 100%;
     padding: 10px;
     background-color: white;
 	}
@@ -350,7 +350,7 @@ svg.cd-cart-trigger {
 	}
 
 	.form-container {
-		max-width: 380px;
+		width: 100%;
 		padding: 10px;
 		background-color: white;
 	}
@@ -567,7 +567,7 @@ svg.cd-cart-trigger {
 
 
 .form-container input[type=text] {
-	width: 85%;
+	width: 95%;
 	padding: 15px;
 	border: solid;
 	background: #ffffff;
@@ -580,7 +580,7 @@ svg.cd-cart-trigger {
 }
 
 .form-container textarea {
-	width: 85%;
+	width: 95%;
 	padding: 15px;
 	border: solid;
 	background: #ffffff;
