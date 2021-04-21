@@ -13,6 +13,8 @@
 
     <script>
         $(function () {
+            resizeCall(900, () => { $('#Blog').addClass("grid-2") }, () => { $('#Blog').addClass("grid-3") }, () => { $('#Blog').addClass("grid-2").removeClass("grid-3") }, () => { $('#Blog').addClass("grid-3").removeClass("grid-2") });
+
             $("#header-container").load("header.html", function () {
                 var page = $('#header-container').data("page");
                 var selector = "#nevigation > div:nth-child(" + page + ") > a";
@@ -45,7 +47,7 @@
 	<body>
 		<div id="header-container" data-page="3"></div>
         <div class="body">
-            <div id="Blog" class="grid-3" style="margin:auto;text-align: left;"></div>
+            <div id="Blog" style="margin:auto;text-align: left;"></div>
             <div id="footer-container"></div>
         </div>
 	</body>
