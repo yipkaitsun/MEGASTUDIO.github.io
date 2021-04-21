@@ -72,7 +72,11 @@ body {
 	}
 }
 @media only screen and (min-width: 900px) {
-	body {
+
+	.checkout-btn {
+		width:60%
+	}
+		body {
 		width: 80vw;
 		overflow-x: hidden;
 		margin: auto;
@@ -406,15 +410,15 @@ svg.cd-cart-trigger {
 	margin-left:auto;
 	margin-right:auto;
 }
-.checkout-btn{
-	width: 60%;
-    height: 50px;
-    background-color: white;
-    font-family: 'RobotoMono-Regular';
-    outline: none;
-    display: block;
-    margin-left: 20px;
-	font-size:15px;
+.checkout-btn {
+	width: calc(100% - 60px);
+	height: 50px;
+	background-color: white;
+	font-family: 'RobotoMono-Regular';
+	outline: none;
+	display: block;
+	margin-left: 20px;
+	font-size: 15px;
 }
 
 	.checkout-btn:hover {
