@@ -27,7 +27,7 @@
 
 
  .body {
-	width: 90%;
+	width: 100%;
     overflow-x: hidden;
     margin: auto;
 	max-width:1000px;
@@ -73,7 +73,10 @@ body {
 }
 @media only screen and (min-width: 900px) {
 
-	.checkout-btn {
+	.body {
+		width: 90% !important;
+	}
+		.checkout-btn {
 		width:60% !important;
 	}
 		body {
