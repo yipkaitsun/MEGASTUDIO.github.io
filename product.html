@@ -22,10 +22,12 @@
 
         $(function () {
 
-            $("#header-container").load("header.html?page=3", function (response, status, xhr) {
+            $("#header-container").load("header.html?page=3", function () {
                 var page = $('#header-container').data("page");
                 var selector = "#nevigation > div:nth-child(" + page + ") > a";
                 $("head").append('<style type="text/css">' + selector + ' {color:grey;}</style>');
+                document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
             });
             var productId = GetId();
 
