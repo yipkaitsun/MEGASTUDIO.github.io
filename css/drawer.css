@@ -78,16 +78,18 @@ xheader
 #main-nav, #cd-cart {
   position: fixed;
   top: 0;
-  width: 350px;
+  width: 100%;
   /* header height */
   padding-top: 25px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   z-index: 3;
+  max-width:350px;
 }
 @media only screen and (min-width: 768px) {
-  #main-nav, #cd-cart {
-    width: 350px;
-  }
+    #main-nav, #cd-cart {
+        max-width: 350px;
+        width: 100%;
+    }
 }
 @media only screen and (min-width: 1200px) {
   #main-nav, #cd-cart {

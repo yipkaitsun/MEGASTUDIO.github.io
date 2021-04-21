@@ -21,6 +21,7 @@
         }
 
         $(function () {
+
             $("#header-container").load("header.html?page=3", function (response, status, xhr) {
                 var page = $('#header-container').data("page");
                 var selector = "#nevigation > div:nth-child(" + page + ") > a";
@@ -47,9 +48,29 @@
                 $("#addQty").htmlNumberSpinner();
                 $("#description").append(response.content.product.description);
 
+                var width = $(window).width();
+                if (width < 768) {
+                    $('.pgwSlider').parent().addClass("mobile");
+                }
+               
+
+                $(window).on('resize', function () {
+                    if ($(this).width() !== width) {
+                        if (width >= 768 && $(this).width() < 768) {
+                            $('.pgwSlider').parent().addClass("mobile");
+                        }
+
+                        else if (width < 768 && $(this).width() >= 768){
+                            $('.pgwSlider').parent().removeClass("mobile");
+                        }
+                    }
+
+                    width = $(this).width();
+                });
+
                 new ResizeSensor($('.ps-current'), function () {
                     $('.pgwSlider').css('height', $('.ps-current').height() + 'px');
-                    if ($(window).width() <= 768) {
+                    if ($(window).width() <= 768) { 
                         $("#productDetail").css(
                             {
                                 position: "relative",

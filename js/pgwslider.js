@@ -203,10 +203,15 @@
         };
 
         // Set size class
-        var setSizeClass = function() {
-
+        var setSizeClass = function () {
+            if (pgwSlider.plugin.parent().hasClass("mobile")) {
+                console.log("mobile");
+                pgwSlider.plugin.addClass('narrow').removeClass('wide');
+            } else {
+                console.log("desktop");
                 pgwSlider.plugin.addClass('wide').removeClass('narrow');
-            
+            }
+
             return true;
         };
 
