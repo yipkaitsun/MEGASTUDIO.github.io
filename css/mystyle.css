@@ -43,7 +43,7 @@ body {
 	.search > input[type=text] {
 		width: calc(100% - 53px) !important;
 	}
-	#banner {
+	.banner {
 		overflow: hidden;
 	}
 
