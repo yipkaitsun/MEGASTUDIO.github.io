@@ -43,6 +43,9 @@ body {
 	.search > input[type=text] {
 		width: calc(100% - 53px) !important;
 	}
+	#banner {
+		overflow: hidden;
+	}
 
 	.search {
 		width: 100% !important;
