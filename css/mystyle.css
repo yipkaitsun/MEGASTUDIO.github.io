@@ -222,7 +222,7 @@ body {
 }
 
 .inputWithIcon > input[type=text] {
-	width: 247px;
+	width: min( calc(100% - 55px), 247px);
 	border: 1px solid #000;
 	border-radius: 4px;
 	font-size: 16px;
@@ -242,7 +242,7 @@ body {
 	display: inline-block;
 	overflow: hidden; 
 	white-space: nowrap;
-	width:300px;
+	max-width:300px;
 }
 
 	.inputWithIcon svg {
