@@ -39,7 +39,7 @@ body {
 .backTo {
 	display: none;
 }
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 899px) {
 	.search > input[type=text] {
 		width: calc(100% - 53px) !important;
 	}
@@ -89,6 +89,19 @@ body {
 			font-size: 14px;
 			color: #000;
 		}
+
+	.homegrid {
+		width: calc(31.3%);
+		display: inline-block;
+		vertical-align: top;
+		text-align: center;
+		margin-bottom: 1%;
+	}
+
+	.grid2 {
+		margin-left: 3%;
+		margin-right: 3%;
+	}
 	
 		
 		
@@ -166,19 +179,6 @@ body {
 	margin-right: 1%;
 }
 
-.homegrid {
-	width: calc(31.3%);
-	display: inline-block;
-	vertical-align: top;
-	text-align: center;
-	margin-bottom: 1%;
-
-}
-
-.grid2{
-	margin-left: 3%;
-	margin-right: 3%;
-}
 .grid>img {
 	width:100%;
 }
