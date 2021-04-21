@@ -25,11 +25,19 @@
 	margin-top:70px;
 }
 
+div#header-container {
+	width: 90vw;
+	margin: auto;
+}
  .body {
 	width: 90vw;
     overflow-x: hidden;
     margin: auto;
 	max-width:1000px;
+}
+
+body {
+	margin:0px;
 }
 .backTo {
 	display: none;
