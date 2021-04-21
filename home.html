@@ -73,37 +73,37 @@
 <body style="position: unset !important;">
 
     <div id="header-container" data-page="1"></div>
-
-    <div class="banner">
-        <div class="slick-banner" style="width:calc(100% - 40px); margin:auto;"></div>
-    </div>
-    <div id="FeatureProducts">
-        <div class="title">Feature Products</div>
-        <div id="FeactureProduct" class="grid-3" style="margin:auto;text-align: center;"></div>
-        <Button onclick="Goto('./shop.html')" class="moreButton">More</Button>
-    </div>
-
-
-    <div id="OurBlog">
-        <div class="title">Our Blog</div>
-        <div id="Blog" class="grid-3" style="margin:auto;text-align: center;"></div>
-        <div><Button onclick="Goto('./blog.html')" class="moreButton">More</Button></div>
-    </div>
-
-    <div id="Follow" style="text-align:center">
-        <div class="title">Follow Us</div>
-        <p>Get our latest news by subscribing to our channel!</p>
-        <div class="inputWithIcon">
-            <input type="text" name="email" placeholder="Email">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="26" height="26" viewBox="0 0 26 26">
-                <image id="mail" width="26" height="26" opacity="0.6" xlink:href="data:image/png;base64,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" />
-            </svg>
-
-
+    <div class="body">
+        <div class="banner">
+            <div class="slick-banner" style="width:calc(100% - 40px); margin:auto;"></div>
+        </div>
+        <div id="FeatureProducts">
+            <div class="title">Feature Products</div>
+            <div id="FeactureProduct" class="grid-3" style="margin:auto;text-align: center;"></div>
+            <Button onclick="Goto('./shop.html')" class="moreButton">More</Button>
         </div>
 
-    </div>
-    <div id="footer-container"></div>
 
+        <div id="OurBlog">
+            <div class="title">Our Blog</div>
+            <div id="Blog" class="grid-3" style="margin:auto;text-align: center;"></div>
+            <div><Button onclick="Goto('./blog.html')" class="moreButton">More</Button></div>
+        </div>
+
+        <div id="Follow" style="text-align:center">
+            <div class="title">Follow Us</div>
+            <p>Get our latest news by subscribing to our channel!</p>
+            <div class="inputWithIcon">
+                <input type="text" name="email" placeholder="Email">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="26" height="26" viewBox="0 0 26 26">
+                    <image id="mail" width="26" height="26" opacity="0.6" xlink:href="data:image/png;base64,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" />
+                </svg>
+
+
+            </div>
+
+        </div>
+        <div id="footer-container"></div>
+    </div>
 </body>
 </html>
