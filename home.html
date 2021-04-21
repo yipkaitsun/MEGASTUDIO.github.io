@@ -1,6 +1,8 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/slick-theme.css" />
     <link rel="stylesheet" href="./css/slick.css" />
     <!-- JQuery -->
@@ -21,8 +23,8 @@
                 var page = $('#header-container').data("page");
                 var selector = "#nevigation > div:nth-child(" + page + ") > a";
                 var selector2 = "#cd-nav-items>li:nth-child(" + page + ") > a";
-                $("head").append('<style type="text/css">' + selector + ' {color:grey;}' + selector2+ '{color:grey;}</style>');
-                
+                $("head").append('<style type="text/css">' + selector + ' {color:grey;}' + selector2 + '{color:grey;}</style>');
+
                 document.body.scrollTop = 0; // For Safari
                 document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
             });

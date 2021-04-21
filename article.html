@@ -1,14 +1,16 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <!-- MyApi -->
     <script src="./js/api.js"></script>
     <!-- BackendApi -->
-	<script src="./js/ResizeSensor.js"></script>
-	<script src="./js/ElementQueries.js"></script>
+    <script src="./js/ResizeSensor.js"></script>
+    <script src="./js/ElementQueries.js"></script>
     <script src="./js/AsynctTask.js"></script>
-	    <script>
+    <script>
         $(function () {
             $("#header-container").load("header.html", function () {
                 var page = $('#header-container').data("page");
@@ -16,25 +18,24 @@
                 var selector2 = "#cd-nav-items>li:nth-child(" + page + ") > a";
                 $("head").append('<style type="text/css">' + selector + ' {color:grey;}' + selector2 + '{color:grey;}</style>');
                 document.body.scrollTop = 0;
-                document.documentElement.scrollTop = 0; 
+                document.documentElement.scrollTop = 0;
             });
-          const queryString = window.location.search;
-          const urlParams = new URLSearchParams(queryString);
-          const articleId = urlParams.get('id');
-          data = {
-              "path": "https://api.vexpo.ai/megastore/article/"+articleId,
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            const articleId = urlParams.get('id');
+            data = {
+                "path": "https://api.vexpo.ai/megastore/article/" + articleId,
             }
-          var asyncTask = new AsyncTask(data);
-          asyncTask.post().then(
-              function(response)
-              {
-                $("#article").append(response.content.article.content);
-              });
-      
+            var asyncTask = new AsyncTask(data);
+            asyncTask.post().then(
+                function (response) {
+                    $("#article").append(response.content.article.content);
+                });
+
             $("#footer-container").load("footer.html");
-		})
-		</script>
-	<link rel="stylesheet" href="./css/mystyle.css" />
+        })
+    </script>
+    <link rel="stylesheet" href="./css/mystyle.css" />
 </head>
     <body>
         <div id="header-container" data-page="3"></div>

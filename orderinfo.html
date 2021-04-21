@@ -1,40 +1,42 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="./css/owl.theme.default.min.css" />
-    <link rel="stylesheet" href="./css/owl.carousel.min.css" />
-    <!-- JQuery -->
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <!-- MyApi -->
-    <script src="./js/api.js"></script>
-    <!-- BackendApi -->
-    <script src="./js/AsynctTask.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./css/owl.theme.default.min.css" />
+	<link rel="stylesheet" href="./css/owl.carousel.min.css" />
+	<!-- JQuery -->
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<!-- MyApi -->
+	<script src="./js/api.js"></script>
+	<!-- BackendApi -->
+	<script src="./js/AsynctTask.js"></script>
 	<script src="./js/owl.carousel.js"></script>
 	<script src="./js/drawer.js"></script>
 
 	<link rel="stylesheet" href="./css/mystyle.css" />
 
-    <script>
+	<script>
 		$(function () {
-                const queryString = window.location.search;
-                const urlParams = new URLSearchParams(queryString);
-				const order_id = urlParams.get('id');
+			const queryString = window.location.search;
+			const urlParams = new URLSearchParams(queryString);
+			const order_id = urlParams.get('id');
 
 			$("#header-container").load("header.html", function () {
-                document.body.scrollTop = 0;
-                document.documentElement.scrollTop = 0; 
+				document.body.scrollTop = 0;
+				document.documentElement.scrollTop = 0;
 			});
 			$("#footer-container").load("footer.html");
 			data = {
 				"path": "https://api.vexpo.ai/megastore/order/" + order_id,
-            }
-            var asyncTask = new AsyncTask(data);
+			}
+			var asyncTask = new AsyncTask(data);
 			asyncTask.post().then(function (response) {
 				var subtotal = 0;
 				response.content.order.product_list.forEach(function (product) {
 					subtotal += parseInt(product.price) * parseInt(product.quantity);
 					$("#order_product").append('<div class="detail">' +
-                        '<div class="orderDetail_title" style= "background-image:url('+ product.thumbnail+')">' +
+						'<div class="orderDetail_title" style= "background-image:url(' + product.thumbnail + ')">' +
 						'</div>' +
 						'<div class="space50">' +
 						'<p>' + product.name + '</p>' +
@@ -52,41 +54,41 @@
 				$("#orderId").append('<h2> Order  # </h2>' +
 					'<h2 id="id">' + order_id + '</h2>');
 
-				 $("#subtotal").append('<p class="order_title">Order Subtotal</p>'+
-                '<span class="space15" ></span >'+
-                '<div class="orderContent"><p>$'+subtotal+'</p></div>');
+				$("#subtotal").append('<p class="order_title">Order Subtotal</p>' +
+					'<span class="space15" ></span >' +
+					'<div class="orderContent"><p>$' + subtotal + '</p></div>');
 
-                $("#total").append('<p class="order_title total">Total</p>'+
-				'<span class="space15"></span>'+
+				$("#total").append('<p class="order_title total">Total</p>' +
+					'<span class="space15"></span>' +
 					'<div class="orderContent"><p>$' + subtotal + '</p></div>')
 
-                $("#contactName").append('<p class= "order_title" >Contact Person</p>'+
+				$("#contactName").append('<p class= "order_title" >Contact Person</p>' +
 					'<span class="space15"></span>' +
-                    '<div class="orderContent"><p>' + response.content.order.delivery_info.name + '</p></div>');
+					'<div class="orderContent"><p>' + response.content.order.delivery_info.name + '</p></div>');
 
-				$("#phone").append('<p class= "order_title" >Phone Number</p>'+
+				$("#phone").append('<p class= "order_title" >Phone Number</p>' +
 					'<span class="space15"></span>' +
 					'<div class="orderContent"><p>' + response.content.order.delivery_info.phone + '</p></div>');
 
-                $("#email").append('<p class= "order_title" >Email Address</p>' +
+				$("#email").append('<p class= "order_title" >Email Address</p>' +
 					'<span class="space15"></span>' +
-                    '<div class="orderContent"><p>' + response.content.order.delivery_info.email + '</p></div>');
+					'<div class="orderContent"><p>' + response.content.order.delivery_info.email + '</p></div>');
 
-                $("#deliveryDistrict").append('<p class= "order_title" >Delivery District</p>' +
+				$("#deliveryDistrict").append('<p class= "order_title" >Delivery District</p>' +
 					'<span class="space15"></span>' +
 					'<div class="orderContent"><p>' + response.content.order.delivery_info.district + '</p></div>');
 
-                $("#address").append('<p class= "order_title" >Full Address</p>' +
+				$("#address").append('<p class= "order_title" >Full Address</p>' +
 					'<span class="space15"></span>' +
-                    '<div class="orderContent"><p>' + response.content.order.delivery_info.address + '</p></div>');
+					'<div class="orderContent"><p>' + response.content.order.delivery_info.address + '</p></div>');
 
-                $("#devlivery").append('<p class= "order_title" >Devlivery Fee</p>' +
-              '<span class="space15"></span>' +
-                        '<div class="orderContent"><p>' + "free" + '</p></div>');
+				$("#devlivery").append('<p class= "order_title" >Devlivery Fee</p>' +
+					'<span class="space15"></span>' +
+					'<div class="orderContent"><p>' + "free" + '</p></div>');
 			})
 
-        });
-    </script>
+		});
+	</script>
 
 </head>
 <body>
