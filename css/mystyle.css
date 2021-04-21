@@ -46,6 +46,7 @@ body {
 
 	.search {
 		width: 100% !important;
+		margin-top: 3%;
 	}
 	div#mobile-header {
 		width: 90vw;
