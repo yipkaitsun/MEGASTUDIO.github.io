@@ -25,10 +25,7 @@
 	margin-top:70px;
 }
 
-div#header-container {
-	width: 90vw;
-	margin: auto;
-}
+
  .body {
 	width: 90vw;
     overflow-x: hidden;
@@ -49,6 +46,10 @@ body {
 
 	.search {
 		width: 100% !important;
+	}
+	div#header-container {
+		width: 90vw;
+		margin: auto;
 	}
 }
 @media only screen and (min-width: 900px) {
