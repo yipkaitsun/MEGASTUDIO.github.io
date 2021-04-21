@@ -310,7 +310,7 @@ svg.cd-cart-trigger {
 		display: inline-block;
 		vertical-align: top;
 		text-align: left;
-		width: 100%;
+		width: 99%;
 	}
 
 
@@ -323,8 +323,8 @@ svg.cd-cart-trigger {
     background-color: white;
 	}
 
-	.contact-form {
-    max-width: 100%;
+.contact-form {
+    width: 100% !important;
 	}
 
 	#Blog>.grid-3,#Shop>.grid-3{
@@ -438,9 +438,7 @@ svg.cd-cart-trigger {
     display: inline-block;
     vertical-align: middle;
 }
-#contact {
-    padding-left: 13%;
-}
+
 
 .contact_input {
 	width: 78%;
