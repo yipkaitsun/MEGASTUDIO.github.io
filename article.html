@@ -14,6 +14,8 @@
                 var page = $('#header-container').data("page");
                 var selector = "#nevigation > div:nth-child(" + page + ") > a";
                 $("head").append('<style type="text/css">' + selector + ' {color:grey;}</style>');
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0; 
             });
           const queryString = window.location.search;
           const urlParams = new URLSearchParams(queryString);
