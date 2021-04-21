@@ -1,6 +1,8 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <!-- MyApi -->
@@ -8,7 +10,7 @@
     <!-- BackendApi -->
     <script src="./js/AsynctTask.js"></script>
 
-<link rel="stylesheet" href="./css/mystyle.css" />
+    <link rel="stylesheet" href="./css/mystyle.css" />
 
     <script>
         $(function () {
@@ -19,30 +21,28 @@
                 var selector = "#nevigation > div:nth-child(" + page + ") > a";
                 var selector2 = "#cd-nav-items>li:nth-child(" + page + ") > a";
                 $("head").append('<style type="text/css">' + selector + ' {color:grey;}' + selector2 + '{color:grey;}</style>');
-                document.body.scrollTop = 0; 
-                document.documentElement.scrollTop = 0; 
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
             });
-          data = {
-              "path": "https://api.vexpo.ai/megastore/product",
+            data = {
+                "path": "https://api.vexpo.ai/megastore/product",
             }
-          var asyncTask = new AsyncTask(data);
-          asyncTask.post().then(
-              function(response)
-              {
-                response.content.product.forEach(function(product)
-                {
-                 if (product.name_zh.length > 30)
-                  $("#product").append("<a href ='./product.html?id=" + product.id + "' class='grid'>  <div class='thumbnail' style='background-image:url(" + product.thumbnail + ");background-size:cover;background-position:center;' /> <p>" + product.name_zh.substring(0,30)+" ... " + "</p>  <p>$" + product.price + "</p></a>");
-                 else
-                  $("#product").append("<a href ='./product.html?id=" + product.id + "' class='grid'>  <div class='thumbnail' style='background-image:url(" + product.thumbnail + ");background-size:cover; background-position:center' /> <p>" + product.name_zh + "</p>  <p>$" + product.price + "</p></a>");
+            var asyncTask = new AsyncTask(data);
+            asyncTask.post().then(
+                function (response) {
+                    response.content.product.forEach(function (product) {
+                        if (product.name_zh.length > 30)
+                            $("#product").append("<a href ='./product.html?id=" + product.id + "' class='grid'>  <div class='thumbnail' style='background-image:url(" + product.thumbnail + ");background-size:cover;background-position:center;' /> <p>" + product.name_zh.substring(0, 30) + " ... " + "</p>  <p>$" + product.price + "</p></a>");
+                        else
+                            $("#product").append("<a href ='./product.html?id=" + product.id + "' class='grid'>  <div class='thumbnail' style='background-image:url(" + product.thumbnail + ");background-size:cover; background-position:center' /> <p>" + product.name_zh + "</p>  <p>$" + product.price + "</p></a>");
 
-                });
+                    });
                 }
             );
-          
-           
+
+
             $("#footer-container").load("footer.html");
-      });
+        });
     </script>
 
 </head>
