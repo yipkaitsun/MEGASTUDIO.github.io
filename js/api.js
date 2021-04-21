@@ -145,3 +145,26 @@ function getCart(callback) {
         }
     });
 }
+
+function resizeCall(minWidth, initMinCall,initMaxCall, mincall, maxcall) {
+    var width = $(window).width();
+    if (width < minWidth) {
+        initMinCall();
+    }
+    else {
+        initMaxCall();
+    }
+
+    $(window).on('resize', function () {
+        if ($(this).width() !== width) {
+            if (width >= minWidth && $(this).width() < minWidth) {
+                mincall();
+            }
+            else if (width < 768 && $(this).width() >= 768) {
+                maxcall();
+            }
+        }
+        width = $(this).width();
+    });
+
+}

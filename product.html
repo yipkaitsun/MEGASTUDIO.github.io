@@ -51,25 +51,8 @@
                 $("#addQty").htmlNumberSpinner();
                 $("#description").append(response.content.product.description);
 
-                var width = $(window).width();
-                if (width < 768) {
-                    $('.pgwSlider').parent().addClass("mobile");
-                }
-               
 
-                $(window).on('resize', function () {
-                    if ($(this).width() !== width) {
-                        if (width >= 768 && $(this).width() < 768) {
-                            $('.pgwSlider').parent().addClass("mobile");
-                        }
-
-                        else if (width < 768 && $(this).width() >= 768){
-                            $('.pgwSlider').parent().removeClass("mobile");
-                        }
-                    }
-
-                    width = $(this).width();
-                });
+                resizeCall(768, () => { $('.pgwSlider').parent().addClass("mobile") }, () => { }, () => { $('.pgwSlider').parent().addClass("mobile") }, () => { $('.pgwSlider').parent().removeClass("mobile"); });
 
                 new ResizeSensor($('.ps-current'), function () {
                     $('.pgwSlider').css('height', $('.ps-current').height() + 'px');
