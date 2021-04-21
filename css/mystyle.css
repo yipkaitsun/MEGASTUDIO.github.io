@@ -195,7 +195,7 @@ body {
 }
 
 .moreButton {
-	width: 239px;
+	width: min(60%,239px);
 	background-color: white;
 	margin-top: 3.5% !important;
 	font-family: "NotoSans-Regular";
