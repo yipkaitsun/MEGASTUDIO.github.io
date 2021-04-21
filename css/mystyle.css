@@ -74,6 +74,22 @@ body {
 			font-size: 14px;
 			color: #000;
 		}
+	.homegrid {
+		width: calc(48%);
+		display: inline-block;
+		vertical-align: top;
+		text-align: center;
+		margin-bottom: 1%;
+	}
+	.grid2 {
+		margin-left: 4%;
+	}
+
+	.grid3 {
+		display:none
+	}
+		
+		
 
 }
 	body.overflow-hidden {
