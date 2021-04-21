@@ -618,7 +618,7 @@ svg.cd-cart-trigger {
 }
 
 .contact-form input[type=text] {
-	width: 90%!important;
+	width: calc(100% - 32px) !important;
 }
 
 .form-container textarea {
@@ -636,7 +636,7 @@ svg.cd-cart-trigger {
 }
 
 .contact-form textarea {
-	width: 90% !important;
+	width: calc(100% - 32px) !important;
 }
 
 .form-container textarea::placeholder,.form-container input[type=text]::placeholder{
