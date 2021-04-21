@@ -58,20 +58,20 @@
                         link = '"./shop.html"';
                         
                         $('#header-container').prepend(
-                            "<div class='header' id='mobile-header'>" +
+                            "<div id='mobile-header-container>'<div class='header' id='mobile-header'>" +
                             "<div id='mobile-nevigation' style='width:25%'><div onclick='Goto(" + link + ")' class='back' id='nav-logo'/></div>" +
                             "<div id='logo'/>" +
                             "<div id='mobile-cart' style='width:25%'><div onclick='CartControl()' id='cart-logo'/></div>" +
-                            "</div><hr/>")
+                            "</div><hr/></div>")
                     }
                 
                 else {
                     $('#header-container').prepend(
-                        "<div class='header' id='mobile-header'>" +
+                        "<div id='mobile-header-container><div class='header' id='mobile-header'>" +
                         "<div id='mobile-nevigation' style='width:25%'><div onclick='navControl()' class='dots' id='nav-logo'/></div>" +
                         "<div id='logo'/>" +
                         "<div id='mobile-cart' style='width:25%'><div onclick='CartControl()' id='cart-logo'/></div>" +
-                        "</div><hr/>")
+                        "</div><hr/></div>")
                 }
             }
             else {
@@ -106,20 +106,20 @@
                                 link = '"./shop.html"';
 
                             $('#header-container').prepend(
-                                "<div class='header' id='mobile-header'>" +
+                                "<div id='mobile-header-container><div class='header' id='mobile-header'>" +
                                 "<div id='mobile-nevigation' style='width:25%'><div onclick='Goto(" + link + ")' class='back' id='nav-logo'/></div>" +
                                 "<div id='logo'/>" +
                                 "<div id='mobile-cart' style='width:25%'><div onclick='CartControl()' id='cart-logo'/></div>" +
-                                "</div><hr/>")
+                                "</div><hr/></div>")
                         }
 
                         else {
                             $('#header-container').prepend(
-                                "<div class='header' id='mobile-header'>" +
+                                "<div id='mobile-header-container><div class='header' id='mobile-header'>" +
                                 "<div id='mobile-nevigation' style='width:25%'><div onclick='navControl()' class='dots' id='nav-logo'/></div>" +
                                 "<div id='logo'/>" +
                                 "<div id='mobile-cart' style='width:25%'><div onclick='CartControl()' id='cart-logo'/></div>" +
-                                "</div><hr/>")
+                                "</div><hr/></div>")
                         }
                     }
                     else if (width < 900 && $(this).width() >= 900) //change to desktop header
