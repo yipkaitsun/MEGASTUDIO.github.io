@@ -160,7 +160,7 @@ function resizeCall(minWidth, initMinCall,initMaxCall, mincall, maxcall) {
             if (width >= minWidth && $(this).width() < minWidth) {
                 mincall();
             }
-            else if (width < 768 && $(this).width() >= 768) {
+            else if (width < minWidth && $(this).width() >= minWidth) {
                 maxcall();
             }
         }
