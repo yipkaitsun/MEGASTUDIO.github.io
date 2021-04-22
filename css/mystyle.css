@@ -146,7 +146,9 @@ body {
 	}
 
 	#status {
+		padding-top: 6px;
 		padding-bottom: 6px;
+	}
 }
 	body.overflow-hidden {
 		overflow: hidden;
@@ -563,11 +565,15 @@ svg.cd-cart-trigger {
 #orderId>*,#status>*,.orderQty>*,.orderQty{
 	display:inline-block;
 }
-	
-	#orderId {
-		font-family: 'NotoSans-Regular';
-		font-weight: bold;
-	}
+
+.orderQty > *, space50 > div, .total {
+	font-weight: bold;
+}
+
+#orderId {
+	font-family: 'NotoSans-Regular';
+	font-weight: bold;
+}
 #status {
 	font-family: 'RobotoMono-Regular';
 }
