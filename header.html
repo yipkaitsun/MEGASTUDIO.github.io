@@ -82,6 +82,7 @@
                         '<div class="item"><a href="./contact.html">Contact</a></div>' +
                         '</div>' +
                         '</div>').ready(function () {
+                            setCartNum();
                             $(".triangle").on("click", function (e) { e.preventDefault(); CartControl() });
                         })
                 },
