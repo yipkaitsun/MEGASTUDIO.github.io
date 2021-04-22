@@ -10,10 +10,13 @@
 		font-size: 16px;
 	}
 }
-
+#article > img {
+	max-width:100%;
+	height:auto;
+}
 @font-face {
-  font-family:"NotoSans-Regular";
-  src: url("../font/NotoSans-Regular.ttf") format("truetype");
+	font-family: "NotoSans-Regular";
+	src: url("../font/NotoSans-Regular.ttf") format("truetype");
 }
 #header > img {
 	height: 7vh;
