@@ -99,6 +99,9 @@ body {
 	#Product > div {
 		width: 100%;
 	}
+	.contact-col {
+		width: 100%
+	}
 }
 @media only screen and (min-width: 900px) {
 
@@ -410,9 +413,7 @@ svg.cd-cart-trigger {
     margin: auto;
     text-align: center;
 	}
-	.contact-col{
-		width:100%
-	}
+	
 
 
 
