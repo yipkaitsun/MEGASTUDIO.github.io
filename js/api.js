@@ -53,12 +53,7 @@ function AddToCart() {
     var id = GetId();
     var index = 0;
     var qty = $("#addQty > input").val();
-    var openedCart = $('#cd-cart').attr('class') == "speed-in";
-    if (!openedCart) {
-        var lateral_cart = $('#cd-cart');
-        var shadow_layer = $('#cd-shadow-layer');
-        toggle_panel_visibility(lateral_cart, shadow_layer, $('body'));
-    }
+    DrawerControl('#cd-cart')
 
     if (array_cart !== null && array_cart.findIndex((element) => element.id == id) !== -1) {
         const isExist = array_cart.findIndex((element) => element.id == id);
