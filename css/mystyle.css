@@ -566,7 +566,7 @@ svg.cd-cart-trigger {
 	display:inline-block;
 }
 
-.orderQty > *, space50 > div, .total {
+.orderQty > *, .space50 > div, .total {
 	font-weight: bold;
 }
 
