@@ -159,7 +159,8 @@ body {
 		padding-bottom: 6px;
 	}
 	.contact-col {
-		width: 48%
+		width: 48%;
+		margin-top: 10px;
 	}
 
 	.productcol {
