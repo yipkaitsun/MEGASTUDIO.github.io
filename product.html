@@ -55,9 +55,24 @@
                 resizeCall(
                     900,
                     () => {
-                        $('.pgwSlider').parent().addClass("mobile")
+                        $('.pgwSlider').parent().addClass("mobile");
+                        $("#productDetail").css(
+                            {
+                                position: "relative",
+                                "margin-left": "0px"
+                            })
+                        $('#name').css('margin-top', '0.83em');
+                        $('.info').css('padding-left', '0%');
                     },
-                    () => { },
+                    () => {
+                        $("#productDetail").css(
+                           {
+                            position: "relative",
+                            "margin-left": "11.125%"
+                           })
+                        $('#name').css('margin-top', '0px');
+                        $('.info').css('padding-left', '3%');
+                    },
                     () => {
                         $('.pgwSlider').parent().addClass("mobile");
                         $("#productDetail").css(

@@ -108,7 +108,7 @@ body {
 		.checkout-btn {
 		width:60% !important;
 	}
-		body {
+	body {
 		width: 80vw;
 		overflow-x: hidden;
 		margin: auto;
@@ -120,12 +120,12 @@ body {
 		display: inline-block;
 	}
 
-		.backTo > * {
+	.backTo > * {
 			display: inline-block;
 			vertical-align: middle;
 			font-size: 14px;
 			color: #000;
-		}
+	}
 
 	.homegrid {
 		width: calc(31.3%);
@@ -154,6 +154,34 @@ body {
 	#status {
 		padding-top: 6px;
 		padding-bottom: 6px;
+	}
+	.contact-col {
+		width: 48%
+	}
+
+	.productcol {
+		width: 45% !important;
+		display: inline-block !important;
+		vertical-align: top !important;
+	}
+
+	#Product > .productcol > #name {
+		text-align: left;
+	}
+
+	.form-container {
+		max-width: 380px;
+		padding: 10px;
+		background-color: white;
+	}
+
+	.contact-form {
+		max-width: 95% !important;
+	}
+
+	#Blog > .grid-3, #Shop > .grid-3 {
+		margin: auto;
+		text-align: center;
 	}
 }
 	body.overflow-hidden {
@@ -331,43 +359,12 @@ img.footer-icon {
     padding-bottom: min(140px, 10%);
     width: min(140px, 10%);
 }
-	/*
-.triangle::before,
-.triangle::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    border-color: transparent;
-    border-style: solid;
-}
 
-.triangle::before {
-	    border-width: 4.43em;
-    border-right-color: #ccc;
-    border-top-color: #ccc;
-}
-
-.triangle::after {
-    border-width: 4.35em;
-    border-right-color: #fff;
-    border-top-color: #fff;
-}*/
-	.triangle > .content {
+.triangle > .content {
 		display: inline-block;
 		padding-left: calc(46% + 8px);
 		padding-top: calc(18% + 12px);
-		/*
-	position: absolute;
-    width: 100px;
-    left: 0px;
-    text-align: center;
-    font-size: 16px;
-    font-family: arial;
-    z-index: 1;
-    padding-left: 3.5em;
-    padding-top: 2.3em;
-	*/
+
 	}
 .cartNumber {
 	padding-left: 4px;
@@ -418,37 +415,6 @@ svg.cd-cart-trigger {
 	}
 
 
-@media only screen and (min-width: 900px) {
-	.contact-col{
-		width:48%
-	}
-    .productcol {
-		width:45% !important;
-		display:inline-block!important;
-		vertical-align:top!important;
-		}
-
-	#Product >.productcol> #name {
-	text-align: left;
-	}
-
-	.form-container {
-		max-width: 380px;
-		padding: 10px;
-		background-color: white;
-	}
-	.contact-form{
-		max-width: 95% !important;
-	}
-
-	#Blog>.grid-3,#Shop>.grid-3{
-
-    margin: auto;
-    text-align: center;
-	}
-
-
-}
 
 #Product{
 	margin-left:auto;
