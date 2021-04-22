@@ -367,7 +367,7 @@ img.footer-icon {
 	*/
 	}
 .cartNumber {
-	padding-left: 2px;
+	padding-left: 4px;
 	vertical-align: middle;
 	line-height: min(20px, 2vw);
 }
