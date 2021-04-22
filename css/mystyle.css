@@ -841,6 +841,7 @@ div#mobile-header {
 	padding-bottom: 20%;
 	background-size: cover;
 	display: inline-block;
+	background-position: center;
 }
 
 #nav-logo.dots{
