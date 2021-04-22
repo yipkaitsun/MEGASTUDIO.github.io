@@ -101,8 +101,10 @@
                             "<div id='logo'/>" +
                             "<div id='mobile-cart' style='width:25%'><div id='cart-logo'/></div>" +
                             "</div><hr style='margin-bottom:-1px;'/></div>").ready(function () {
+                                $(".triangle").off("click");
                                 $(".back").on("click", function (e) { e.preventDefault(); Goto(link) });
                                 $("#cart-logo").on("click", function (e) { e.preventDefault(); CartControl() });
+                                
                             })
                     }
 
@@ -113,6 +115,7 @@
                             "<div id='logo'/>" +
                             "<div id='mobile-cart' style='width:25%'><div id='cart-logo'/></div>" +
                             "</div><hr style='margin-bottom:-1px;'/></div>").ready(function () {
+                                $(".triangle").off("click");
                                 $(".dots").on("click", function (e) { e.preventDefault(); navControl() });
                                 $("#cart-logo").on("click", function (e) { e.preventDefault(); CartControl() });
                             })
@@ -137,6 +140,9 @@
                         '</div>' +
                         '</div>').ready(function () {
                             $(".triangle").on("click", function (e) { e.preventDefault(); CartControl() });
+                            $("#cart-logo").off("click");
+                            $(".dots").off("click");
+                            $(".back").off("click");
                             setCartNum();
                         })
                 }
