@@ -137,8 +137,11 @@ body {
 		margin-right: 3%;
 	}
 
-	#orderId > div, #status > div {
+	#orderId > div{
 		font-size: 1.5em
+	}
+	#status > div {
+		font-size: 1.3em
 	}
 
 	#order {
