@@ -383,25 +383,22 @@ svg.cd-cart-trigger {
 	vertical-align: middle;
 }
 
-#Product > div {
-	display: inline-block;
-	vertical-align: top;
-	text-align: left;
-	margin-top: 3%;
-}
+	#Product > div {
+		display: inline-block;
+		vertical-align: top;
+		text-align: left;
+		margin-top: 3%;
+	}
 
-#productDes > .productcol.info {
-	width: 100%;
-}
 
-#Product > .productcol > #name {
+	#Product >.productcol> #name {
 	text-align: center;
-}
-.form-container {
-	max-width: 70vw;
-	padding: 10px;
-	background-color: white;
-}
+	}
+	.form-container {
+    max-width: 70vw;
+    padding: 10px;
+    background-color: white;
+	}
 
 .contact-form {
     max-width: 100% !important;
@@ -419,7 +416,6 @@ svg.cd-cart-trigger {
 
 
 @media only screen and (min-width: 900px) {
-
 	.contact-col{
 		width:48%
 	}
@@ -446,6 +442,10 @@ svg.cd-cart-trigger {
 
     margin: auto;
     text-align: center;
+	}
+
+	#Product > div {
+		width:100%;
 	}
 }
 
