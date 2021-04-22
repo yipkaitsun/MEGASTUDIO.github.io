@@ -77,6 +77,11 @@ body {
 	#orderId > div, #status > div {
 		font-size: 19px;
 	}
+
+	#orderId, #status {
+		text-align:left;
+		padding-top:20px;
+	}
 }
 @media only screen and (min-width: 900px) {
 
