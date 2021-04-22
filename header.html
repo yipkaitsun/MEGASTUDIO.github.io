@@ -19,33 +19,15 @@
         }
 
         function CartControl() {
-            var openedCart = $('#cd-cart').attr('class') == "speed-in";
-            var lateral_cart = $('#cd-cart');
-            var shadow_layer = $('#cd-shadow-layer');
-            if (!openedCart) {
-                toggle_panel_visibility(lateral_cart, shadow_layer, $('body'));
-            }
-            else {
-                toggle_panel_visibility(lateral_cart, shadow_layer, $('body'));
-            }
+            DrawerControl('#cd-cart')
         }
+
         function navControl() {
-            var openedNav = $('#cd-nav').attr('class') == "speed-in";
-            var lateral_cart = $('#cd-nav');
-            var shadow_layer = $('#cd-shadow-layer');
-            if (!openedNav) {
-                toggle_panel_visibility(lateral_cart, shadow_layer, $('body'));
-            }
-            else {
-                toggle_panel_visibility(lateral_cart, shadow_layer, $('body'));
+            if (DrawerControl('#cd-nav') == true)
                 $("#overlay").remove();
-
-            }
         }
 
-        function Goto(url) {
-            window.location.href = url;
-        }
+        
         var sensor = null;
         $(function () {
 
@@ -55,31 +37,38 @@
                     var link = '';
                     if (path == 'article' || path == 'product') {
                         if (path == 'article')
-                            link = '"./blog.html"';
+                            link = 'blog.html';
                         else
-                            link = '"./shop.html"';
+                            link = 'shop.html';
                         $('#header-container').prepend(
                             "<div id='mobile-header-container'><div class='header' id='mobile-header'>" +
-                            "<div id='mobile-nevigation' style='width:25%'><div onclick='Goto(" + link + ")' class='back' id='nav-logo'/></div>" +
+                            "<div id='mobile-nevigation' style='width:25%'><div class='back' id='nav-logo'/></div>" +
                             "<div id='logo'/>" +
-                            "<div id='mobile-cart' style='width:25%'><div onclick='CartControl()' id='cart-logo'/></div>" +
-                            "</div><hr style='margin-bottom:-1px;'/></div>")
+                            "<div id='mobile-cart' style='width:25%'><div id='cart-logo'/></div>" +
+                            "</div><hr style='margin-bottom:-1px;'/></div>").ready(function () {
+                                $(".back").on("click", function (e) { e.preventDefault(); Goto(link) });
+                                $("#cart-logo").on("click", function (e) { e.preventDefault();CartControl() });
+
+                            })
                     }
 
                     else {
                         $('#header-container').prepend(
                             "<div id='mobile-header-container'><div class='header' id='mobile-header'>" +
-                            "<div id='mobile-nevigation' style='width:25%'><div onclick='navControl()' class='dots' id='nav-logo'/></div>" +
+                            "<div id='mobile-nevigation' style='width:25%'><div class='dots' id='nav-logo'/></div>" +
                             "<div id='logo'/>" +
-                            "<div id='mobile-cart' style='width:25%'><div onclick='CartControl()' id='cart-logo'/></div>" +
-                            "</div><hr style='margin-bottom:-1px;'/></div>")
+                            "<div id='mobile-cart' style='width:25%'><div id='cart-logo'/></div>" +
+                            "</div><hr style='margin-bottom:-1px;'/></div>").ready(function () {
+                                $(".dots").on("click", function (e) { e.preventDefault(); navControl() });
+                                $("#cart-logo").on("click", function (e) { e.preventDefault(); CartControl() });
+                            })
                     }
                 },
                 () => {
 
                     $('#header-container').prepend(
                         '<div class="header" id="header">' +
-                        '<div onclick="CartControl()" class="triangle">' +
+                        '<div class="triangle">' +
                         '<div class="content">' +
                         '<svg class="cartBtn" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22" height="22" viewBox="0 0 22 22"><image id="shopping-cart" width="22" height="22" opacity="0.8" xlink:href="data:image/png;base64,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" /></svg>' +
                         '<div id="cartNumber" class="cartNumber cartBtn">0</div>' +
@@ -92,7 +81,9 @@
                         '<div class="item"><a href="./blog.html">Blog</a></div>' +
                         '<div class="item"><a href="./contact.html">Contact</a></div>' +
                         '</div>' +
-                        '</div>')
+                        '</div>').ready(function () {
+                            $(".triangle").on("click", function (e) { e.preventDefault(); CartControl() });
+                        })
                 },
                 () => {
                     $('#header').remove();
@@ -100,33 +91,38 @@
                     var link = '';
                     if (path == 'article' || path == 'product') {
                         if (path == 'article')
-                            link = '"./blog.html"';
-
+                            link = 'blog.html';
                         else
-                            link = '"./shop.html"';
+                            link = 'shop.html';
 
                         $('#header-container').prepend(
                             "<div id='mobile-header-container'><div class='header' id='mobile-header'>" +
-                            "<div id='mobile-nevigation' style='width:25%'><div onclick='Goto(" + link + ")' class='back' id='nav-logo'/></div>" +
+                            "<div id='mobile-nevigation' style='width:25%'><div class='back' id='nav-logo'/></div>" +
                             "<div id='logo'/>" +
-                            "<div id='mobile-cart' style='width:25%'><div onclick='CartControl()' id='cart-logo'/></div>" +
-                            "</div><hr style='margin-bottom:-1px;'/></div>")
+                            "<div id='mobile-cart' style='width:25%'><div id='cart-logo'/></div>" +
+                            "</div><hr style='margin-bottom:-1px;'/></div>").ready(function () {
+                                $(".back").on("click", function (e) { e.preventDefault(); Goto(link) });
+                                $("#cart-logo").on("click", function (e) { e.preventDefault(); CartControl() });
+                            })
                     }
 
                     else {
                         $('#header-container').prepend(
                             "<div id='mobile-header-container'><div class='header' id='mobile-header'>" +
-                            "<div id='mobile-nevigation' style='width:25%'><div onclick='navControl()' class='dots' id='nav-logo'/></div>" +
+                            "<div id='mobile-nevigation' style='width:25%'><div class='dots' id='nav-logo'/></div>" +
                             "<div id='logo'/>" +
-                            "<div id='mobile-cart' style='width:25%'><div onclick='CartControl()' id='cart-logo'/></div>" +
-                            "</div><hr style='margin-bottom:-1px;'/></div>")
+                            "<div id='mobile-cart' style='width:25%'><div id='cart-logo'/></div>" +
+                            "</div><hr style='margin-bottom:-1px;'/></div>").ready(function () {
+                                $(".dots").on("click", function (e) { e.preventDefault(); navControl() });
+                                $("#cart-logo").on("click", function (e) { e.preventDefault(); CartControl() });
+                            })
                     }
                 },
                 () => {
                     $('#mobile-header-container').remove();
                     $('#header-container').prepend(
                         '<div class="header" id="header">' +
-                        '<div onclick="CartControl()" class="triangle">' +
+                        '<div class="triangle">' +
                         '<div class="content">' +
                         '<svg class="cartBtn" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22" height="22" viewBox="0 0 22 22"><image id="shopping-cart" width="22" height="22" opacity="0.8" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABAEAQAAABQ8GUWAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAAAGAAAABgAPBrQs8AAAAHdElNRQflAw8DHw69OtfXAAAIrklEQVR42u1ba1BURxb+eh6KBBQMlKtRoRAEh7l3UJDoEgQxyWIiumsxrCZYsaQ2ZZmIj2Bc1kTZbGmBmLJK16zEUkyM0SW4boIvMAZlfYQMY5wHlCgrDwvwAUIQDTDD9P5g5s6IMMxLrrh+v/rOnNt9zlenT58+3ZcwpRs2QPjOO7hRXU1OqFRo0moRc/myel15OUApnnEQ9q3796H18Oj9B01rbCRFOTn6+Z9+WpHU3s63ok8KAuqdlUWP/vLLY8xsGzsW6owMoYdWKxNPncq3ok8KxNSQUX9/TJFKKWFZDIuPR3JUFA4IBABAN7a1GRpmzSpPVan4VnjQEFYikbDZKhXLUsqylDJl1675UTc3vvUaVEjyPDzYQxUVHAkL1qzhW6dBh2x5ZKSJAPZQRQXf+vACpk6rNZEw9bfjxvGtjyshsEWI/PP0aVPbsP3ZWhFsIsCwUK02tWkQw/Ct9KATgDUaDdfe+2wRYBNm3Bwxgjmh17Mspew4CzL+n8DOuHqVZSll6nW6wB3Dh/Otj6sgslkyTKPBxeBgMlckcg9UKNjUri6+lXcGNL6jA2P37LGdgIUaDS4mJgIAqhgGVXyb4BzIWQA1oaG2BUEA5F/P4NyffOOGzbKhdZMmcSlxXmEh37o7CqZuxQous03etMlmDyifWF0NaU9dgNSyLN+GOAryu4QE7uFUQYFdL7M+P/5oYi+sxNeXb2PshSTPw4M98OuvLEspU15fDxBiswf09GCOA4bSoZcQiSSvv45s45b+q4ICgFL7CEiwCIS7hh4BqDK7v+D3Pe5vFwEkzWJPoB5qBAgEODx3LgBQxcOHohXFxXYToPvGTAAahxYBsqKZM1ExZgwAkB2nTyuVDx/aTUBF0r179FBDAwDAXyoFBPZNIT6RaBH9YY7+9hvg0xMHyHR3d0leQADfdtkKw14jAUsMBr3f8eMOE0DWm6eBSDI08gGGCQggf5NIAABZCkVF0q1bDhOA9yxWgswhEgey5s83NenxR5Mf+z0gwoKAS0ODAPJH8/yn39uZ/fVG4I7hw1mfri7TWQHfxg2E8GmjRpn0ZQ/W1gKEWP5vtwdUpXZ20n9cvw4ApHjSJDb7hRf4NtIadJo33sA4sRgAyNLvvut94OvYMvYHYyA8IBAISozB5WnFLIvlb/Pj7u8QAYQxxwF66umNAzFUJEJ3fDwAQNre/sDt3DmXEIBlFgRseXoJaJ0THY173t4AgNLCwqrUzk6XEEDSLFaCc08vAXSvRfTP7zv6O0SAitTWoqa1FQBomkzGt6H9EtA8bx4AYInBQL4/edKlnTMnzp/nSmQnxo/n29jekJaFhHClr0sXLvQn5/hm5khpKdfOkcv5Nvgxw2alpHAPwU4mP31BVhQVxTG8trk5LDUoiG+jOd2WR0ayU9rbe7xTr5fkTZz4RAZibp86xZEQdPs2w7z7rmz5Sy/xZbh00oQJ7KK0NOa/ra3c9EzfvdvaO8TWzvtCePjYsbqA8+dR+ZRui2OVSkyIiVGve/CgPxGnChpKZWOjsD46GhPPnOHb1t6gc/Ly3FbGxVkzHnDSAyzBSF99lRyRy3FPKqViX1+SJRQOqsU3dTq6sakJU5VKwV8PHlTt/umnQR3/OZ5jaMIlMSCGikTNynnzBJ5z51IvPz8SKBbjQF0d5EVFYvbbb00laFdDWhYSQnITE4l/RAT8vLwQ1NKCtxQKQvPzVVdtK9Y4TYCMxsZSYU4OpJMn9ylwrb4eUatWqc8cOeIqwyOvjxzZMXvnTqxKTjZd57UEzezuxiv793efWr16oIveThHAihcvxqgvvjBVXPoXpBT6Dz9UH962zVnjw6f5+OhuFRfDRyodSJbuvHIF78fFaTQtLf3JOJwHSOdHRCA1N9dkPM28cIF0JSSIRb6+YpGXF5bMmUMTjfV3NSEQbd0qCzHuzhwGIV178/I442taW3E2PV3/UVCQ/iNPT0Hs5Mk0+uOP6ca2NgAgK8PCiP7rr50lvU+wspISLt1csm+fXN73us/QjAwuXc6uqgqfNoC3WIFsf1KSua/GRllI39MurEQiYdru3OH0azOXxV2CR7aagsrKgYxifv7hB05+hrFE5QjpiqIiUz+y0jfftCqrXbiQI+A//e8GHZoCgi2zZ3MPSXv2KC/rdFZfaPzsM64dEhfnyJhyuVCIP8fEAADNrK1VvWw+3uoLaunRo9w5ZmRcXO9yuFMEYKbFjq9Gqx1Q/hWLEtpNx4on5XJfX9wdNgwAUGbDmKAU5T1yZLq7e8h7o0e7jACy3VxcNPx94I8oBJ4jRnAPKx8vTNoCsbyjgxs/26I/a3puNssN8ze/7zQB9G4Vd0tQ8H5s7EDyhpMWMuk9hyr2QkVaW+mOpiYAQEJkZHi4u7s1+eBlnp7084gIAKCHGhr62xU6RID+YGEhGozzPiAlRUb9/fuTZRhvb7Llgw848hY7Xp4irceOAQC0Hh5da9avtybrlr9hA/lTjwcQkfE9V4JN2bXL8ksSSV5gYG8Z6eYxYx4pnn7inCKy/aGh3KXt7O5upm7FiseDGyHMidWr2WSDgWUpZX26uvpbLgEnMkGG8fZGbmkpWWasBb7W2Yn7hw/TSxcv0n/rdIKXp0+nu99+m3wyciQA0B1NTUQRGaleV13tFPHJmzZBnZHB/fCXsjK6OT+f7GtowNnx4+kquZxEWHzUcTY9XT06M9PlBAA9t0eFSceP42FwsDU5mtbYKPxmwYIrBQqFM+MZVSZMyrZtRLF27YCSNVlZqrb0dGtfwDpVtbm7vaXFr/jLL/XThELckslwx7hMmfBaZyeicnO7fRYt0mx23VH6nZ+Lin7jrVQimGFwr+fikyXozitXyPKlS9Vbc3IGJMlVSvlRNzfPLdHRwoKAAEO0SCRIrKnpyCkpqdx3/76rxugLocemTBHlhIdTzYsvEqa52XBQodCMrKx8kmM+x3M8Q/gf4rWGlNv3yAcAAAAldEVYdGRhdGU6Y3JlYXRlADIwMjEtMDMtMTVUMDM6MzE6MTQrMDA6MDC2EteyAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDIxLTAzLTE1VDAzOjMxOjE0KzAwOjAwx09vDgAAAABJRU5ErkJggg==" /></svg>' +
                         '<div id="cartNumber" class="cartNumber cartBtn"></div>' +
@@ -140,6 +136,7 @@
                         '<div class="item"><a href="./contact.html">Contact</a></div>' +
                         '</div>' +
                         '</div>').ready(function () {
+                            $(".triangle").on("click", function (e) { e.preventDefault(); CartControl() });
                             setCartNum();
                         })
                 }

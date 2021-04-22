@@ -168,3 +168,17 @@ function resizeCall(minWidth, initMinCall,initMaxCall, mincall, maxcall) {
     });
 
 }
+
+
+function DrawerControl(cd_class) {
+    var openedDrawer = $(cd_class).attr('class') == "speed-in";
+    var lateral_cart = $(cd_class);
+    var shadow_layer = $('#cd-shadow-layer');
+    if (!openedDrawer) {
+        toggle_panel_visibility(lateral_cart, shadow_layer, $('body'));
+    }
+    else {
+        toggle_panel_visibility(lateral_cart, shadow_layer, $('body'));
+    }
+    return openedDrawer;
+}
