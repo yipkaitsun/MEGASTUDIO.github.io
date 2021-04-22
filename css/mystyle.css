@@ -73,6 +73,10 @@ body {
 	.grid3 {
 		display: none
 	}
+
+	#orderId > div, #status > div {
+		font-size: 19px;
+	}
 }
 @media only screen and (min-width: 900px) {
 
@@ -113,8 +117,10 @@ body {
 		margin-left: 3%;
 		margin-right: 3%;
 	}
-	
-		
+
+	#orderId > div, #status > div {
+		font-size: 1.5em
+	}
 		
 
 }
