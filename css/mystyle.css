@@ -80,10 +80,13 @@ body {
 	#status > div {
 		font-size: 16px;
 	}
-	#orderId, #status {
+	#orderId{
 		padding-top:20px;
 	}
-	#order {
+	#status {
+		padding-top:6px;
+	}
+		#order {
 		text-align: left;
 	}
 }
