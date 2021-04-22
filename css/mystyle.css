@@ -83,6 +83,9 @@ body {
 	#orderId, #status {
 		padding-top:20px;
 	}
+	#order {
+		text-align: left;
+	}
 }
 @media only screen and (min-width: 900px) {
 
@@ -126,6 +129,10 @@ body {
 
 	#orderId > div, #status > div {
 		font-size: 1.5em
+	}
+
+	#order {
+		text-align: center;
 	}
 		
 
@@ -541,9 +548,6 @@ svg.cd-cart-trigger {
 	padding: 23px 35px;
 }
 
-#order{
-	text-align:center;
-}
 
 #orderId>*,#status>*,.orderQty>*,.orderQty{
 	display:inline-block;
