@@ -19,11 +19,10 @@
         }
 
         function CartControl() {
-            alert("test");
             var openedCart = $('#cd-cart').attr('class') == "speed-in";
+            var lateral_cart = $('#cd-cart');
+            var shadow_layer = $('#cd-shadow-layer');
             if (!openedCart) {
-                var lateral_cart = $('#cd-cart');
-                var shadow_layer = $('#cd-shadow-layer');
                 toggle_panel_visibility(lateral_cart, shadow_layer, $('body'));
             }
             else {
