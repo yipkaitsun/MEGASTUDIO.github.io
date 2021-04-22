@@ -563,11 +563,8 @@ svg.cd-cart-trigger {
 #orderId>*,#status>*,.orderQty>*,.orderQty{
 	display:inline-block;
 }
-	.orderQty > *, space50 > div, .total {
-		font-weight: bold;
-	}
-
-#orderId {
+	
+	#orderId {
 		font-family: 'NotoSans-Regular';
 		font-weight: bold;
 	}
