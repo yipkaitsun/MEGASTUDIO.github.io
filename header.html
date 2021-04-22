@@ -26,6 +26,10 @@
                 var shadow_layer = $('#cd-shadow-layer');
                 toggle_panel_visibility(lateral_cart, shadow_layer, $('body'));
             }
+            else {
+                toggle_panel_visibility(lateral_cart, shadow_layer, $('body'));
+                $("#overlay").remove();
+            }
         }
         function navControl() {
             var openedNav = $('#cd-nav').attr('class') == "speed-in";
