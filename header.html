@@ -54,12 +54,7 @@
                     var path = GetURLPath();
                     var link = '';
                     if (path == 'article' || path == 'product') {
-                        if (path == 'article')
-                            link = '"./blog.html"';
-
-                        else
-                            link = '"./shop.html"';
-
+                        link = '"./' + path + '.html"';
                         $('#header-container').prepend(
                             "<div id='mobile-header-container'><div class='header' id='mobile-header'>" +
                             "<div id='mobile-nevigation' style='width:25%'><div onclick='Goto(" + link + ")' class='back' id='nav-logo'/></div>" +
@@ -101,11 +96,7 @@
                     var path = GetURLPath();
                     var link = '';
                     if (path == 'article' || path == 'product') {
-                        if (path == 'article')
-                            link = '"./blog.html"';
-
-                        else
-                            link = '"./shop.html"';
+                        link = '"./' + path + '.html"';
 
                         $('#header-container').prepend(
                             "<div id='mobile-header-container'><div class='header' id='mobile-header'>" +
@@ -146,7 +137,6 @@
                         })
                 }
             )
-
 
             setCart();
         });
