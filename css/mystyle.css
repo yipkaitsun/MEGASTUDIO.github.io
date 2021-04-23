@@ -43,6 +43,13 @@ body {
 	display: none;
 }
 @media only screen and (max-width: 899px) {
+
+	.form-container {
+		max-width: 70vw;
+		padding: 10px;
+		background-color: white;
+	}
+
 	.search > input[type=text] {
 		width: calc(100% - 53px) !important;
 	}
@@ -111,6 +118,13 @@ body {
 	.body {
 		width: 100% !important;
 	}
+
+	.form-container {
+		max-width: 500px;
+		padding: 10px;
+		background-color: white;
+	}
+
 		.checkout-btn {
 		width:60% !important;
 	}
@@ -175,11 +189,7 @@ body {
 		text-align: left;
 	}
 
-	.form-container {
-		max-width: 380px;
-		padding: 10px;
-		background-color: white;
-	}
+	
 
 	.contact-form {
 		max-width: 95% !important;
@@ -400,11 +410,7 @@ svg.cd-cart-trigger {
 	#Product >.productcol> #name {
 	text-align: center;
 	}
-	.form-container {
-    max-width: 70vw;
-    padding: 10px;
-    background-color: white;
-	}
+
 
 .contact-form {
     max-width: 100% !important;
