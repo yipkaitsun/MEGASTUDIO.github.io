@@ -45,7 +45,7 @@ body {
 @media only screen and (max-width: 899px) {
 
 	.form-container {
-		max-width: 70vw;
+		width: 70vw;
 		padding: 10px;
 		background-color: white;
 	}
@@ -620,6 +620,7 @@ svg.cd-cart-trigger {
 }
 
 .form-popup {
+  position: fixed;
   border: 3px solid #f1f1f1;
   z-index: 9;
 }
