@@ -45,7 +45,7 @@ body {
 @media only screen and (max-width: 899px) {
 
 	.form-container {
-		max-width: 90vw;
+		max-width: 70vw;
 		padding: 10px;
 		background-color: white;
 	}
