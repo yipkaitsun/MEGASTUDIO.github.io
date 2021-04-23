@@ -30,7 +30,7 @@
         
         var sensor = null;
         $(function () {
-            $('#checkout-btn').on('touchend click', function (e) {
+            $('.checkout-btn').on('touchend click', function (e) {
                 event.stopPropagation();
                 event.preventDefault();
                 Checkout();
@@ -55,8 +55,8 @@
                             "<div id='logo'/>" +
                             "<div id='mobile-cart' style='width:25%'><div id='cart-logo'/></div>" +
                             "</div><hr style='margin-bottom:-1px;'/></div>").ready(function () {
-                                $(".back").on("touchend", function (e) { e.preventDefault(); Goto(link) });
-                                $("#cart-logo").on("touchend", function (e) { e.preventDefault();CartControl() });
+                                $(".back").on("touchend click", function (e) { e.preventDefault(); Goto(link) });
+                                $("#cart-logo").on("touchend click", function (e) { e.preventDefault();CartControl() });
                             })
                     }
 
@@ -67,9 +67,9 @@
                             "<div id='logo'/>" +
                             "<div id='mobile-cart' style='width:25%'><div id='cart-logo'/></div>" +
                             "</div><hr style='margin-bottom:-1px;'/></div>").ready(function () {
-                                $(".dots").on("touchend", function (e) { e.preventDefault(); navControl() });
-                                $("#cart-logo").on("touchend", function (e) { e.preventDefault(); CartControl() });
-                                $("#nav-close").on("touchend", function (e) { e.preventDefault(); navControl() });
+                                $(".dots").on("touchend click", function (e) { e.preventDefault(); navControl() });
+                                $("#cart-logo").on("touchend click", function (e) { e.preventDefault(); CartControl() });
+                                $("#nav-close").on("touchend click", function (e) { e.preventDefault(); navControl() });
                             })
                     }
                 },
@@ -112,8 +112,8 @@
                             "<div id='mobile-cart' style='width:25%'><div id='cart-logo'/></div>" +
                             "</div><hr style='margin-bottom:-1px;'/></div>").ready(function () {
                                 $(".triangle").off("click");
-                                $(".back").on("touchend", function (e) { e.preventDefault(); Goto(link) });
-                                $("#cart-logo").on("touchend", function (e) { e.preventDefault(); CartControl() });
+                                $(".back").on("touchend click", function (e) { e.preventDefault(); Goto(link) });
+                                $("#cart-logo").on("touchend click", function (e) { e.preventDefault(); CartControl() });
                                 
                             })
                     }
@@ -126,9 +126,9 @@
                             "<div id='mobile-cart' style='width:25%'><div id='cart-logo'/></div>" +
                             "</div><hr style='margin-bottom:-1px;'/></div>").ready(function () {
                                 $(".triangle").off("click");
-                                $(".dots").on("touchend", function (e) { e.preventDefault(); navControl() });
-                                $("#cart-logo").on("touchend", function (e) { e.preventDefault(); CartControl() });
-                                $("#nav-close").on("touchend", function (e) { e.preventDefault(); navControl() });
+                                $(".dots").on("touchend click", function (e) { e.preventDefault(); navControl() });
+                                $("#cart-logo").on("touchend click", function (e) { e.preventDefault(); CartControl() });
+                                $("#nav-close").on("touchend click", function (e) { e.preventDefault(); navControl() });
                             })
                     }
                 },
@@ -151,10 +151,10 @@
                         '</div>' +
                         '</div>').ready(function () {
                             $(".triangle").on("click", function (e) { e.preventDefault(); CartControl() });
-                            $("#cart-logo").off("touchend");
-                            $(".dots").off("touchend");
-                            $(".back").off("touchend");
-                            $("#nav-close").off("touchend");
+                            $("#cart-logo").off("touchend click");
+                            $(".dots").off("touchend click");
+                            $(".back").off("touchend click");
+                            $("#nav-close").off("touchend click");
                             setCartNum();
                         })
                 }
