@@ -619,15 +619,6 @@ svg.cd-cart-trigger {
 
 }
 
-.form-popup {
-  display:none;
-  position: fixed;
-  top: 5%;
-  left: 50%;
-  border: 3px solid #f1f1f1;
-  z-index: 9;
-}
-
 
 .form-container input[type=text] {
 	width: 85%;
