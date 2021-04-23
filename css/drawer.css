@@ -78,7 +78,7 @@ xheader
 #main-nav, #cd-cart {
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 75%;
   /* header height */
   padding-top: 25px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
@@ -383,7 +383,6 @@ xkeyframes
 
 #cd-cart.speed-in {
     right: 0;
-    margin-right: -15px;
     height: 100%;
 }
 

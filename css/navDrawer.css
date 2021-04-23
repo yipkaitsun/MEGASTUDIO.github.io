@@ -75,7 +75,7 @@ xheader
     position: fixed;
     top: 0;
     height: 100%;
-    width: 100%;
+    width: 75%;
     /* header height */
     padding-top: 20px;
     overflow-y: auto;
@@ -86,14 +86,12 @@ xheader
 }
 @media only screen and (min-width: 768px) {
     #main-nav, #cd-nav {
-        width: 100%;
         max-width: 350px;
     }
 }
 @media only screen and (min-width: 1200px) {
   #main-nav, #cd-nav {
     width: 30%;
-    /* header height has changed */
     padding-top: 80px;
   }
 }
