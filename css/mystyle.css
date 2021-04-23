@@ -620,9 +620,10 @@ svg.cd-cart-trigger {
 }
 
 .form-popup {
-  position: fixed;
-  border: 3px solid #f1f1f1;
-  z-index: 9;
+	position: fixed;
+	border: 3px solid #f1f1f1;
+	z-index: 9;
+	top: 5%;
 }
 
 
