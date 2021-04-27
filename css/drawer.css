@@ -403,7 +403,7 @@ xkeyframes
 .cd-cart-img {
   width: calc(30% - 10px);
   height: 0px;
-  padding-bottom: 20%;
+  padding-bottom: calc(30% - 10px);
   background-size: cover;
   background-position: center;
 }
