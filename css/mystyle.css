@@ -797,7 +797,7 @@ button {
 	transition: visibility 0s, opacity 0.5s linear;
 }
 #Blog > a > .thumbnail:hover > .layer {
-	background-color: rgb(255 255 255 / 74%);
+	background-color: rgb(255 255 255 / 85%);
 	position: absolute;
 	width: 100%;
 	height: 100%;
