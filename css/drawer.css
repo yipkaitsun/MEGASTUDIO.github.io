@@ -401,16 +401,16 @@ xkeyframes
 
 }
 .cd-cart-img {
-    width: 20%;
-    height: 0px;
-    padding-bottom: 20%;
-    background-size: cover;
-    background-position: center;
+  width: calc(30% - 10px);
+  height: 0px;
+  padding-bottom: 20%;
+  background-size: cover;
+  background-position: center;
 }
 
 .cd-cart-item-detail {
     padding-right: 9px;
-    width: calc(100% - 95px);
+    width: calc(100% - 94px);
 }
 
 
